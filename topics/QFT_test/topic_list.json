@@ -1,0 +1,38 @@
+{
+  "Advanced Undergraduate": {
+    "Foundations and Scalar Fields": [
+      { "id": "UG-01", "topic": "Classical field theory and Lagrangian formalism", "description": "Build field theories from symmetry principles using actions and Euler-Lagrange equations. Connect kinetic and interaction terms to conservation laws and dimensions.", "category": "Foundations and Scalar Fields" },
+      { "id": "UG-06", "topic": "Quantization of the Klein-Gordon field", "description": "Promote classical fields to operators, impose commutators, and define creation/annihilation operators. Connect normalizations to delta functions and box quantization.", "category": "Foundations and Scalar Fields" }
+    ],
+    "Path Integrals and Quantization": [
+      { "id": "UG-13", "topic": "Propagators and Green's functions", "description": "Construct time-ordered, retarded, and advanced propagators in x- and p-space. Emphasize boundary conditions and mass dependence.", "category": "Path Integrals and Quantization" }
+    ]
+  },
+  "Graduate": {
+    "Fermions and Spinor Structure": [
+      { "id": "GR-01", "topic": "Dirac equation and spinor solutions", "description": "Solve plane-wave spinors and completeness relations; compute bilinears and currents. Interpret helicity and chirality in simple processes.", "category": "Fermions and Spinor Structure" },
+      { "id": "GR-03", "topic": "Gamma matrices, traces, and bilinears", "description": "Use Clifford algebra identities and trace technology. Classify bilinears by Lorentz and discrete symmetries.", "category": "Fermions and Spinor Structure" }
+    ],
+    "Renormalization and Quantum Corrections": [
+      { "id": "GR-12", "topic": "Dimensional regularization", "description": "Regulate loop integrals in d=4-2e. Track poles, scales, and scheme conventions (MS/MS-bar).", "category": "Renormalization and Quantum Corrections" }
+    ]
+  },
+  "Advanced Graduate": {
+    "Renormalization Group and Scaling": [
+      { "id": "AG-01", "topic": "RG flow and fixed points", "description": "Formulate RG equations and classify fixed points. Linearize flows and extract simple critical exponents.", "category": "Renormalization Group and Scaling" },
+      { "id": "AG-02", "topic": "Beta functions in phi4 and QED", "description": "Compute one-loop beta-functions with attention to factors and schemes. Interpret UV/IR behavior and triviality vs asymptotic freedom.", "category": "Renormalization Group and Scaling" }
+    ],
+    "Anomalies and Supersymmetry": [
+      { "id": "AG-13", "topic": "Chiral anomalies (triangle diagrams)", "description": "Compute axial anomalies and understand current non-conservation. State cancellation conditions.", "category": "Anomalies and Supersymmetry" }
+    ]
+  },
+  "Post Graduate": {
+    "Amplitude and On-Shell Methods": [
+      { "id": "PG-01", "topic": "Spinor helicity for massless particles", "description": "Represent external states with spinor variables and express amplitudes using angle/square brackets. Enforce little-group scaling and on-shell constraints.", "category": "Amplitude and On-Shell Methods" },
+      { "id": "PG-03", "topic": "BCFW recursion", "description": "Reconstruct tree amplitudes from complex momentum shifts and factorization. Address boundary terms and valid shifts.", "category": "Amplitude and On-Shell Methods" }
+    ],
+    "Effective Field Theories": [
+      { "id": "PG-17", "topic": "Chiral perturbation theory (chiPT)", "description": "Build the chiral Lagrangian under symmetry constraints and compute low-energy pion processes. Track LECs and orders.", "category": "Effective Field Theories" }
+    ]
+  }
+}

@@ -1,0 +1,646 @@
+problem:
+  type: problem
+  content: "Consider the vector potential defined by\n\\begin{align}\n    A_x &= \\\
+    frac{-y}{x^2+y^2} \\\\\n    A_y &= \\frac{x}{x^2+y^2} \\\\\n    A_z &= 0\n\\end{align}\n\
+    \\begin{enumerate}[label=\\alph*.]\n    \\item Show that the curl of $\\vec{A}$\
+    \ is zero, apart possibly from the z-axis where it is ill-defined.\n    \n   \
+    \ \\item Use Stoke's theorem to define the curl on the z-axis.\n    \n    Since\
+    \ $\\vec{A}_i = \\partial_i \\phi$, where $\\phi$ is the angle in cylindrical\
+    \ coordinates, you have now derived the charming formula\n    \\begin{equation}\n\
+    \        \\epsilon_{zij}\\partial_i\\partial_j\\phi = 2\\pi\\delta(x)\\delta(y).\n\
+    \    \\end{equation}\n    Can you think of a simple way to realize this set-up\
+    \ physically?\n    \n    \\item Now suppose there is a repulsive barrier around\
+    \ the z-axis, so we don't have to worry about the singular nature of the vector\
+    \ potential there. Write down the Hamiltonian for a particle of charge $q$. Show\
+    \ that if the wave-function depends on the angle as $e^{in\\phi}$, then the repulsive\
+    \ centrifugal barrier is proportional to $(n+q)^2$. If the charge $q$ is not an\
+    \ integer\\footnote{If you prefer unit charge, let the vector potential be $q$\
+    \ times what we originally assumed.} the spectrum will have changed, even though\
+    \ the particle never sees a non-zero field strength. This is the Aharonov-Bohm\
+    \ effect, which dramatically illustrates the unavoidable significance of the vector\
+    \ potential in quantum mechanics.\n    \n    Effectively, the particle has acquired\
+    \ fractional angular momentum.\n    \n    \\item If you have been putting $\\\
+    hbar=1$, now restore it. Discuss in two sentences what is classical and what is\
+    \ quantum mechanical in the Aharonov-Bohm effect.\n    \n    \\item [This part\
+    \ is Profound.] The vector potential appears to be axially symmetric. How is this\
+    \ consistent with its perturbing the angular momentum?\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{equation}\n    \\vec{A} = \\frac{1}{x^2+y^2} \\begin{pmatrix}\
+    \ -y \\\\ x \\\\ 0 \\end{pmatrix}\n    \\tag{12.1}\n\\end{equation}\n(a) For any\
+    \ closed path which does not wind around $x=y=0$ line one gets\n\\begin{equation}\n\
+    \    \\oint_C d\\vec{s} \\cdot \\vec{A} = 0\n    \\tag{12.3}\n\\end{equation}\n\
+    because the curl is zero in the region.\nIf $C$ winds around the z-axis one instead\
+    \ gets,\n\\begin{equation}\n    \\oint_C d\\vec{s} \\cdot \\vec{A} = 2\\pi\n \
+    \   \\tag{12.4}\n\\end{equation}\nWe conclude that\n\\begin{equation}\n    \\\
+    vec{\\nabla} \\times \\vec{A} = 2\\pi\\delta(x)\\delta(y)\\hat{z}\n    \\tag{12.5}\n\
+    \\end{equation}\n\n(b)\n\\begin{equation}\n    H = \\frac{(\\vec{p}+q\\vec{A})^2}{2\\\
+    mu} = \\frac{\\vec{p}^2 + 2q\\vec{A}\\vec{p} + q^2\\vec{A}^2}{2\\mu}\n    \\tag{12.6}\n\
+    \\end{equation}\nusing $\\vec{\\nabla} \\cdot \\vec{A}=0$ and working in a gauge\
+    \ where $\\vec{A} \\cdot \\vec{p} = \\vec{p} \\cdot \\vec{A}$.\nWe change to cylindrical\
+    \ coordinates and consider the wave-function\n\\begin{equation}\n    \\psi(\\\
+    rho, z, \\phi) = \\psi(\\rho, z)e^{in\\phi} \\Rightarrow H = \\frac{p_\\rho^2}{2\\\
+    mu} + \\frac{p_z^2}{2\\mu} + \\frac{L_z^2}{2\\mu\\rho^2} + \\frac{A_\\phi q L_z}{\\\
+    mu \\rho} + \\frac{q^2 A^2}{2\\mu}\n    \\tag{12.7}\n\\end{equation}\nWith $\\\
+    vec{A} = \\frac{1}{\\rho}\\hat{\\phi}$, the momentum operator is $\\vec{p} = -i\\\
+    vec{\\nabla}$. In cylindrical coordinates, $L_z = -i\\frac{\\partial}{\\partial\\\
+    phi}$. For a wavefunction $\\psi \\propto e^{in\\phi}$, $L_z\\psi = n\\psi$. The\
+    \ Hamiltonian term becomes\n\\begin{equation}\n    \\frac{1}{2\\mu\\rho^2} (L_z\
+    \ + q\\rho A_\\phi)^2 \\psi = \\frac{1}{2\\mu\\rho^2} (L_z + q)^2 \\psi = \\frac{1}{2\\\
+    mu\\rho^2} (n+q)^2\\psi\n\\end{equation}\nSo we can identify the repulsive centrifugal\
+    \ potential term.\n\\begin{equation}\n    V_{\\text{eff}} = \\frac{(n+q)^2}{2\\\
+    mu\\rho^2}\n    \\tag{12.9}\n\\end{equation}\nIf $q$ is not an integer (assuming\
+    \ $\\hbar=1$), the spectrum changes."
+---
+problem:
+  type: problem
+  content: "Consider a 3-index antisymmetric tensor field $A_{\\mu\\nu\\rho}$ with\
+    \ the gauge symmetry\n\\begin{equation}\n    A_{\\mu\\nu\\rho} \\to A_{\\mu\\\
+    nu\\rho} + \\partial_{\\mu}\\Lambda_{\\nu\\rho}\n\\end{equation}\nwhere, in the\
+    \ last term, antisymmetrizaton over the indices is assumed.\n\\begin{enumerate}[label=\\\
+    alph*.]\n    \\item By analogy with electromagnetism, construct an invariant field-strength\
+    \ $F_{\\mu\\nu\\rho\\sigma}$ and a kinetic energy term. What is the free equation\
+    \ of motion (analogue of the Maxwell equations)? How many degrees of freedom does\
+    \ this field have?\n    \n    \\item We saw how to couple the electromagnetic\
+    \ field to particles in a gauge-invariant way by adding a world-line term $\\\
+    int A_\\mu dx^\\mu$. What is the natural kind of object for $A_{\\mu\\nu\\rho}$\
+    \ to couple to? What does it take for this to be gauge-invariant? (If you don't\
+    \ have a comfortable grip on differential geometry, do a special case, analogous\
+    \ to a straight world-line.)\n    \n    \\item What is the equation of motion\
+    \ for $F$ now?\n    \n    \\item There is a natural vector-field $B^\\alpha =\
+    \ \\epsilon^{\\alpha\\mu\\nu\\rho} A_{\\mu\\nu\\rho}$ associated with the three-index\
+    \ tensor field. What are the salient features of $B$?\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "(a)\nDefine\n\\begin{equation}\n    F_{\\mu\\nu\\rho\\sigma} = \\partial_{[\\\
+    mu}A_{\\nu\\rho\\sigma]}\n    \\tag{12.13}\n\\end{equation}\nThen\n\\begin{equation}\n\
+    \    \\text{K.E.} = -\\frac{1}{2} \\frac{1}{4!} F^{\\mu\\nu\\rho\\sigma} F_{\\\
+    mu\\nu\\rho\\sigma}\n    \\tag{12.14}\n\\end{equation}\nE.O.M.:\n\\begin{equation}\n\
+    \    \\partial_\\mu F^{\\mu\\nu\\rho\\sigma} = 0\n    \\tag{12.15}\n\\end{equation}"
+---
+problem:
+  type: problem
+  content: "The theory of non-abelian groups and their representations is a big subject\
+    \ in itself, especially if explicit algorithms for classifying invariants and\
+    \ labelling and reducing representations are required. Fortunately in the Standard\
+    \ Model we need only to deal with the groups SU(2) and SU(3), and for these we\
+    \ can do everything we need using ad hoc ``bare hands'' methods. If any of the\
+    \ specific group-theoretic manipulations used in class are completely unfamiliar,\
+    \ you should ask me, but it might also be a good idea to review the basic ideas,\
+    \ to make sure you're comfortable with them. As a reference, see for example M.\
+    \ Hamermesh, \\textit{Group Theory and its Application to Physical Problems}\\\
+    footnote{This is a really excellent book and reference that every theoretical\
+    \ physicist should own, especially since it is available in a cheap Dover edition.}.\
+    \ Here are some simple exercises to focus your attention.\n\\begin{enumerate}[label=\\\
+    alph*.]\n    \\item The infinitesimal versions of group elements near the identity\
+    \ define the Lie algebra of the group. Thus we write\n    \\begin{equation}\n\
+    \        \\Omega^i_j = \\delta^i_j + i\\omega^i_j\n    \\end{equation}\n    with\
+    \ $\\omega$ small. Show that the condition that $\\Omega$ is unitary translates\
+    \ (dropping quadratic terms!) into the condition that $\\omega$ is Hermitean,\
+    \ and that the condition that $\\Omega$ has unit determinant translates into the\
+    \ condition that $\\omega$ has zero trace.\n    \n    Since these conditions are\
+    \ linear, the Lie algebra forms a vector space. Find nice bases for the SU(2)\
+    \ and SU(3) cases. (A nice basis is one for which $\\mathrm{Tr}\\,w^a w^b = \\\
+    frac{1}{2}\\delta^{ab}$.) What are their dimensions? Given a basis, we define\
+    \ the structure constants by\n    \\begin{equation}\n        [w^a, w^b] = i f^{ab}_{\\\
+    \ \\ c} w^c.\n    \\end{equation}\n    Compute the structure constants for your\
+    \ bases.\n    \n    \\item Show that the group of $2 \\times 2$ unitary transformations\
+    \ can be parametrized in the form\n    \\begin{equation}\n        \\begin{pmatrix}\
+    \ \\alpha & \\beta \\\\ -\\beta^* & \\alpha^* \\end{pmatrix}\n    \\end{equation}\n\
+    \    with $\\alpha$ and $\\beta$ being complex numbers subject to $|\\alpha|^2\
+    \ + |\\beta|^2 = 1$. (So what is the topology of SU(2)?)\n    \n    Work out a\
+    \ similar parametrization for SU(3). [Hint: The first row is an abitrary vector\
+    \ of unit magnitude; the second is orthogonal to it; the third is proportional\
+    \ to the cross-product.] How many real parameters are required? Optional: What\
+    \ does this construction suggest about the topology of SU(3)?\n    \n    \\item\
+    \ Upper-index (covariant) vectors transform as columns that get multiplied on\
+    \ the left; lower-index (contravariant) vectors transform as rows that get multiplied\
+    \ on the right by the inverse matrix. Thus\n    \\begin{align}\n        (\\phi')^i\
+    \ &= \\Omega^i_j \\phi^j; \\\\\n        (\\psi')_\\mu &= (\\Omega^{-1})^\\nu_\\\
+    mu \\psi_\\sigma.\n    \\end{align}\n    Show that the complex conjugate of a\
+    \ covariant vector transforms like a contravariant vector.\n    \n    From these\
+    \ we can construct tensors, which transform like products of vectors. Convince\
+    \ yourself that we can apply symmetry restrictions on tensors (e.g., requiring\
+    \ them to be symmetric or antisymmetric) and still have representations of the\
+    \ groups.\n    \n    Show by explicit calculation that the Kronecker delta $\\\
+    delta^i_j$ and the antisymmetric symbol $\\epsilon_{ab}$ are invariant under SU(2)\
+    \ transformations. Use this to argue that any tensor can be decomposed into a\
+    \ sum of symmetric tensors with up indices only. What are the dimensions of these\
+    \ representations? How does the group transformation $\\Omega = e^{i\\theta T_3}$\
+    \ act on these? Does this ring any bells?\n\n    \\item We define Lie-algebra\
+    \ representations in general by matrices that satisfy the commutation relations\n\
+    \    \\begin{equation}\n        [\\rho^a, \\rho^b] = i f^{ab}_{\\ \\ c} \\rho^c\n\
+    \    \\end{equation}\n    where the $f^{ab}_{\\ \\ c}$ are the structure constants\
+    \ of the group. Convince yourself that this ``works'', in the sense that the representation\
+    \ matrices you get by taking infinitesimal versions of how the group elements\
+    \ work on the tensor product obey this rule.\n    \n    For physics purposes we\
+    \ are often interested in the so-called Casimir number $C_2(\\rho)$ and trace\
+    \ $T(\\rho)$ associated with a representation. These are defined by\n    \\begin{equation}\n\
+    \        C_2(\\rho)\\delta^i_j = (\\rho^a)^i_\\sigma(\\rho^a)^\\sigma_j,\n   \
+    \ \\end{equation}\n    with summation over $a$ and $\\sigma$ assumed, and by\n\
+    \    \\begin{equation}\n        T(\\rho)\\delta^{ab} = \\mathrm{Tr}\\,\\rho^a\\\
+    rho^b\n    \\end{equation}\n    using a nice basis\\footnote{These ``definitions''\
+    \ assume that the forms on the two sides match. That will be true for irreducible\
+    \ representations.}. Thus $T(\\text{fundamental})$ for the fundamental vector\
+    \ representation is, by definition, $\\frac{1}{2}$.\n    \n    Prove the general\
+    \ relationship\n    \\begin{equation}\n        d_\\rho C_2(\\rho) = d_G T(\\rho),\n\
+    \    \\end{equation}\n    where $d_\\rho$ is the dimension of the representation\
+    \ and $d_G$ is the dimension of the group.\n    \n    Evaluate $C_2(\\rho)$ for\
+    \ the representations of SU(2) discussed above.\n    \n    Evaluate $C_2(\\rho)$\
+    \ for the fundamental vector $\\mathbf{3}$ representation of SU(3), and for the\
+    \ following:\n    \\begin{itemize}\n        \\item the $\\mathbf{6}$ representation,\
+    \ using a two-index symmetric tensor\n        \\item the $\\mathbf{10}$ representation,\
+    \ using a three-index symmetric\n        \\item the adjoint $\\mathbf{8}$ representation,\
+    \ using a traceless tensor with one upper and one lower index\n    \\end{itemize}\n\
+    \    [Hint: Compute $T$ by picking a convenient Lie algebra element.]\n    \n\
+    \    For a grand finale, compute $C_2(\\mathbf{27})$ for the representation of\
+    \ SU(3) that has two symmetric upper indices, two symmetric lower indices, and\
+    \ vanishing trace.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "Let me only show the evaluation of $C_2(\\rho)$ in the most non-trivial\
+    \ example, $C_2(27)$ in $SU(3)$. Consider the Clebsh-Gordon decomposition of a\
+    \ product representation:\n\\begin{equation}\n    \\rho_1 \\otimes \\rho_2 = \\\
+    sum_i \\rho_i\n    \\tag{12.34}\n\\end{equation}\nThe way $T^a$ acts on $\\rho_1\
+    \ \\otimes \\rho_2$ is given above\n\\begin{equation}\n    T^a_{\\rho_1 \\otimes\
+    \ \\rho_2} = T^a_{\\rho_1} \\otimes 1_{\\rho_2} + 1_{\\rho_1} \\otimes T^a_{\\\
+    rho_2}\n    \\tag{12.35}\n\\end{equation}\nSo\n\\begin{equation}\n    \\text{tr}(T^a_{\\\
+    rho_1 \\otimes \\rho_2} T^a_{\\rho_1 \\otimes \\rho_2}) = (C_2(\\rho_1) + C_2(\\\
+    rho_2))d_{\\rho_1}d_{\\rho_2}\n    \\tag{12.36}\n\\end{equation}\nOn the other\
+    \ hand,\n\\begin{align}\n    T^a_{\\rho_1 \\otimes \\rho_2} &= \\sum_i T^a_{\\\
+    rho_i} \\tag{12.37} \\\\\n    \\text{tr}(T^a_{\\rho_1 \\otimes \\rho_2} T^a_{\\\
+    rho_1 \\otimes \\rho_2}) &= \\text{tr}(\\sum_i T^a_{\\rho_i} \\sum_j T^a_{\\rho_j})\
+    \ \\tag{12.38} \\\\\n    &= \\sum_i \\text{tr}(T^a_{\\rho_i} T^a_{\\rho_i}) \\\
+    tag{12.39} \\\\\n    &= \\sum_i C_2(\\rho_i) d_{\\rho_i} \\tag{12.40}\n\\end{align}\n\
+    Then,\n\\begin{equation}\n    (C_2(\\rho_1) + C_2(\\rho_2)) d_{\\rho_1} d_{\\\
+    rho_2} = \\sum_i C_2(\\rho_i) d_{\\rho_i}\n    \\tag{12.41}\n\\end{equation}\n\
+    27 occurs in the product of two 8's:\n\\begin{equation}\n    8 \\times 8 = 27\
+    \ + 10 + \\overline{10} + 8 + 8 + 1\n    \\tag{12.42}\n\\end{equation}\nYou should\
+    \ have found that $C_2(8)=3, C_2(10)=6$. Plug these in:\n\\begin{align}\n    (3+3)\
+    \ \\cdot 8 \\cdot 8 &= C_2(27) \\cdot 27 + 2 \\cdot 6 \\cdot 10 + 2 \\cdot 3 \\\
+    cdot 8 + 0 \\tag{12.43} \\\\\n    8 \\cdot 8 \\cdot 6 &= 27 C_2(27) + 168 \\tag{12.44}\
+    \ \\\\\n    C_2(27) &= \\frac{216}{27} \\tag{12.45} \\\\\n    &= 8 \\tag{12.46}\n\
+    \\end{align}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[a.] Let $\\psi$ be a right-handed fermion\
+    \ field. Using 4-component fermion notation, and some stated convention for Dirac\
+    \ matrices, construct the ``Majorana'' mass term\n    \\begin{equation}\n    \
+    \    \\mathcal{L}_{\\text{Majorana}} = - \\frac{1}{2} M C \\bar{\\psi} \\psi,\n\
+    \    \\end{equation}\n    where $C$ is the charge conjugation operator. (Of course,\
+    \ it is implicit that you must add the Hermitean conjugate.) Now simplify it by\
+    \ using the right-hand projector to express $\\psi$ in terms of its two independent\
+    \ components. Generalize to several ``flavors'' of neutrino and a mass matrix\
+    \ $M_{ij}$, i.e.\n    \\begin{equation}\n        \\mathcal{L}_{\\text{Majorana}}\
+    \ = - \\frac{1}{2} M_{ij} C \\bar{\\psi}^i \\psi^j.\n    \\end{equation}\n   \
+    \ Does $M$ have to be symmetric? [Hint: Use fermi statistics, or equivalently\
+    \ anticommutativity of the fields.]\n\n    \\item[b.] Now let there be an equal\
+    \ number (say three) of left-handed fermion fields $\\eta^i$. Assume that these\
+    \ do \\emph{not} have non-zero Majorana mass terms to begin with, but are allowed\
+    \ to have ``normal'' mass terms connecting them to the $\\psi^j$, i.e.\n    \\\
+    begin{equation}\n        \\mathcal{L}_{\\text{normal}} = - m \\bar{\\eta}_i \\\
+    psi^i\n    \\end{equation}\n    Assuming $m \\ll M$\\footnote{Part of the problem\
+    \ -- what does this mean?} show that the combined effect of both mass terms is,\
+    \ when you diagonalize the Hamiltonian at zero energy-momentum, that a Majorana\
+    \ mass matrix is generated for the $\\eta$, of the order $m^2/M$. Give its precise\
+    \ (leading order) form.\n\n    \\item[c.] You are free to make a unitary transformation\
+    \ involving the flavor indices of $\\eta$ (leaving the kinetic energy properly\
+    \ normalized). Prove that this is enough to diagonalize the Majorana mass matrix.\
+    \ Having done this, is there any residual freedom?\n\\end{enumerate}\nThis problem\
+    \ provides the theoretical foundation for understanding neutrino masses in the\
+    \ context of unified gauge theories, e.g. $SO(10)$."
+solution:
+  type: solution
+  content: "\\begin{itemize}\n    \\item I will use a basis in which\n    \\begin{equation}\n\
+    \        \\psi^C = i\\gamma^2 \\psi^* = C \\gamma^0 \\psi^*\n    \\end{equation}\n\
+    \    We can define left (light) handed Majorana fields as,\n    \\begin{align}\n\
+    \        \\omega &= \\psi_L + (\\psi_L)^C \\\\\n        \\chi &= \\psi_R + (\\\
+    psi_R)^C\n    \\end{align}\n    so that\n    \\begin{align}\n        \\omega &=\
+    \ \\omega^C \\\\\n        \\chi &= \\chi^C\n    \\end{align}\n    Note that\n\
+    \    \\begin{align}\n        (\\psi_L)^C &= (\\psi^C)_R \\\\\n        (\\psi_R)^C\
+    \ &= (\\psi^C)_L\n    \\end{align}\n    Then\n    \\begin{align}\n        -\\\
+    mu_R \\bar{\\chi} \\chi &= -\\mu_R(\\bar{\\psi_R}(\\psi_R)^C + \\overline{(\\\
+    psi_R)^C}\\psi_R) \\\\\n        -\\mu_L \\bar{\\omega} \\omega &= -\\mu_L(\\bar{\\\
+    psi_L}(\\psi_L)^C + \\overline{(\\psi_L)^C}\\psi_L)\n    \\end{align}\n    are\
+    \ the right (left) handed mass terms for Majorana fields.\n    \\item Generalizing\
+    \ to $N$ flavor, $i, j = 1, \\dots, N$, we have $-\\mu_{ij}\\psi^C_i \\psi_j +\
+    \ h.c$\n    Using above definition for $C$ and anti-symmetry of Grassmann variables\
+    \ one sees that $\\mu_{ij}$ can be taken as symmetric. For a term of the form\
+    \ $M_{ij} \\psi_i^T C \\psi_j$, the combination $\\psi_i^T C \\psi_j$ is symmetric\
+    \ under the exchange of flavor indices $i \\leftrightarrow j$ due to the anti-commuting\
+    \ nature of fermion fields. Therefore, any anti-symmetric part of the matrix $M_{ij}$\
+    \ would not contribute to the Lagrangian, and we can take $M_{ij}$ to be symmetric\
+    \ without loss of generality.\n    \\item For one flavor case general Dirac and\
+    \ Majorana mass is\n    \\begin{equation}\n        \\begin{pmatrix} \\bar{\\omega}\
+    \ & \\bar{\\chi} \\end{pmatrix}\n        \\begin{pmatrix} -\\mu_L & \\frac{m}{2}\
+    \ \\\\ \\frac{m}{2} & -\\mu_R \\end{pmatrix}\n        \\begin{pmatrix} \\omega\
+    \ \\\\ \\chi \\end{pmatrix}\n    \\end{equation}\n    Since\n    \\begin{equation}\n\
+    \        \\frac{m}{2}(\\bar{\\omega}\\chi + \\bar{\\chi}\\omega) = m(\\bar{\\\
+    psi_L}\\psi_R + \\bar{\\psi_R}\\psi_L) = \\text{Dirac Mass}\n    \\end{equation}\n\
+    \    One can diagonalize this by a unitary transformation to get the eigenvalues\
+    \ (in case $\\mu_L=0$ for instance) $\\mu \\approx \\mu_R, \\frac{m^2}{\\mu_R}$.\
+    \ The light eigenvalue corresponds to the mass of the left-handed neutrino. For\
+    \ a multi-flavor case with a Dirac mass term $m \\bar{\\eta}_i \\psi^i$ and a\
+    \ Majorana mass term for $\\psi$ fields with mass matrix $M$, the full mass matrix\
+    \ in the $(\\eta, \\psi^c)$ basis is $\\begin{pmatrix} 0 & mI \\\\ mI & M \\end{pmatrix}$.\
+    \ Integrating out the heavy fields $\\psi$ gives an effective mass matrix for\
+    \ the light fields $\\eta$: $M_\\eta = -(mI) M^{-1} (mI)^T = -m^2 M^{-1}$.\n \
+    \   \\item This is an example of the ``see-saw'' mechanism. Although one can not\
+    \ write down relevant (dimension $\\le 4$) Majorana mass term in standard model,\
+    \ one can in some GUT's, e.g. SO(10). Therefore, the natural Majorana mass $\\\
+    sim O(10^{15} \\text{ Gev})$, which is the GUT scale in typical theories. Then\
+    \ above mechanism would give a LH fermion with a tiny mass\n    \\begin{equation}\n\
+    \        \\frac{m^2}{\\mu} \\sim \\frac{(100 \\text{ Gev})^2}{10^{15} \\text{\
+    \ Gev}} \\sim 10^{-2} \\text{ eV}\n    \\end{equation}\n    which is consistent\
+    \ with observation of solar neutrinos. Note that for the typical Dirac mass $m$,\
+    \ I take $\\sim 100 \\text{ Gev}$ since they are obtained by Higgs mechanism at\
+    \ the weak scale.\n\\end{itemize}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[a.] Suppose that there are two Higgs doublets\
+    \ $\\phi_1$ and $\\phi_2$, both with the usual assignments $(1, 2, \\frac{1}{2})$.\
+    \ Suppose further that $\\phi_1$ cannot couple to right-handed charge $2/3$ quarks\
+    \ (our $U_R$) and $\\phi_2$ cannot couple to right-handed charge $-1/3$ quarks.\
+    \ (This set-up arises in supersymmetric models.) Show that if both fields condense\
+    \ the relation among $W$ and $Z$ masses and the neutral current parameter -- i.e.,\
+    \ the Weinberg angle -- is just the same as for one doublet. How many physical\
+    \ scalars are there, and what are their electric charges?\n    \\item[b.] Continuing\
+    \ this analysis, write down the most general potential consistent with symmetry\
+    \ under simultaneously reversal of the signs of $\\phi_1$ and $D_R$, or $\\phi_2$\
+    \ and $U_R$ (this guarantees the coupling pattern assumed previously). Find the\
+    \ region of parameters where viable condensations occur. In this domain, calculate\
+    \ the spectrum of scalars and their couplings to the quarks.\n    \\item[c.] Suppose\
+    \ we have a continuous phase symmetry $\\phi_1 \\to e^{-i\\alpha}\\phi_1$, $\\\
+    phi_2 \\to e^{i\\alpha}\\phi_2$, $U_R \\to e^{i\\alpha}U_R$, $D_R \\to e^{i\\\
+    alpha}D_R$. (This set-up arises in axion models.) Show that the fermion-Higgs\
+    \ coupling patterns are as advertized. What are the extra restrictions on the\
+    \ potential, beyond those found in b.? Show that there is now a massless neutral\
+    \ scalar\\footnote{In a quantum treatment, the symmetry will be violated -- an\
+    \ ``anomaly'' -- and a small mass will be generated.}, and calculate how it couples\
+    \ to quarks.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "(a) We have two Higgs doublets $\\phi_1$ and $\\phi_2$ with condensation\n\
+    \\begin{align}\n    \\langle \\phi_1 \\rangle &= \\begin{pmatrix} 0 \\\\ v_1 \\\
+    end{pmatrix} \\\\\n    \\langle \\phi_2 \\rangle &= \\begin{pmatrix} 0 \\\\ v_2\
+    \ \\end{pmatrix}\n\\end{align}\n\\begin{itemize}\n    \\item Started with 8 real\
+    \ scalar D.O.F. 3 absorbed into longitudinal modes of gauge mesons $W^\\pm$ and\
+    \ $Z$. Therefore, 5 left out of which one is the usual neutral Higgs: $\\phi_1\
+    \ = \\begin{pmatrix} 0 \\\\ v_1+h \\end{pmatrix}$, 4 others are $\\phi_2 = \\\
+    begin{pmatrix} \\alpha+i\\beta \\\\ \\gamma+i\\delta \\end{pmatrix}$, $\\alpha$\
+    \ and $\\beta$ are charge $+1(\\alpha+i\\beta), -1(\\alpha-i\\beta)$, $\\gamma$\
+    \ and $\\delta$ are both charge zero.\n\\end{itemize}\n(b) See H. E. Haber in\
+    \ QC793.W66 1989\n\n(c)\n\\begin{itemize}\n    \\item Extra restriction on the\
+    \ potential in the previous part is that $(\\phi_1^\\dagger \\phi_2)(\\phi_2^\\\
+    dagger \\phi_1)$ term is not allowed.\n    \\item It is proportional to $T v_2$,\
+    \ where $T$ is the U(1) generator that generates $\\phi_1 \\to \\phi_1 e^{-i\\\
+    lambda}, \\phi_2 \\to \\phi_2 e^{i\\lambda}$. Therefore, its coupling to quarks\
+    \ are\n    \\begin{equation}\n        \\epsilon_{\\alpha\\beta} \\bar{q}_{L}^\\\
+    alpha q_R^\\beta \\phi_2^{*\\beta} \\to (\\bar{u}_L u_R \\Lambda_u + \\bar{c}_L\
+    \ c_R \\Lambda_c + \\bar{t}_L t_R \\Lambda_t) \\frac{a_x}{v_{\\text{axion}}}\n\
+    \    \\end{equation}\n\\end{itemize}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[a.] Calculate the logarithmically divergent\
+    \ part of the wave function renormalization for gluons, due to gluons, in an arbitrary\
+    \ Fermi gauge, using the brutal cutoff procedure described in class. You will\
+    \ have to include the Fadeev-Popov ghost contribution, of course. Pay attention\
+    \ to the issue of longitudinal versus transverse polarizations!\n    \\item[b.]\
+    \ How is the answer modified by charged fermions and scalars?\n    \\item[c.]\
+    \ Give arguments that the quadratic and linear divergences can be ignored, as\
+    \ can the renormalization of longitudinal polarizations, in calculating the $\\\
+    beta$ function.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{align}\n    \\log \\text{part} &\\xrightarrow{} -g^2 C_2(\\Gamma_F)\
+    \ \\delta_{ab} \\frac{4}{3} (g_{\\mu\\nu}p^2 - p_\\mu p_\\nu) \\frac{i}{2} \\\
+    frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\intertext{where\
+    \ $\\Lambda$ is cut-off scale, $\\mu$ is renormalization scale, and $\\Omega_3$\
+    \ is 3D surface area.}\n    \\log \\text{div.part} &\\xrightarrow{} -g^2 C_2(\\\
+    Gamma_s) \\delta_{ab} \\frac{1}{4} (g_{\\mu\\nu}p^2 - p_\\mu p_\\nu) \\frac{i}{2}\
+    \ \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\\
+    log \\text{part} &\\xrightarrow{} 0 \n\\end{align}\nSimilarly all tadpoles have\
+    \ no log div. part.\n\\begin{align}\n    \\log \\text{div.} &\\xrightarrow{} -g^2\
+    \ C_2(G) \\delta_{ab} (\\frac{1}{6} g_{\\mu\\nu} p^2 - p_\\mu p_\\nu) \\frac{i}{2}\
+    \ \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\\
+    log \\text{div.} &\\xrightarrow{} -g^2 C_2(G) \\delta_{ab} \\left[ p^2 g_{\\mu\\\
+    nu} (\\frac{19}{12} + \\frac{\\alpha}{2}) - p_\\mu p_\\nu (\\frac{11}{6} + \\\
+    frac{\\alpha}{2}) \\right] \\frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\\
+    frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\log \\text{div.} &\\xrightarrow{} 0 \n\\\
+    end{align}\nAdd up all contributions to get:\n\\begin{align}\n    &\\quad \\frac{i}{2}\
+    \ \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) g^2(p^2 g_{\\\
+    mu\\nu} - p_\\mu p_\\nu) \\nonumber \\\\\n    & \\quad \\left\\{ (\\frac{5}{3}\
+    \ - \\frac{\\alpha}{2})C_2(G) - \\frac{4}{3}C_2(\\Gamma_F) - \\frac{1}{2}C_2(\\\
+    Gamma_s) \\right\\} \\\\\n    &\\Rightarrow -\\delta_3 \\mu^2 \n\\end{align}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[a.] Calculate the log divergent parts of\
+    \ the ``proper'' gluon 3-point function -- the part that matches the tree graph\
+    \ structure, including glue, fermions, and scalars. Use this, together with earlier\
+    \ results, to calculate the $\\beta$ function. Check that the $\\alpha$ dependence\
+    \ cancels.\n    \\item[b.] Do the same thing using the 4-point function.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{itemize}\n    \\item Note that inclusion of ghost contribution\
+    \ was crucial to get right tenser structure $(p^2 g_{\\mu\\nu} - p_\\mu p_\\nu)$.\n\
+    \    \\item We only evaluate log div. parts, since linear and quadratic divergence\
+    \ of the term $a\\Lambda + b\\Lambda^2$ will not yield and contribution to $\\\
+    beta$-function as $\\beta$ gets contributions from $\\frac{\\partial}{\\partial\\\
+    mu}\\delta_1$ and $\\frac{\\partial}{\\partial\\mu}\\delta_3$.\n\\end{itemize}\n\
+    \\begin{align}\n    \\log \\text{div.part} &\\xrightarrow{} -ig^3 f^{abc}[(k-p)^\\\
+    rho g^{\\mu\\nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\mu g^{\\nu\\rho}] \\nonumber\
+    \ \\\\\n    & \\quad \\frac{1}{8}(13-9\\alpha)C_2(G) \\frac{i}{2} \\frac{\\Omega_3}{(2\\\
+    pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\log \\text{part} &\\xrightarrow{}\
+    \ ig^3 f^{abc}[(k-p)^\\rho g^{\\mu\\nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\\
+    mu g^{\\nu\\rho}] \\nonumber \\\\\n    & \\quad \\frac{1}{4}(9-\\frac{3}{2}\\\
+    alpha)C_2(G) \\frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\\
+    mu^2}) \\\\\n    \\log \\text{div.part} &\\xrightarrow{} ig^3 f^{abc}[(k-p)^\\\
+    rho g^{\\mu\\nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\mu g^{\\nu\\rho}] \\nonumber\
+    \ \\\\\n    & \\quad \\frac{1}{24}C_2(G) \\frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4}\
+    \ \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\log \\text{div.part} &\\xrightarrow{}\
+    \ -ig^3 f^{abc}[(k-p)^\\rho g^{\\mu\\nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\\
+    mu g^{\\nu\\rho}] \\nonumber \\\\\n    & \\quad \\frac{4}{3} C_2(\\Gamma_F) \\\
+    frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4} \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\
+    \n    \\log \\text{part} &\\xrightarrow{} -ig^3 f^{abc}[(k-p)^\\rho g^{\\mu\\\
+    nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\mu g^{\\nu\\rho}] \\nonumber \\\\\n \
+    \   & \\quad \\frac{1}{3} C_2(\\Gamma_s) \\frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4}\
+    \ \\log(\\frac{\\Lambda^2}{\\mu^2}) \\\\\n    \\log \\text{part} &\\xrightarrow{}\
+    \ 0 \n\\end{align}\nAdding all up we get\n\\begin{align}\n    & -ig^3 f^{abc}\
+    \ \\left\\{ C_2(G)\\left(\\frac{3}{4} + \\frac{3}{4}\\alpha\\right) - \\frac{4}{3}C_2(\\\
+    Gamma_F) - \\frac{1}{3}C_2(\\Gamma_s) \\right\\} \\nonumber \\\\\n    & \\quad\
+    \ [(k-p)^\\rho g^{\\mu\\nu} + (p-q)^\\nu g^{\\rho\\mu} + (q-k)^\\mu g^{\\nu\\\
+    rho}] \\nonumber \\\\\n    & \\quad \\frac{i}{2} \\frac{\\Omega_3}{(2\\pi)^4}\
+    \ \\log(\\frac{\\Lambda^2}{\\mu^2}) \\Rightarrow \\frac{\\delta_1}{\\mu^2} \n\\\
+    end{align}\nTherefore,\n\\begin{equation}\n    \\beta = \\mu \\frac{\\partial}{\\\
+    partial\\mu}(-\\delta_1 + \\frac{3}{2}\\delta_3)\n\\end{equation}\nTherefore,\n\
+    \\begin{equation}\n    \\beta_{3g} = \\frac{g^3}{(4\\pi)^2} \\left\\{ C_2(G)\\\
+    left(-\\frac{11}{3}\\right) + C_2(\\Gamma_F)\\frac{4}{3} + C_2(\\Gamma_s)\\frac{1}{3}\
+    \ \\right\\} \n\\end{equation}\nNote that $\\alpha$-dependence has cancelled out."
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[a.] Calculate the $\\beta$ function from\
+    \ renormalization of the gluon-fermion coupling.\n    \\item[b.] Calculate the\
+    \ $\\beta$ function from renormalization of the gluon-scalar coupling.\n    \\\
+    item[c.] Calculate the $\\beta$ function from renormalization of the gluon-ghost\
+    \ coupling.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "Courtesy of Guide Festucchia \\\\\n4 Gluons vertex: We have to evaluate\
+    \ the following diagrams\nUsing mathematica we obtain:\n\\begin{align}\n& g^4\
+    \ f^{fal} f^{ebg} f^{gch} f^{hdf} \\int \\frac{d^4 K}{(2\\pi)^4} \\frac{1}{K^4}\
+    \ \\left( \\frac{K^\\mu K^\\nu K^\\rho K^\\sigma}{K^4} (34 - 12\\alpha + 2\\alpha^2)\
+    \ + \\right. \\nonumber \\\\\n& \\quad \\left. \\frac{K^\\mu K^\\nu K^\\rho g^{\\\
+    sigma} + K^\\mu K^\\sigma g^{\\nu\\rho} + K^\\rho K^\\sigma g^{\\mu\\nu} + K^\\\
+    nu K^\\rho g^{\\mu\\sigma}}{K^2} (3+2\\alpha - \\alpha^2) + \\right. \\nonumber\
+    \ \\\\\n& \\quad \\left. (g^{\\mu\\nu}g^{\\rho\\sigma} + g^{\\mu\\sigma}g^{\\\
+    nu\\rho})(1+2\\alpha+\\alpha^2) \\right) \\nonumber \\\\\n=& g^4 tr(t^a t^b t^c\
+    \ t^d) \\frac{1}{24} \\nonumber \\\\\n& \\quad ((g^{\\mu\\nu}g^{\\rho\\sigma}\
+    \ + g^{\\mu\\rho}g^{\\nu\\sigma})(94+60\\alpha+14\\alpha^2) + g^{\\mu\\rho}g^{\\\
+    sigma\\nu}(34-12\\alpha+2\\alpha^2)) \\nonumber \\\\\n& \\quad \\int \\frac{d^4\
+    \ K}{(2\\pi)^4} \\frac{1}{K^4} \n\\end{align}\nThe different permutations of the\
+    \ gluon vertices will be accounted for later.\n\\begin{align}\n& -g^4 tr(t^a t^b\
+    \ t^c t^d) \\int \\frac{d^4 K}{(2\\pi)^4} \\frac{1}{K^4} \\left(\\frac{K^\\mu\
+    \ K^\\nu K^\\rho K^\\sigma}{K^4}(-3\\alpha+\\alpha^2) + \\right. \\nonumber \\\
+    \\\n& \\quad K^\\mu K^\\nu g^{\\rho\\sigma}(-1-2\\alpha-\\alpha^2) + (K^\\nu K^\\\
+    rho g^{\\mu\\sigma} + K^\\mu K^\\sigma g^{\\nu\\rho})(3+3\\alpha) + \\nonumber\
+    \ \\\\\n& \\quad K^\\rho K^\\sigma g^{\\mu\\nu}(6-3\\alpha-\\alpha^2) + g^{\\\
+    mu\\nu}g^{\\rho\\sigma}(2+3\\alpha+\\alpha^2) + \\nonumber \\\\\n& \\quad \\left.\
+    \ g^{\\mu\\rho}g^{\\nu\\sigma}(-2-2\\alpha) + g^{\\mu\\sigma}g^{\\nu\\rho}(1+\\\
+    alpha)\\right)(c.p \\leftrightarrow d, \\sigma) \\nonumber \\\\\n=& -g^4 tr(t^a\
+    \ t^b t^c t^d) \\frac{1}{24} ((g^{\\mu\\nu}g^{\\rho\\sigma} + g^{\\mu\\sigma}g^{\\\
+    nu\\rho})) \\\\\n=& -\\frac{1}{3} g^4(1+3\\alpha) [ (f^{ade}f^{bce} + f^{ace}f^{bde})g_{\\\
+    mu\\nu}g_{\\rho\\sigma} + \\nonumber \\\\\n& \\quad (f^{ade}f^{cbe} + f^{abe}f^{cde})g_{\\\
+    mu\\rho}g_{\\nu\\sigma} + (f^{abe}f^{dce} + f^{ace}f^{dbe})g_{\\mu\\sigma}g_{\\\
+    nu\\rho}] \\nonumber \\\\\n& \\quad \\int \\frac{d^4K}{(2\\pi)^4} \\frac{1}{K^4}\
+    \ \\\\\n=& -\\frac{1}{3} g^4(1+3\\alpha) [f^{abe}f^{cde}(g_{\\mu\\rho}g_{\\nu\\\
+    sigma} - g_{\\mu\\sigma}g_{\\nu\\rho}) + \\nonumber \\\\\n& \\quad f^{ace}f^{bde}(g_{\\\
+    mu\\nu}g_{\\rho\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho}) + f^{ade}f^{bce}(g_{\\mu\\\
+    nu}g_{\\rho\\sigma}-g_{\\mu\\rho}g_{\\nu\\sigma})] \\nonumber \\\\\n& \\quad \\\
+    int \\frac{d^4K}{(2\\pi)^4}\\frac{1}{K^4} \n\\end{align}\nThis computation has\
+    \ been done with $\\alpha \\to -\\alpha$\n\\begin{align}\n& -\\frac{1}{3}g^4(1-3\\\
+    alpha)[f^{abe}f^{cde}(g_{\\mu\\rho}g_{\\nu\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho})\
+    \ + \\nonumber \\\\\n& \\quad f^{ace}f^{bde}(g_{\\mu\\nu}g_{\\rho\\sigma}-g_{\\\
+    mu\\sigma}g_{\\nu\\rho}) + f^{ade}f^{bce}(g_{\\mu\\nu}g_{\\rho\\sigma}-g_{\\mu\\\
+    sigma}g_{\\nu\\rho})] \\nonumber \\\\\n& \\quad \\int \\frac{d^4K}{(2\\pi)^4}\\\
+    frac{1}{K^4} \n\\end{align}\n\\begin{align}\n& -g^4 tr(t^a t^b t^c t^d) \\int\
+    \ \\frac{d^4K}{(2\\pi)^4} \\frac{K_\\alpha K_\\beta K_\\gamma K_\\delta}{K^4}\
+    \ tr[\\gamma^\\mu \\gamma^\\alpha \\gamma^\\nu \\gamma^\\beta \\gamma^\\rho \\\
+    gamma^\\gamma \\gamma^\\sigma \\gamma^\\delta] + \\text{(color trace reversed)}\
+    \ \\nonumber \\\\\n=& -g^4 tr(t^a t^b t^c t^d) \\frac{1}{24} (tr[\\gamma^\\mu\
+    \ \\gamma^\\nu \\gamma^\\rho \\gamma^\\sigma \\gamma_\\alpha \\gamma_\\beta \\\
+    gamma_\\gamma \\gamma_\\delta] + tr[\\gamma^\\mu \\gamma^\\nu \\gamma^\\rho \\\
+    gamma^\\sigma \\gamma_\\alpha \\gamma_\\gamma \\gamma_\\beta \\gamma_\\delta]\
+    \ + \\nonumber \\\\\n& \\quad tr[\\gamma^\\mu \\gamma^\\nu \\gamma^\\rho \\gamma^\\\
+    sigma \\gamma_\\alpha \\gamma_\\gamma \\gamma_\\delta \\gamma_\\beta]) \\int \\\
+    frac{d^4K}{(2\\pi)^4} \\frac{1}{K^4} \\\\\n=& -\\frac{8}{3}g^4 tr(t^a t^b t^c\
+    \ t^d)(g^{\\mu\\nu}g^{\\rho\\sigma} - 2g^{\\sigma\\nu}g^{\\mu\\rho} + g^{\\mu\\\
+    sigma}g^{\\rho\\nu}) + \\nonumber \\\\\n& \\quad (\\mu,a \\leftrightarrow \\gamma,b)\
+    \ + (\\mu,a \\leftrightarrow \\sigma,d) + \\text{(color trace reversed)} \n\\\
+    end{align}\nThis has exactly the same structure as before so the result is\n\\\
+    begin{align}\n& -\\frac{4}{3}g^4[f^{abe}f^{cde}(g_{\\mu\\rho}g_{\\nu\\sigma}-g_{\\\
+    mu\\sigma}g_{\\nu\\rho}) + f^{ace}f^{bde}(g_{\\mu\\nu}g_{\\rho\\sigma}-g_{\\mu\\\
+    sigma}g_{\\nu\\rho}) + \\nonumber \\\\\n& \\quad f^{ade}f^{bce}(g_{\\mu\\nu}g_{\\\
+    rho\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho})] \\int \\frac{d^4K}{(2\\pi)^4} C_2(\\\
+    Gamma_F) \\\\\n&= 32 g^4 tr(t^a t^b t^c t^d) \\int \\frac{d^4K}{(2\\pi)^4} \\\
+    frac{K_\\mu K_\\nu K_\\rho K_\\sigma}{K^8} \\nonumber \\\\\n&= \\frac{4}{3} g^4\
+    \ tr(t^a t^b t^c t^d) (g^{\\mu\\nu}g^{\\rho\\sigma} + g^{\\mu\\rho}g^{\\nu\\sigma}\
+    \ + g^{\\mu\\sigma}g^{\\nu\\rho}) \\int \\frac{d^4K}{(2\\pi)^4} \\frac{1}{K^4}\
+    \ + \\text{permutations} \\\\\n&= -8g^4 tr(\\{t^a, t^b\\} t^c t^d) g^{\\mu\\nu}\
+    \ g^{\\rho\\sigma} \\int \\frac{d^4K}{(2\\pi)^4} \\frac{K_\\rho K_\\sigma}{K^6}\
+    \ \\nonumber \\\\\n&= -2g^4 tr(\\{t^a, t^b\\} t^c t^d) g^{\\mu\\nu} g^{\\rho\\\
+    sigma} \\int \\frac{d^4K}{(2\\pi)^4} \\frac{1}{K^4} + \\text{permutations} \\\\\
+    \n&= g^4 tr(\\{t^a,t^b\\}\\{t^c,t^d\\})g^{\\mu\\nu}g^{\\rho\\sigma} \\int\\frac{d^4K}{(2\\\
+    pi)^4}\\frac{1}{K^4} + \\text{permutations} \n\\end{align}\nSumming the last three\
+    \ graphs together and permuting the vertices we obtain:\n\\begin{align}\n& \\\
+    frac{1}{3}g^4 [g^{\\mu\\nu}g^{\\rho\\sigma} tr(-2t^a t^c t^b t^d + 4t^d t^c t^b\
+    \ t^a - 2t^b t^a t^c t^d) + \\nonumber \\\\\n& \\quad g^{\\rho\\nu}g^{\\mu\\sigma}\
+    \ tr(-2t^a t^c t^d t^b + 4t^d t^b t^c t^a - 2t^c t^b t^a t^d) + \\nonumber \\\\\
+    \n& \\quad g^{\\mu\\sigma}g^{\\nu\\rho} tr(-2t^a t^b t^d t^c + 4t^c t^b t^d t^a\
+    \ - 2t^b t^a t^d t^c) ] \\int \\frac{d^4K}{(2\\pi)^4}\\frac{1}{K^4} \n\\end{align}\n\
+    Now using\n\\begin{align}\ntr(-2t^a t^c t^b t^d + 4t^d t^c t^b t^a - 2t^b t^a\
+    \ t^c t^d) &= tr([a,d][b,c]+[a,c][b,d]) \\\\\n&= -C_2(G)[f^{ade}f^{bce} + f^{ace}f^{bde}]\
+    \ \n\\end{align}\nand similar relations we obtain:\n\\begin{align}\n& \\frac{1}{3}g^4[f^{abe}f^{cde}(g_{\\\
+    mu\\rho}g_{\\nu\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho}) + f^{ace}f^{bde}(g_{\\mu\\\
+    nu}g_{\\rho\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho}) \\nonumber \\\\\n& \\quad +\
+    \ f^{ade}f^{bce}(g_{\\mu\\nu}g_{\\rho\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho})] \\\
+    int \\frac{d^4K}{(2\\pi)^4} \\frac{1}{K^4} C_2(\\Gamma_B) \n\\end{align}\nAll\
+    \ the calculations sum to:\n\\begin{align}\n& g^4[f^{abe}f^{cde}(g_{\\mu\\rho}g_{\\\
+    nu\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho}) + f^{ace}f^{bde}(g_{\\mu\\nu}g_{\\rho\\\
+    sigma}-g_{\\mu\\sigma}g_{\\nu\\rho}) \\nonumber \\\\\n& \\quad + f^{ade}f^{bce}(g_{\\\
+    mu\\nu}g_{\\rho\\sigma}-g_{\\mu\\sigma}g_{\\nu\\rho})] \\int \\frac{d^4K}{(2\\\
+    pi)^4}\\frac{1}{K^4} \\nonumber \\\\\n& \\quad \\left\\{-\\frac{1}{3}(1-3\\alpha)C_2(G)\
+    \ - \\frac{4}{3}C_2(\\Gamma_F) - \\frac{1}{3}C_2(\\Gamma_B)\\right\\} \n\\end{align}\n\
+    \\begin{align}\n\\beta &= \\frac{1}{2} * \\frac{g^3}{(4\\pi)^2} \\nonumber \\\\\
+    \n& \\quad \\left\\{ \\left[-\\frac{1}{3}(1-3\\alpha) - (\\frac{4}{3}+\\frac{5}{2}\\\
+    alpha)\\right] C_2(G) + \\frac{4}{3}C_2(\\Gamma_F)(-1+2) + \\frac{1}{3}C_2(\\\
+    Gamma_B)(-1+2) \\right\\} \\\\\n&= \\left(-\\frac{11}{3}C_2(G) + \\frac{4}{3}C_2(\\\
+    Gamma_F) + \\frac{1}{3}C_2(\\Gamma_B)\\right) \\frac{g^3}{(4\\pi)^2} \n\\end{align}\n\
+    * $\\frac{1}{2}$ comes from the fact that the vertex appears at color $g^2$ 2\
+    \ from the log div. of $\\ln(\\frac{\\Lambda^2}{\\mu^2})$ with respect to $\\\
+    pi$."
+---
+problem:
+  type: problem
+  content: Calculate the renormalization of the Higgs field self-coupling due to its
+    interactions with gauge bosons, fermions, and itself. Find the algebraic condition
+    that insures the effective stays positive at large scales. Then put in numerical
+    values, and express your result as a condition on the Higgs mass.
+solution:
+  type: solution
+  content: 'A nice derivation on the theoretical lower bound on Higgs mass (note experimental
+    lower bound is $\mu_{H} \geq 120\text{GeV}$ by now) can be found in G. Attarelli,
+    G. Isideri, Phys. Lett. B337 p141 (''94) (available on the SPIRES). This uses
+    two-loop corrections and the result for ($\mu_t \approx 174\text{GeV}$) as a function
+    of cut-off scale $\Lambda$ is as follows:
+
+    % Figure 12.41: Lower Bound.
+
+    % The figure shows a plot of m_H (GeV) vs log(Lambda / 1 GeV).
+
+    % The y-axis ranges from 90 to 150. The x-axis ranges from 3 to 19.
+
+    % A dashed line shows a curve that starts at m_H=90 for log(Lambda)=3, rises and
+    asymptotes to about m_H=140.
+
+    % The region below this curve is labeled "NOT ALLOWED".
+
+
+    I will sketch the argument, see the paper for details.
+
+    Tree level Higgs potential is
+
+    \begin{equation}
+
+    V_{\text{tree}} = -\frac{\mu_0\phi^2}{2} + \frac{\lambda_0\phi^4}{24}
+
+    \end{equation}
+
+    where we fix $\lambda_0$ and $\mu_0$ at renormalization scale $\mu_0 = \mu = v
+    \approx 245\text{GeV}$ (at weak scale).
+
+    As $\mu \to \mu + \delta\mu$, Higgs field strength scales as $\phi \to \phi(1
+    + \delta\eta)$ and $\lambda \to \lambda + \delta\lambda$. Accordingly the renormalized
+    potential is
+
+    \begin{equation}
+
+    V_{\text{Ren}} = \frac{1}{24}\lambda(\mu)((1 + \delta\eta(\mu))\phi)^4
+
+    \end{equation}
+
+    For one-loop corrections we can write
+
+    \begin{equation}
+
+    1 + \delta\eta \simeq e^{\delta\eta} = \exp[-\int_{\mu_0}^{\log\frac{\Lambda}{\mu_0}}
+    \gamma[t'']dt'']
+
+    \end{equation}
+
+    where
+
+    \begin{equation}
+
+    \gamma = -\frac{\mu}{\delta\mu}\delta\eta = -\frac{\delta\eta}{\delta\log\frac{\mu}{\mu_0}}
+    = -\frac{\delta\eta}{\delta t''}
+
+    \end{equation}
+
+    These one-loop effects can turn the tail of $V_{\text{tree}}(\phi)$ in downwards
+    for large $\phi$ hence $V_{\text{ren}}(\phi)$ may become unstable.
+
+    % Figure 12.42: V_tree.
+
+    % The figure shows a typical Higgs potential shape (a "W" shape), symmetric around
+    phi=0.
+
+
+    From Equation 12.165 the condition for stability is clearly
+
+    \begin{equation}
+
+    \lambda(\mu) > 0
+
+    \end{equation}
+
+    Thus we shall look at how $\lambda$ evolves:
+
+    \begin{equation}
+
+    \dot{\lambda} = \beta(t) = \frac{\partial}{\partial \ln \mu}(-\delta_\lambda +
+    2\delta_\phi)
+
+    \end{equation}
+
+    where $\delta_\lambda$ is the counterterm for
+
+    % Figure 12.43: delta_lambda Equation 12.169.
+
+    % A diagram for phi^4 interaction (4-point vertex).
+
+    and $\delta_\phi$ is Higgs self-renormalization
+
+    % Figure 12.44: delta_phi Equation 12.169.
+
+    % A diagram for the Higgs propagator (2-point function).
+
+
+    We just draw contributing diagrams and give the result:
+
+    take only top quark.
+
+    $\to \delta_\lambda$ (from log-divergent pieces)
+
+    % Figure 12.45: Contributing Diagrams delta_lambda.
+
+    % A set of one-loop diagrams contributing to the 4-point function.
+
+    % They include a box diagram with top quarks, and various other topologies with
+    W, Z, and Higgs loops.
+
+    % Figure 12.46: Contributing Diagrams delta_phi.
+
+    % A set of one-loop diagrams contributing to the Higgs self-energy.
+
+    % They include a top quark loop and a W/Z boson loop.
+
+    take only top.
+
+    $\to \delta_\phi$ (from log-divergent pieces)
+
+    Therefore,( see above mentioned paper) for the result. Actually I will quote two-loop
+    result:
+
+    \begin{equation}
+
+    \frac{d\lambda}{dt} = \frac{1}{16\pi^2}[4\lambda^2 + 12\lambda g_t^2 - 36g_t^4
+    - 9\lambda g_2^2 - 3\lambda g_1^2 + \frac{9}{2}g_1^2 g_2^2 + \frac{27}{4}g_1^4]
+
+    \end{equation}
+
+    where $g_t$ is the Yukawa coupling for top quark, $g_1$ and $g_2$ are $U(1)_Y$
+    and $SU(2)_W$ coupling.
+
+    We have
+
+    \begin{align}
+
+    g_t(\mu_0) &= \frac{\sqrt{2}m_t}{V}(a + \delta_t(\mu_0)) \\
+
+    \lambda(\mu_0) &= \frac{3m_H^2}{V^2}(a + \delta_\lambda(\mu_0))
+
+    \end{align}
+
+    at $\mu_0 = \text{weak scale} \approx 100\text{GeV}$. (note that the funny factors
+    of 3 in $\frac{\lambda}{m_H^2}$ is coming from my unusual $V_{\text{tree}}$ definition).
+
+    Therefore, we see that $\lambda$ can become negative, hence $V_{Ren}$ unstable
+    for particular values of $\Lambda$, $m_t^2$ and $m_H^2$. To find the range of
+    $m_H^2$ for which $\lambda > 0$ fix $m_t^2 \approx 174 \text{GeV}$ (ignore QCD
+    corrections). Then solve the above equation for $\frac{d\lambda}{dt}$ numerically
+    and the one gets the range as shown in Figure 12.41.'

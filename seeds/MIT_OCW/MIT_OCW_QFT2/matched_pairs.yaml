@@ -1,0 +1,1079 @@
+problem:
+  type: problem
+  content: "One can in principle add the following term to a Yang-Mills Lagrangian\n\
+    \\begin{equation}\n    \\mathcal{L}_\\theta = \\frac{\\theta}{64\\pi^2} \\epsilon^{\\\
+    mu\\nu\\lambda\\rho} F_{\\mu\\nu}^a F_{\\lambda\\rho}^a\n\\end{equation}\n\\begin{enumerate}[(a)]\n\
+    \    \\item Discuss how this term transforms under $C, P, T$ transformations.\n\
+    \    \\item Express it explicitly as a total derivative.\n\\end{enumerate}\nNote:\
+    \ You will learn later (probably next term) that $\\theta$ is in fact an angle\
+    \ with period $2\\pi$, i.e. with the particular normalization in (5), the theory\
+    \ is equivalent for $\\theta + 2\\pi n$ for any integer $n$."
+solution:
+  type: solution
+  content: "The term $\\epsilon^{\\mu\\nu\\lambda\\rho} F_{\\mu\\nu}^a F_{\\lambda\\\
+    rho}^a$ is known as the Pontryagin density. It can be written as a total derivative.\
+    \ The relevant identity is\n\\begin{equation}\n    \\partial_\\mu K^\\mu = \\\
+    frac{1}{2} \\epsilon^{\\mu\\nu\\rho\\sigma} F^a_{\\mu\\nu} F^a_{\\rho\\sigma}\n\
+    \\end{equation}\nwhere $K^\\mu$ is the Chern-Simons current, given by\n\\begin{equation}\n\
+    \    K^\\mu = \\epsilon^{\\mu\\nu\\rho\\sigma} \\left( A^a_\\nu \\partial_\\rho\
+    \ A^a_\\sigma + \\frac{g}{3}f^{abc} A^a_\\nu A^b_\\rho A^c_\\sigma \\right)\n\\\
+    end{equation}\nThe term in the problem is $\\epsilon^{\\mu\\nu\\lambda\\rho} F_{\\\
+    mu\\nu}^a F_{\\lambda\\rho}^a = 2 \\left( \\frac{1}{2} \\epsilon^{\\mu\\nu\\lambda\\\
+    rho} F_{\\mu\\nu}^a F_{\\lambda\\rho}^a \\right)$.\nTherefore, we can write it\
+    \ as the divergence of a current $J^\\mu = 2 K^\\mu$:\n\\begin{equation}\n   \
+    \ \\epsilon^{\\mu\\nu\\lambda\\rho} F_{\\mu\\nu}^a F_{\\lambda\\rho}^a = \\partial_\\\
+    mu \\left[ 2 \\epsilon^{\\mu\\nu\\rho\\sigma} \\left( A^a_\\nu \\partial_\\rho\
+    \ A^a_\\sigma + \\frac{g}{3}f^{abc} A^a_\\nu A^b_\\rho A^c_\\sigma \\right) \\\
+    right]\n\\end{equation}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}[\\label = \\alph*]\n    \\item Derive the propagator\
+    \ for the gauge field in the axial gauge\n    \\begin{equation}\n        A_3^a\
+    \ = 0\\,.\n    \\end{equation}\n    \\item Consider the generalized gauge Coulomb\
+    \ gauge, i.e. taking the gauge fixing function as $f_a = \\vec{\\nabla}\\cdot\\\
+    vec{A}_a$. Derive the ghost Lagrangian and ghost propagator.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: '(a) Let us assume that $A_\mu$ and $\tilde{A}_\mu$ give the same field
+    strength tensor:
+
+    \begin{align}
+
+    F_{\mu\nu} &= \partial_\mu A_\nu - \partial_\nu A_\mu = \partial_\mu \tilde{A}_\nu
+    - \partial_\nu \tilde{A}_\mu \tag{51} \\
+
+    a_\mu &= \tilde{A}_\mu - A_\mu \tag{52} \\
+
+    0 &= \partial_\mu a_\nu - \partial_\nu a_\mu = f_{\mu\nu} \tag{53}
+
+    \end{align}
+
+    Hence $a_\mu$ is an abelian gauge field with $f_{\mu\nu}=0$. According to Problem
+    4. this implies that $a_\mu$ is gauge equivalent to zero. Hence there exists such
+    an $\alpha$:
+
+    \begin{align}
+
+    0 &= a_\mu + \frac{1}{e}\partial_\mu \alpha \tag{54} \\
+
+    -\frac{1}{e}\partial_\mu\alpha &= a_\mu = \tilde{A}_\mu - A_\mu \tag{55} \\
+
+    \tilde{A}_\mu &= A_\mu + \frac{1}{e}\partial_\mu \alpha, \tag{56}
+
+    \end{align}
+
+    which is the statement that $A_\mu$ and $\tilde{A}_\mu$ are gauge equivalent locally.
+
+
+    \bigskip
+
+    (b) Recall
+
+    \begin{equation}
+
+    F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu - ig[A_\mu, A_\nu] \tag{57}
+
+    \end{equation}
+
+    Suppose
+
+    \begin{equation}
+
+    A_x = -\frac{1}{2}y\frac{\sigma^3}{2} \quad \text{and} \quad A_y = \frac{1}{2}x\frac{\sigma^3}{2}
+    \tag{58}
+
+    \end{equation}
+
+    then the field strength derives only from the derivative terms and the only nonzero
+    components are
+
+    \begin{equation}
+
+    F_{xy} = g\frac{\sigma^3}{2} = -F_{yx} \tag{59}
+
+    \end{equation}
+
+    Note that this field configuration is essentially Abelian, i.e. the fields only
+    take values from a $U(1)$ subgroup of $SU(2)$.
+
+    Now suppose
+
+    \begin{equation}
+
+    A''_x = \frac{\sigma^1}{2} \quad \text{and} \quad A''_y = \frac{\sigma^2}{2} \tag{60}
+
+    \end{equation}
+
+    The field strength now derives entirely from the commutator terms and the only
+    nonzero components are
+
+    \begin{equation}
+
+    F''_{xy} = g\frac{\sigma^3}{2} = -F''_{yx} \tag{61}
+
+    \end{equation}
+
+    Hence the two field tensors are equal.
+
+
+    \bigskip
+
+    (c) Since the field strength has no coordinate dependence
+
+    \begin{equation}
+
+    D_\rho F_{\mu\nu} = \partial_\rho F_{\mu\nu} - ig[A_\rho, F_{\mu\nu}] \tag{62}
+
+    \end{equation}
+
+    will come only from the commutator terms. For the connection A this will be zero,
+    as both A and F are in the $\sigma^3$ direction
+
+    \begin{equation}
+
+    D_\rho F_{\mu\nu} = 0 \tag{63}
+
+    \end{equation}
+
+    However, the commutator terms are non-zero for $A''$. One finds
+
+    \begin{equation}
+
+    D_x F''_{xy} = -g^2 \frac{\sigma^2}{2} \quad \text{and} \quad D_y F''_{xy} = g^2
+    \frac{\sigma^1}{2} \tag{64}
+
+    \end{equation}
+
+    If there were a gauge transformation between A and A'' then this gauge transformation
+    would also take $(D_x F_{xy})''$ to $D_x F_{xy}$. However, this is not possible,
+    as the gauge transformation $U(D_x F_{xy})U^\dagger$ cannot map zero to a non-zero
+    object, because U is an invertible matrix. This is in contrast with the gauge
+    transformation properties of a gauge field, which involves an inhomogenuous term.'
+---
+problem:
+  type: problem
+  content: "For this you should recall that when\n\\begin{equation}\n    \\langle\
+    \ p_1, p_2, \\dots, p_n; + | p; - \\rangle = -i (2\\pi)^4 \\delta^4 \\left(p -\
+    \ \\sum p_f \\right) T(p_1 \\dots p_n; p), \\tag{1}\n\\end{equation}\nthe decay\
+    \ rate $\\Gamma$ is then given by\n\\begin{equation}\n    \\Gamma = \\left[ \\\
+    prod_{i=1}^n \\int \\frac{d^3 p_i}{(2\\pi)^3 2p_i^0} \\right] (2\\pi)^4 \\delta^4\
+    \ \\left(p - \\sum p_f \\right) |T(p_1 \\dots p_n; p)|^2 \\frac{1}{2p^0}. \\tag{2}\n\
+    \\end{equation}\nA factor of $1/k!$ must be added for each group of $k$ identical\
+    \ particles in the final state.\n\\begin{enumerate}\n    \\item[(a)] Consider\
+    \ two scalar fields $\\phi$ and $\\chi$ coupled by\n    \\[\n        \\mathcal{L}\
+    \ = -\\frac{1}{2}(\\partial_\\mu\\phi)^2 - \\frac{1}{2} M^2\\phi^2 - \\frac{1}{2}(\\\
+    partial_\\mu\\chi)^2 - \\frac{1}{2} m^2\\chi^2 + \\frac{1}{2} g\\phi\\chi^2.\n\
+    \    \\]\n    Assume $M > 2m$ and calculate the decay rate of $\\phi$-particles\
+    \ to the lowest order in $g$.\n\n    \\item[(b)] Let $A, B, C$ and $D$ be four\
+    \ real scalar fields with dynamics governed by the Lagrangian\n    \\[\n     \
+    \   \\mathcal{L} = -\\frac{1}{2}\\left( (\\partial_\\mu A)^2 + m_A^2 A^2 + (\\\
+    partial_\\mu B)^2 + (\\partial_\\mu C)^2 + (\\partial_\\mu D)^2 \\right) - g ABCD.\n\
+    \    \\]\n    Calculate the decay rate $\\Gamma$ of the $A$ particle to lowest\
+    \ order in the coupling constant $g$. How would the decay width change if the\
+    \ interaction $g ABCD$ is replaced by $gAB^3$?\n\\end{enumerate}"
+solution:
+  type: solution
+  content: '(a) The relevant transition amplitude is that between a state of one $\phi$-particle
+    at time minus infinity and a state with two $\chi$ particles at time plus infinity:
+
+    \begin{align}
+
+    \langle k_1, k_2; +\infty | p; -\infty \rangle &= \langle k_1 k_2 | T \exp\left(i
+    \int d^4x \frac{g}{2} \phi\chi^2 \right) | p_\phi \rangle \label{eq:6} \\
+
+    &= i \frac{g}{2} \langle k_1 k_2 | \int d^4x \, \phi\chi^2 | p_\phi \rangle +
+    O(g^2). \label{eq:7} \\
+
+    &= i \frac{g}{2} \int d^4x \, e^{i(-k_1-k_2+p) \cdot x} \langle k_1 k_2 | \phi(0)\chi(0)^2
+    | p_\phi \rangle \label{eq:8} \\
+
+    &= i \frac{g}{2} (2\pi)^4 \delta^4(k_1+k_2-p) \cdot 2, \label{eq:9}
+
+    \end{align}
+
+    where the factor of two comes from the two possible pairings with the external
+    particle. We thus read $T(k_1, k_2; p) = -g$. The decay rate is then given by
+
+    \begin{equation}
+
+    \Gamma = \frac{1}{2(2\pi)^2} \int \frac{d^3k_1}{2E(k_1)} \frac{d^3k_2}{2E(k_2)}
+    \delta^{(4)}(k_1+k_2-p) \frac{g^2}{2p^0}.
+
+    \end{equation}
+
+    The extra factor of $(1/2)$ in front of the integral is there because the two
+    outgoing particles are indistinguishable and we must not overcount final states.
+    Writing
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{16\pi^2 M} \frac{1}{2} \int \frac{d^3k_1}{2E(k_1)} \frac{d^3k_2}{2E(k_2)}
+    \delta^{(4)}(k_1+k_2-p) \, ,
+
+    \end{equation}
+
+    We choose a Lorentz frame where $p^\mu = (M, \vec{0})$. The decay rate becomes
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{16\pi^2 M} \int \frac{d^3\vec{k}}{2E(\vec{k})} \frac{d^3\vec{k}''}{2E''(\vec{k}'')}
+    \delta\left(E(\vec{k}) + E(\vec{k}'') - M\right) \delta^{(3)}(\vec{k}+\vec{k}'')\,.
+
+    \end{equation}
+
+    Integrating over $\vec{k}''$ we get
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{16\pi^2 M} \int \frac{d^3\vec{k}}{4(E(\vec{k}))^2} \delta(2E(\vec{k})-M)\,.
+
+    \end{equation}
+
+    The value $\bar{k}$ of $|\vec{k}|$ that solves the energy conservation equation
+    $M = 2E(\vec{k}) = 2\sqrt{m^2+\vec{k}^2}$ is
+
+    \begin{equation}
+
+    \bar{k} = \sqrt{\frac{M^2}{4} - m^2}
+
+    \end{equation}
+
+    Thus, changing variables in the delta function
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{16\pi^2 M} \int_0^\infty \frac{\pi k^2 dk}{E(k)^2} \frac{\delta(k-\bar{k})}{\frac{d}{dk}(2E(k))}
+    = \frac{g^2}{16\pi^2 M} \frac{\pi \bar{k}^2}{E(\bar{k})^2} \frac{E(\bar{k})}{2\bar{k}}
+    = \frac{g^2}{16\pi^2 M} \frac{\pi \bar{k}}{M} = \frac{g^2 \bar{k}}{16\pi M^2}
+    = \frac{g^2}{32\pi M} \sqrt{1 - \left(\frac{2m}{M}\right)^2}
+
+    \end{equation}
+
+    (b) This time the in/out matrix element is
+
+    \begin{align}
+
+    \langle k_B, k_C, k_D; +\infty | k_A; -\infty \rangle &= -ig \int dx \langle k_B
+    | B(x) | 0 \rangle \langle k_C | C(x) | 0 \rangle \langle k_D | D(x) | 0 \rangle
+    \langle 0 | A(x) | k_A \rangle \nonumber \\
+
+    &= -ig(2\pi)^4 \delta^{(4)}(k_B+k_C+k_D-k_A).
+
+    \end{align}
+
+    We thus read $T(k_B, k_C, k_D; k_A) = g$. Since the particles B, C, and D are
+    massless, their energies are equal to the magnitude of their momenta (say, $k_B=|\mathbf{k}_B|$).
+    Thus
+
+    \begin{align}
+
+    \Gamma &= \frac{1}{(2\pi)^5} \int \frac{d^3k_B}{2k_B} \frac{d^3k_C}{2k_C} \frac{d^3k_D}{2k_D}
+    \delta^{(4)}(k_B+k_C+k_D-k_A) \frac{g^2}{2m_A} \\
+
+    &= \frac{g^2}{(2\pi)^5} \frac{1}{16m_A} \int \frac{d^3k_B d^3k_C d^3k_D}{k_B k_C
+    k_D} \delta^{(3)}(\mathbf{k}_B+\mathbf{k}_C+\mathbf{k}_D) \delta(k_B+k_C+k_D-m_A)
+    \nonumber
+
+    \end{align}
+
+    where, in the last step, we defined $k=|\mathbf{k}|$ for particles B, C, and D.
+    We notice that the vector $\mathbf{k}_D$ is fully determined once we fix $\mathbf{k}_B$
+    and $\mathbf{k}_C$. Doing the integral over $\mathbf{k}_D$,
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{(2\pi)^5} \frac{1}{16m_A} \int \frac{d^3k_B d^3k_C}{k_B k_C
+    k_D} \delta(k_B+k_C+k_D-m_A), \quad \text{with } k_D=|\mathbf{k}_B+\mathbf{k}_C|.
+
+    \end{equation}
+
+    By rotational invariance we can imagine doing the $\mathbf{k}_C$ integral before
+    the $\mathbf{k}_B$ integral and orienting $\mathbf{k}_B$ along the z-axis. This
+    integral will eliminate all angular dependence, and then we can take $d^3k_B =
+    4\pi k_B^2 dk_B$. Thus
+
+    \begin{equation}
+
+    d^3k_B d^3k_C = 4\pi k_B^2 dk_B k_C^2 dk_C 2\pi \sin\theta d\theta.
+
+    \end{equation}
+
+    We now trade the variable of integration $\theta$ for the variable of integration
+    $k_D$. Note the ranges
+
+    \begin{equation}
+
+    \theta \in [0, \pi] \implies |k_B-k_C| \le k_D \le k_B+k_C.
+
+    \end{equation}
+
+    Since we are only changing one of the variables of integration it suffices to
+    use
+
+    \begin{equation}
+
+    dk_D = \left|\frac{dk_D}{d\theta}\right| d\theta.
+
+    \end{equation}
+
+    Since $k_D^2 = k_B^2+k_C^2+2k_B k_C \cos\theta$ we obtain
+
+    \begin{equation}
+
+    dk_D = \frac{k_B k_C}{k_D} \sin\theta d\theta.
+
+    \end{equation}
+
+    Back in (19)
+
+    \begin{equation}
+
+    d^3k_B d^3k_C = 8\pi^2 k_B dk_B k_C dk_C k_D dk_D,
+
+    \end{equation}
+
+    and the decay rate becomes
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2}{64\pi^3 m_A} \int_{|k_B-k_C| \le k_D \le k_B+k_C} dk_B dk_C
+    dk_D \delta(k_B+k_C+k_D-m_A).
+
+    \end{equation}
+
+    The region of integration is nicely represented using Cartesian $k_B, k_C,$ and
+    $k_D$ axes. Since all $k$ are positive, the delta function restricts the integration
+    to the portion of the plane $k_B+k_C+k_D=m_A$ that lies in the first quadrant;
+    an equilateral triangle with vertices on the axes, a distance $m_A$ from the origin.
+    The inequalities for $k_D$ restrict further the domain to the "barycentric triangle"
+    that is formed by joining the midpoints of the sides of the original triangle
+    (see Figure 1). Because of the delta function, the value of the integral in (24)
+    is given by the area of the projection of the barycentric triangle on any of the
+    three planes, ($k_B, k_C$), for example. The projection is shown in the figure,
+    and its area is $m_A^2/8$. We thus have
+
+    \begin{equation}
+
+    \Gamma = \frac{g^2 m_A}{512\pi^3}.
+
+    \end{equation}
+
+    If $\mathcal{L}_{\text{int}} = -gAB^3$, particle A decays into three B particles.
+    The contractions between the interaction and the final states give a combinatorial
+    factor of 3!, so
+
+    \begin{equation}
+
+    T(k_B, k_C, k_D; k_A) = g \quad \to \quad T(k_{B1}, k_{B2}, k_{B3}; k_A) = 6g.
+
+    \end{equation}
+
+    Since the three decay particles are indistinguishable we must include a symmetry
+    factor of $1/3! = 1/6$ in the phase space integral
+
+    \begin{equation}
+
+    \int dk_B dk_C dk_D \to \frac{1}{6} \int dk_{B_1} dk_{B_2} dk_{B_3}
+
+    \end{equation}
+
+    Since $T$ enters squared, we get $\Gamma_{\text{new}} = \frac{1}{6} \cdot 6^2
+    \cdot \Gamma = 6\Gamma$.'
+---
+problem:
+  type: problem
+  content: "Derive the spectral representation for the vacuum two-point function of\
+    \ a spinor field, i.e.\\ for\n\\begin{equation}\n    D_F(x,y) = \\langle 0|T\\\
+    psi(x)\\bar{\\psi}(y)|0\\rangle \\,. \\tag{5}\n\\end{equation}\nSeparate your\
+    \ spectral decomposition into the single-particle and multiple-particle part assuming\
+    \ that there is only a single set of single-particle states of mass $m$."
+solution:
+  type: solution
+  content: 'We can perform the same sorts of manipulations that led us to the scalar
+    Lehmann representation.
+
+    \begin{equation}
+
+    \langle 0 | T \psi(x) \bar{\psi}(y) | 0 \rangle = \theta(x^0-y^0)\langle 0 | \psi(x)\bar{\psi}(y)
+    | 0 \rangle - \theta(y^0-x^0)\langle 0 | \bar{\psi}(y)\psi(x) | 0 \rangle
+
+    \end{equation}
+
+    We insert a complete set of states, finding,
+
+    \begin{equation}
+
+    \langle 0 | \psi(x) \bar{\psi}(y) | 0 \rangle = \sum_{s, \lambda} \int \frac{d^3p}{(2\pi)^3}
+    \frac{e^{-ip_\lambda \cdot (x-y)}}{2E_{p\lambda}} \langle 0 | \psi(0) | \lambda_p,
+    s \rangle \langle \lambda_p, s | \bar{\psi}(0) | 0 \rangle
+
+    \end{equation}
+
+    where $s$ is the sum over all polarizations and $\lambda$ is the sum over single
+    and multi-particle states. We already made use of $\langle 0 | \psi(0) | 0 \rangle=0$.
+    We observe that by the Wigner-Eckart theorem the sum only gives contributions
+    if $s=\pm \frac{1}{2}$. Performing the same manipulations that we used in class
+    we get to:
+
+    \begin{align}
+
+    \langle 0 | \psi(x) \bar{\psi}(y) | 0 \rangle &= \int \frac{d^4p}{(2\pi)^4} e^{-ip(x-y)}
+    \sum_{s, \lambda} 2\pi \frac{\delta(p^0-p_\lambda^0)}{2E_p} \langle 0 | \psi(0)
+    | \lambda_p, s \rangle \langle \lambda_p, s | \bar{\psi}(0) | 0 \rangle \nonumber
+    \\
+
+    &= \int \frac{d^4p}{(2\pi)^4} e^{-ip(x-y)} \sum_{s, \lambda} 2\pi \delta(p^2+m_\lambda^2)
+    \langle 0 | \psi(0) | \lambda_p, s \rangle \langle \lambda_p, s | \bar{\psi}(0)
+    | 0 \rangle \\
+
+    &= \int \frac{d^4p}{(2\pi)^4} e^{-ip \cdot (x-y)} 2\pi\Theta(p^0) \rho(p) \nonumber
+    \\
+
+    2\pi\Theta(p^0)\rho(p) &= \sum_{s, \lambda} 2\pi\delta(p^2+m_\lambda^2) \langle
+    0 | \psi(0) | \lambda_p, s \rangle \langle \lambda_p, s | \bar{\psi}(0) | 0 \rangle
+
+    \end{align}
+
+    Notice that we were not able to conclude that $\rho=\rho(-p^2)$ yet. As in the
+    scalar case, we can insert operators that boost the ket back to $p=0$,
+
+    \begin{equation}
+
+    \langle 0 | \psi(0) | p,s \rangle = \langle 0 | U^\dagger U \psi(0) U^\dagger
+    U | \lambda_p, s \rangle = \langle 0 | S^{-1}\psi(0) | \lambda_0, s \rangle =
+    S^{-1} \langle 0 | \psi(0) | \lambda_0, s \rangle
+
+    \end{equation}
+
+    where $S$ belongs to the spin 1/2 representation of the Lorentz group and we have
+    used the Lorentz invariance of the vacuum. For simplicity we will assume $P,C,T$
+    invariance to conclude that:
+
+    \begin{align}
+
+    \sum_s \langle 0 | \psi(0) | \lambda_p, s \rangle \langle \lambda_p, s | \bar{\psi}(0)
+    | 0 \rangle &= \sum_s S^{-1} \langle 0 | \psi(0) | \lambda_0, s \rangle \langle
+    \lambda_0, s | \bar{\psi}(0) | 0 \rangle S = S^{-1} \left( D_S^{(\lambda)} + \left(D_V^{(\lambda)}\right)_\mu
+    \gamma^\mu \right) S \\
+
+    &= D_S^{(\lambda)} + \left(D_V^{(\lambda)}\right)_\mu \Lambda^\mu_{\ \nu} \gamma^\nu,
+
+    \end{align}
+
+    where we used well known properties of Dirac matrices (e.g. PS (3.29)), the subscripts
+    S and V denote scalar and vector respectively and we suppressed spinor indices.
+    We used the assumed discrete symmetries to eliminate terms like $(D_A^{(\lambda)})_{\mu\nu}\gamma^\mu\gamma^5$.
+    Furthermore we only have one four vector quantity, the four velocity of the boost,
+    so we can write:
+
+    \begin{equation}
+
+    \sum_s \langle 0 | \psi(0) | \lambda_p, s \rangle \langle \lambda_p, s | \bar{\psi}(0)
+    | 0 \rangle = D_S^{(\lambda)} + (D_V^{(\lambda)})_\mu \Lambda^\mu_{\ \nu} \gamma^\nu
+    = D_S^{(\lambda)} + \tilde{D}_V^{(\lambda)} p_\nu \gamma^\nu
+
+    \end{equation}
+
+    \begin{equation}
+
+    2\pi\Theta(p^0)\rho(p) = \sum_\lambda 2\pi\delta(p^2+m_\lambda^2)\left( D_S^{(\lambda)}
+    + \tilde{D}_V^{(\lambda)} \not p \right) = 2\pi\theta(p^0)\left[\rho_1(-p^2)+\rho_2(-p^2)\not
+    p\right]
+
+    \end{equation}
+
+    Because we know that there is only a single set of single particle states in our
+    theory for that case we get:
+
+    \begin{equation}
+
+    \langle 0 | \psi(0) | m, s \rangle = \sqrt{Z} u_s(0)
+
+    \end{equation}
+
+    \begin{equation}
+
+    \sum_s \langle 0 | \psi(0) | m, s \rangle \langle m, s | \bar{\psi}(0) | 0 \rangle
+    = \sum_s Z S^{-1} (u_s(0) \bar{u}_s(0)) S = Z \sum_s u_s(p)\bar{u}_s(p) = Z(\not
+    p - im),
+
+    \end{equation}
+
+    where we used the definition of single particle states. For $Z=1$ we get back
+    the free theory result. Now we are ready to determine the two point function.
+
+    \begin{align}
+
+    \langle 0 | \psi(x) \bar{\psi}(y) | 0 \rangle &= \int_0^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4}
+    e^{-ip\cdot(x-y)} 2\pi\Theta(p^0) [\rho_1(-p^2) + \rho_2(-p^2)\not p] \\
+
+    &= \int_0^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4} e^{-ip\cdot(x-y)} 2\pi\delta(p^2+\mu^2)\Theta(p^0)[\rho_1(\mu^2)+\rho_2(\mu^2)\not
+    p] \nonumber \\
+
+    &= \int_0^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4} e^{-ip\cdot(x-y)} 2\pi\delta(p^2+\mu^2)\Theta(p^0)
+    \left[ \frac{1}{2}\left(\rho_1+\frac{i\rho_1}{\mu}+ \rho_2 \right)(\not p - i\mu)
+    + \frac{1}{2}\left(\rho_1-\frac{i\rho_1}{\mu}+ \rho_2 \right)(\not p + i\mu) \right]
+    \nonumber
+
+    \end{align}
+
+    We observe the appearance of positive and negative mass fermion propagators. Hence
+    the Feynman propagator is:
+
+    \begin{align}
+
+    \langle 0 | T \psi(x) \bar{\psi}(y) | 0 \rangle &= \int_0^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4}
+    e^{-ip\cdot(x-y)} \left[\frac{1}{2}\left(\rho_1-\frac{i\rho_1}{\mu}+ \rho_2 \right)\frac{\not
+    p - i\mu}{p^2+\mu^2-i\epsilon} + \frac{1}{2}\left(\rho_1+\frac{i\rho_1}{\mu}+
+    \rho_2 \right)\frac{\not p + i\mu}{p^2+\mu^2-i\epsilon}\right] \\
+
+    &= \int_0^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4} e^{-ip\cdot(x-y)} \left[\frac{1}{2}\left(\frac{i\rho_1}{\mu}+\rho_2\right)\frac{1}{i\not
+    p - \mu + i\epsilon} + \frac{1}{2}\left(-\frac{i\rho_1}{\mu}+\rho_2\right)\frac{1}{i\not
+    p + \mu - i\epsilon}\right] \nonumber \\
+
+    &= \int d\mu^2 \left( \frac{d^4p}{(2\pi)^4} e^{-ip\cdot(x-y)} \frac{Z}{i\not p
+    -m+i\epsilon} \right) + \int_{\text{threshold}}^\infty d\mu^2 \int \frac{d^4p}{(2\pi)^4}
+    e^{-ip\cdot(x-y)} \left[\frac{\frac{1}{2}\left(\frac{i\sigma_1}{\mu}+\sigma_2\right)}{i\not
+    p - \mu + i\epsilon} + \frac{\frac{1}{2}\left(-\frac{i\sigma_1}{\mu}+\sigma_2\right)}{i\not
+    p + \mu - i\epsilon}\right] \nonumber
+
+    \end{align}
+
+    where $\sigma_i$ denote the spectral density of multi-particle states. The interpretation
+    of this result is straightforward, we get contributions to the spectral density
+    not only from particles, but also from ant-particles represented by the negative
+    mass propagator in our formula.
+
+
+    Using the canonical anticommutator of the spinor field one can prove that
+
+    \begin{equation}
+
+    1 = Z + \int_{4m^2}^\infty d\mu^2 \, \sigma_2(\mu^2) \,.
+
+    \end{equation}'
+---
+problem:
+  type: problem
+  content: "Consider two scalar fields $\\phi$ and $\\chi$ coupled by\n\\[\n    \\\
+    mathcal{L} = -\\frac{1}{2}(\\partial_\\mu\\phi)^2 - \\frac{1}{2} M^2\\phi^2 -\
+    \ \\frac{1}{2}(\\partial_\\mu\\chi)^2 - \\frac{1}{2} m^2\\chi^2 + \\frac{1}{2}\
+    \ g\\phi\\chi^2.\n\\]\nin $d=6$ spacetime dimensions and assume $M>2m$.\n\\begin{enumerate}\n\
+    \    \\item[(a)] Calculate the imaginary part of the one-loop self-energy $\\\
+    mathrm{Im}\\,\\Pi(p^2)$ for $\\phi$ by putting all the internal propagators on\
+    \ shell and verify this is the same as what we obtained in lecture by direct calculation.\
+    \ (This equivalence makes it manifest that the imaginary part is UV finite.)\n\
+    \    \\item[(b)] Evaluate the expression you got from (a) at $p^2 = -M^2$ and\
+    \ show that it is equal to $M\\Gamma$ with $\\Gamma$ the decay rate of $\\phi$.\n\
+    \    \\item[(c)] In lecture we determined the full expression for $\\Pi(p^2)$\
+    \ by requiring\n    \\begin{equation}\n        \\mathrm{Re}\\,\\Pi(-M^2) = 0,\
+    \ \\qquad \\mathrm{Re}\\,\\frac{d\\Pi}{dp^2}\\bigg|_{p^2=-M^2} = 0 \\tag{6}\n\
+    \    \\end{equation}\n    Show that near $p^2=-M^2$, the propagator for $\\phi$\
+    \ can be approximated as\n    \\begin{equation}\n        G_F(p^2) = \\frac{Z}{p^2\
+    \ + M^2 - iM\\Gamma} + \\cdots \\tag{7}\n    \\end{equation}\n    Find the explicit\
+    \ expression for $Z$ to order $\\mathcal{O}(g^2)$.\n    \\item[(d)] Consider the\
+    \ time dependence of the propagator\n    \\begin{equation}\n        G_F(t, \\\
+    vec{p}) = \\int \\frac{d\\omega}{2\\pi} e^{-i\\omega t} G_F(\\omega, \\vec{p})\
+    \ \\tag{8}\n    \\end{equation}\n    Evaluate (8) for $t > 0$ using (7) (you can\
+    \ ignore $\\cdots$ in (7)). Examine the expression you find in the regime $t \\\
+    gg \\frac{1}{M\\Gamma}$ and extract the lifetime of the particle. Compare the\
+    \ lifetime with $\\Gamma^{-1}$ and explain the difference.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: '(a) The self energy is read off from the diagram and is given by
+
+    \begin{equation}
+
+    i\Pi(p^2) = \frac{1}{2}(ig)^2 \int \frac{d^6 k_1}{(2\pi)^6} \frac{d^6 k_2}{(2\pi)^6}
+    (2\pi)^6 \delta(k_1+k_2-p) \frac{-i}{k_1^2+m^2-i\epsilon} \frac{-i}{k_2^2+m^2-i\epsilon}
+
+    \end{equation}
+
+    The Cutkosky rules tell us how to put the internal particles on shell-we replace
+    propagators with delta functions and appropriate factors of i and 2$\pi$ to get
+    the imaginary part
+
+    \begin{equation}
+
+    \text{Im}\,\Pi(p^2) = \frac{1}{2}g^2 \int \frac{d^6 k_1}{(2\pi)^6} \frac{d^6 k_2}{(2\pi)^6}
+    (2\pi)^6 \delta(k_1+k_2-p) (2\pi)\delta(k_1^2+m^2)\theta(k_1^0) (2\pi)\delta(k_2^2+m^2)\theta(k_2^0)
+
+    \end{equation}
+
+    The delta functions and the theta functions we recognize as being part of the
+    Lorentz invariant measure. We know that we can equivalently write things as
+
+    \begin{equation}
+
+    \text{Im}\,\Pi(p^2) = \frac{1}{4}g^2 \int \frac{d^5 k_1}{(2\pi)^5 2E_{k_1}} \frac{d^5
+    k_2}{(2\pi)^5 2E_{k_2}} (2\pi)^6 \delta(k_1+k_2-p)
+
+    \end{equation}
+
+    with the $\chi$ particles on shell. We can immediately do one of these integrals
+    using the delta function-we also boost to a frame where $\vec{p}=0$ (note, though,
+    that we have not yet put this particle on shell). Thus we get
+
+    \begin{equation}
+
+    \text{Im}\,\Pi(p^2) = \frac{g^2}{16(2\pi)^4} \int \frac{d^3 k_1}{m^2+k_1^2} \delta(E_\phi-2\sqrt{m^2+k_1^2})
+
+    \end{equation}
+
+    Now use $d^3k = 8\pi^2 k_1^2 dk_1$ and define $E=2\sqrt{m^2+k_1^2}$. We get
+
+    \begin{align}
+
+    \text{Im}\,\Pi(p^2) &= \frac{g^2\pi^2}{6(2\pi)^4} \int \frac{k_1^3 dE}{E} \delta(E_\phi-E)
+    \\
+
+    &= \frac{g^2\pi^2}{6(2\pi)^4} \left( \frac{m^2}{4} \frac{1}{E_\phi^2} \right)^{3/2}
+    E_\phi^2 \Theta(E_\phi-2m)
+
+    \end{align}
+
+    Since we know the result is Lorentz invariant, we can write this for a general
+    frame
+
+    \begin{equation}
+
+    \text{Im}\,\Pi(k^2) = \frac{\alpha\pi}{12}k^2 \left(1+\frac{4m^2}{k^2}\right)^{3/2}
+    \Theta(-k^2-2m)
+
+    \end{equation}
+
+    with $\alpha=g^2/(4\pi)^3$.
+
+
+    (c) We have
+
+    \begin{equation}
+
+    iG_F(p) = \frac{1}{p^2+M^2-\text{Re}\,\Pi(p^2)-i\text{Im}\,\Pi(p^2)-i\epsilon}
+
+    \end{equation}
+
+    We will Taylor expand the denominator around $p^2=-M^2$. For example
+
+    \begin{align}
+
+    \Pi(p^2) &= \Pi(-M^2) + (p^2+M^2)\frac{d\Pi(-M^2)}{dp^2} + \dots \\
+
+    &= i\text{Im}\,\Pi(-M^2)+i(p^2+M^2)\frac{d\text{Im}\,\Pi(-M^2)}{dp^2} + \dots
+
+    \end{align}
+
+    by the renormalization conditions. Then we have
+
+    \begin{align}
+
+    iG_F(p) &\approx \frac{1}{p^2+M^2-i\text{Im}\,\Pi(-M^2)-i(p^2+M^2)\frac{d\text{Im}\,\Pi(-M^2)}{dp^2}}
+    \\
+
+    &\approx \frac{1}{-iM\Gamma+(p^2+M^2)(1-i\frac{d\text{Im}\,\Pi(-M^2)}{dp^2})}
+    \\
+
+    &\approx \frac{1+i\frac{d\text{Im}\,\Pi(-M^2)}{dp^2}}{p^2+M^2-iM\Gamma} \approx
+    \frac{Z}{p^2+M^2-iM\Gamma} \\
+
+    Z &= 1+i\frac{d\text{Im}\,\Pi(-M^2)}{dp^2}
+
+    \end{align}
+
+    Here we have used the fact that, to $O(g^2)$ order $\Gamma=Z\Gamma$ and so this
+    step introduces higher order error. Taking the derivative of our result in (a),
+    we find
+
+    \begin{equation}
+
+    i\frac{d\text{Im}\,\Pi(p^2)}{dp^2}\bigg|_{p^2=-M^2} = \frac{i\alpha\pi}{12} \left(1-\frac{4m^2}{M^2}\right)^{1/2}\left(1+\frac{2m^2}{M^2}\right)
+
+    \end{equation}
+
+    Thus
+
+    \begin{equation}
+
+    Z=1+i\frac{d\text{Im}\,\Pi(-M^2)}{dp^2} = 1 - \frac{i\alpha\pi}{12} \left(1-\frac{4m^2}{M^2}\right)^{1/2}\left(1+\frac{2m^2}{M^2}\right)
+
+    \end{equation}
+
+
+    (d) We are interested in computing the integral
+
+    \begin{equation}
+
+    iG_F(t,\vec{p}) = \int \frac{d\omega}{2\pi} \frac{-Ze^{-i\omega t}}{(\omega-\omega_0)(\omega+\omega_0)}
+
+    \end{equation}
+
+    with
+
+    \begin{equation}
+
+    \omega_0 = \sqrt{\vec{p}^2+M^2-iM\Gamma} \approx \sqrt{\vec{p}^2+M^2}\left(1-i\frac{M\Gamma}{2(p^2+M^2)}\right)
+
+    \end{equation}
+
+    To evaluate the integral, we close the contour in the lower half plane and evaluate
+    the residue at $\omega = \omega_0$. (The clockwise contour introduces an extra
+    minus sign.) Thus
+
+    \begin{equation}
+
+    \int \frac{d\omega}{2\pi} \frac{-Ze^{-i\omega t}}{(\omega-\omega_0)(\omega+\omega_0)}
+    \approx \frac{iZe^{-i\omega_0 t}}{2\omega_0} \approx \left( \frac{iZe^{-iE_p t}}{2E_p}
+    \right) e^{-\frac{M\Gamma}{2E_p}t} \sim e^{-\frac{M\Gamma}{2E_p}t}
+
+    \end{equation}
+
+    with $E_p = \sqrt{\vec{p}^2+M^2}$ and $\sim$ indicating the asymptotic decay of
+    the modulus. For a particle at rest, $E_p=M$, and
+
+    \begin{equation}
+
+    G_F \sim e^{-\frac{\Gamma}{2}t}
+
+    \end{equation}
+
+    $G_F$ is intuitively interpreted as an amplitude:
+
+    \begin{equation}
+
+    G_F(t,\vec{p}) = \langle 0 | \phi(t,\vec{p})\phi(0,-\vec{p}) | 0 \rangle = \left(\frac{iZ}{2E_p}\right)
+    \text{``out''''}\langle\vec{p},t|\vec{p},t=0\rangle\text{``in''''}
+
+    \end{equation}
+
+    where the states cannot be interpreted as asymptotic states, as they decay. (We
+    normalized the states as $\langle \vec{p} | \vec{q} \rangle = (2\pi)^3 \delta^{(3)}(\vec{p}-\vec{q})$
+    to make the matching of the two formula more suggestive.) Nevertheless, it is
+    clear that $G_F$ gives the overlap between an initial $\phi$ particle and a $\phi$
+    particle $t$ times from there. The physical probability will be proportional to
+    the amplitude squared and will go like $\sim e^{-\Gamma t}$ which indeed looks
+    like a particle decaying with rate $\Gamma$. For a more general particle in motion,
+    since $E_p = \gamma M$, with $\gamma$ the Lorentz factor, we get the amplitude
+    squared goes like $e^{-\frac{\Gamma}{\gamma}t}$ which is the correct formula for
+    a decaying, Lorentz boosted particle.'
+---
+problem:
+  type: problem
+  content: "Consider the Lagrangian\n\\begin{equation}\n\\mathcal{L} = -\\frac{1}{4}F^{\\\
+    mu\\nu}F_{\\mu\\nu} - \\frac{1}{2}m^2 A_\\mu A^\\mu - i\\bar{\\psi}(\\gamma^\\\
+    mu\\partial_\\mu - m)\\psi - eA_\\mu\\bar{\\psi}\\gamma^\\mu\\psi\n\\end{equation}\n\
+    \\begin{enumerate}[label=(\\alph*)]\n    \\item Find the momentum space propagator\
+    \ $D_{\\mu\\nu}(k)$ for the massive vector field $A_\\mu$.\n    \\item Show that\
+    \ in the large momentum limit, $D_{\\mu\\nu}(k)$ scales as $O(1)$ (i.e. independent\
+    \ of $k$). Convince yourself that in terms of momentum counting, this implies\
+    \ that $A_\\mu$ has an effective dimension 2.\n    \\item By explicitly counting\
+    \ the power of momentum inside the integrand of the amplitude, derive an explicit\
+    \ expression for the superficial divergence $D$ for a diagram with $E_e$ external\
+    \ $\\psi$-lines, $E_A$ external $A_\\mu$-lines and $V$ vertices.\n    \\item Show\
+    \ that the expression obtained in (c) is the same as that derived in lecture by\
+    \ using dimensional analysis with the effective dimension of $A_\\mu$ now given\
+    \ by 2.\n    \\item Is this theory renormalizable? Why?\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(a)] In momentum space, the quadratic part\
+    \ of the Lagrangian containing the vector field is:\n    \\begin{equation}\n \
+    \   \\mathcal{L}_{2,A} = -\\frac{1}{2}A_\\mu [-(k^2-m^2)\\eta^{\\mu\\nu} + k^\\\
+    mu k^\\nu]A_\\nu\n    \\end{equation}\n    Inverting this quadratic form we get\
+    \ the Proca propagator:\n    \\begin{equation}\n    D_{\\nu\\sigma}(k) = \\frac{-i}{k^2\
+    \ - m^2 + i\\epsilon} \\left[\\eta_{\\nu\\sigma} - \\frac{k_\\nu k_\\sigma}{m^2}\\\
+    right]\n    \\end{equation}\n\n    \\item[(b)] The superficial degree of divergence\
+    \ is given by $D = dL - \\sum_{\\text{internal lines } i} p_i$, where $p_i$ is\
+    \ the power of momentum for propagator $i$. Here, the fermion propagator scales\
+    \ as $k^{-1}$ and the vector propagator scales as $k^0$. Thus, $D = dL - I_\\\
+    psi$, where $L$ is the number of loops and $I_\\psi$ is the number of internal\
+    \ fermion propagators. Using the topological identities $L = I_A + I_\\psi - V\
+    \ + 1$, $2I_A+E_A = V$, and $2I_\\psi+E_e=2V$, we can express $D$ in terms of\
+    \ the number of external lines ($E_e$, $E_A$) and vertices ($V$). The result is:\n\
+    \    \\begin{equation}\n    D = d + \\frac{d-2}{2}V - \\frac{d-1}{2}E_e - \\frac{d}{2}E_A\n\
+    \    \\end{equation}\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider a free scalar field theory in Euclidean signature with a Lagrangian\n\
+    \\begin{equation}\n\\mathcal{L} = \\frac{1}{2} \\int d^d x \\left( (\\partial\\\
+    phi)^2 + m^2\\phi^2 \\right)\n\\end{equation}\n\\begin{enumerate}[label=(\\alph*)]\n\
+    \    \\item Express the operator $\\phi^4(x)$ in terms of normal-ordered operators.\n\
+    \    \\item Denote $\\mathcal{O}(x) =: \\phi^4(x) :$ where $::$ stands for normal\
+    \ ordering. Consider the operator product expansion (as $|x| \\to 0$)\n    \\\
+    begin{equation}\n    \\mathcal{O}(x)\\mathcal{O}(0) = \\sum_n C_n(x) \\mathcal{O}_n(0)\n\
+    \    \\end{equation}\n    where $\\mathcal{O}_n$ denotes a complete set of normal-ordered\
+    \ local operators built from $\\phi$ and its derivatives. Work out the coefficients\
+    \ $C_n(x)$ for those $\\mathcal{O}_n$ who canonical dimension $\\Delta_n \\le\
+    \ 4$.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(a)] The operator product expansion is\
+    \ understood to be valid inside (time-ordered) correlation functions, hence in\
+    \ the free theory case one can apply Wick's theorem in these calculations. The\
+    \ direct application of Wick's theorem gives us\n    \\begin{equation}\n    \\\
+    phi^4(x) = \\lim_{\\epsilon\\to 0} \\phi(x+3\\epsilon)\\phi(x+\\epsilon)\\phi(x-\\\
+    epsilon)\\phi(x-3\\epsilon) =: \\phi^4(x) : + [3D(2\\epsilon)+2D(4\\epsilon)+D(6\\\
+    epsilon)]: \\phi^2(x) : + [D(2\\epsilon)^2 + D(2\\epsilon)D(6\\epsilon) + D(4\\\
+    epsilon)^2]I\n    \\end{equation}\n    where we took all possible contractions\
+    \ and could safely take the $\\epsilon\\to 0$ limit inside the normal-ordering\
+    \ symbol. Writing down the most singular pieces we get:\n    \\begin{equation}\n\
+    \    D(\\epsilon) = \\frac{1}{4\\pi^2\\epsilon^2} + \\dots\n    \\end{equation}\n\
+    \    \\begin{equation}\n    \\phi^4(x) = :\\phi^4(x): + \\frac{65}{288\\pi^2\\\
+    epsilon^2}:\\phi^2(x): + \\frac{169}{36864\\pi^4\\epsilon^4}I.\n    \\end{equation}\n\
+    \n    \\item[(b)] Wick's theorem for the product of normal ordered strings of\
+    \ operators states that we only have to take all possible contractions \\textit{between}\
+    \ the two strings. The pairings within the normal-ordered string itself was taken\
+    \ care of by the normal ordering.\\footnote{A little bit of digression is in order\
+    \ here: in perturbation theory on the level of the diagrammatic calculation normal\
+    \ ordering means that our regularization subtracted loops that only have one internal\
+    \ propagator In a two dimensional scalar theory this can be shown to sufficient\
+    \ to take care of all the divergences and thus is a valid renormalization procedure.}\
+    \ This algorithm gives us the following $\\Delta \\le 4$ terms in the OPE:\n \
+    \   \\begin{equation}\n    :\\phi^4(x)::\\phi^4(0): = 4!D(x)^4 I + \\frac{(4!)^2}{3!}D(x)^3\
+    \ :\\phi(x)\\phi(0): + \\frac{(4 \\cdot 3)^2}{2}D(x)^2 :\\phi^2(x)\\phi^2(0):\
+    \ + \\dots = \\sum_{k=1}^4 \\frac{(4!)^2}{(4-k)!(k!)^2} D(x)^{4-k} :\\phi^k(x)\\\
+    phi^k(0):\n    \\end{equation}\n    These kind of results can be elegantly derived\
+    \ from the following identity by the generating function method (Di Francesco:\
+    \ CFT (6.63)):\n    \\begin{equation}\n    :e^{\\alpha\\phi(x)}::e^{\\beta\\phi(0)}:\
+    \ = e^{\\alpha\\beta D(x)} :e^{\\alpha\\phi(x)+\\beta\\phi(0)}:\n    \\end{equation}\n\
+    \    This identity plays a rather important role in the study of vertex operators\
+    \ in the field of CFT and String Theory. Now what remains to be done is to replace\
+    \ $:\\phi^k(x)\\phi^k(0):$ with composite operators multiplied by x-dependent\
+    \ coefficients. This can be done by Taylor expanding for small xs. Keeping only\
+    \ $\\Delta \\le 4$ operators we get:\n    \\begin{equation}\n    :\\phi^4(x)::\\\
+    phi^4(0): = 4!D(x)^4 I + \\frac{(4!)^2}{3!}D(x)^3 \\left[:\\phi^2(0):+x^\\mu :\\\
+    partial_\\mu\\phi(0)\\phi(0):+\\frac{1}{2}x^\\mu x^\\nu :\\partial_\\mu\\partial_\\\
+    nu\\phi(0)\\phi(0): + \\dots\\right] + \\frac{(4\\cdot 3)^2}{2}D(x)^2 :\\phi^4(0):\
+    \ + \\dots\n    \\end{equation}\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[(a)] Consider a coupling constant $\\lambda$\
+    \ and a redefined coupling constant $\\bar{\\lambda}(\\lambda)$. Find the general\
+    \ transformation law for the beta function, namely the relation between $\\beta(\\\
+    lambda)$ and $\\bar{\\beta}(\\bar{\\lambda})$. If we think of $\\lambda$ as a\
+    \ coordinate we see that $\\beta$ transforms as a tensor. What kind of tensor?\n\
+    \n    \\item[(b)] Assume that\n    \\[\n        \\beta(\\lambda) = b_2\\lambda^2\
+    \ + b_3\\lambda^3 + b_4\\lambda^4 + \\cdots\n    \\]\n    and consider the perturbatively\
+    \ defined and invertible coupling constant redefinition:\n    \\[\n        \\\
+    bar{\\lambda}(\\lambda) = \\lambda + a_2\\lambda^2 + a_3\\lambda^3 + \\cdots.\n\
+    \    \\]\n    Calculate $\\bar{\\beta}(\\bar{\\lambda})$ writing it in the form\n\
+    \    \\[\n        \\bar{\\beta}(\\bar{\\lambda}) = \\bar{b}_2\\bar{\\lambda}^2\
+    \ + \\bar{b}_3\\bar{\\lambda}^3 + \\bar{b}_4\\bar{\\lambda}^4 + \\cdots.\n   \
+    \ \\]\n    Verify that:\n    \\begin{enumerate}\n        \\item[i.] $\\bar{b}_2\
+    \ = b_2$ and $\\bar{b}_3 = b_3$.\n        \\item[ii.] It is possible to make $\\\
+    bar{b}_4$ anything you want by such a coupling redefinition.\n        \\item[iii.]\
+    \ Let $\\lambda = \\lambda_F$ denote a fixed point. Show that $\\bar{\\lambda}\
+    \ = \\bar{\\lambda}_F$ is also a fixed point. How are the derivatives $\\beta'$\
+    \ and $\\bar{\\beta}'$ related at the fixed point?\n    \\end{enumerate}\n\n \
+    \   \\item[(c)] Consider the differential equation for a massless coupling $g$\n\
+    \    \\begin{equation}\n        \\mu\\frac{dg}{d\\mu} = -bg^2 - cg^3 - dg^4 -\
+    \ \\cdots\n    \\end{equation}\n    with $b,c,d$ numerical constants. Show that\
+    \ one can write a solution to the above equation in the form\n    \\begin{equation}\n\
+    \        \\ln\\frac{\\mu}{\\Lambda} = \\frac{1}{bg(\\mu)} + \\frac{c}{b^2}\\ln\
+    \ bg(\\mu) + \\mathcal{O}(g(\\mu))\n    \\end{equation}\n    where $\\Lambda$\
+    \ is an integration constant, which can be considered as a dynamically generated\
+    \ scale. Argue that $\\Lambda$ is renormalization group invariant.\n\n    \\item[(d)]\
+    \ More generally, show that in a renormalizable theory with a dimensionless coupling\
+    \ constant $g(\\mu)$ and no other dimensional parameter (like in a non-Abelian\
+    \ gauge theory), dimensional transmutation happens. That is, show that $g(\\mu)$\
+    \ can be written in a form\n    \\begin{equation}\n        g(\\mu) = f\\left(\\\
+    log\\left(\\frac{\\mu}{\\Lambda}\\right)\\right)\n    \\end{equation}\n    with\
+    \ $\\Lambda$ a universal scale and $f$ a function depending on the specific theory.\
+    \ (Inverting (2) gives a specific example of $f$.)\n\\end{enumerate}"
+solution:
+  type: solution
+  content: '\begin{enumerate}
+
+    \item[(a)] Changing the variable $\bar{\lambda} = \bar{\lambda}(\lambda)$ we can
+    find $\bar{\beta}$ using the chain rule of differentiation. We find,
+
+    \begin{equation}
+
+    \bar{\beta}(\bar{\lambda}) = \mu \frac{d\bar{\lambda}}{d\mu} = \mu \frac{d\bar{\lambda}}{d\lambda}
+    \frac{d\lambda}{d\mu} = \beta(\lambda) \frac{d\bar{\lambda}}{d\lambda}.
+
+    \end{equation}
+
+    Thus $\bar{\beta}$ transforms like a contravariant vector. For example, recall
+    how in GR $V^\mu$ transforms like
+
+    \begin{equation}
+
+    V''^\mu(x'') = V^\alpha(x) \frac{\partial x''^\mu}{\partial x^\alpha}.
+
+    \end{equation}
+
+
+    \item[(b)] Using (1), together with
+
+    \begin{equation}
+
+    \bar{\lambda} = \lambda + a_2\lambda^2 + a_3\lambda^3 + \dots
+
+    \end{equation}
+
+    and
+
+    \begin{equation}
+
+    \beta = b_2\lambda^2 + b_3\lambda^3 + b_4\lambda^4 + \dots,
+
+    \end{equation}
+
+    we find
+
+    \begin{equation}
+
+    \bar{\beta} = (b_2\lambda^2 + b_3\lambda^3 + b_4\lambda^4\dots)(1 + 2a_2\lambda
+    + 3a_3\lambda^2 + \dots),
+
+    \end{equation}
+
+    which to fourth order gives
+
+    \begin{equation}
+
+    \bar{\beta} = b_2\lambda^2 + (b_3 + 2a_2b_2)\lambda^3 + (b_4 + 2a_2b_3 + 3a_3b_2)\lambda^4
+    + O(\lambda^5).
+
+    \end{equation}
+
+    We must express $\bar{\beta}$ in terms of $\bar{\lambda}$. Instead of finding
+    $\lambda$ in terms of $\bar{\lambda}$ we calculate
+
+    \begin{align}
+
+    \bar{\lambda}^2 &= \lambda^2 + 2a_2\lambda^3 + (2a_3+a_2^2)\lambda^4 + \dots \notag
+    \\
+
+    \bar{\lambda}^3 &= \lambda^3 + 3a_2\lambda^4 + \dots \notag \\
+
+    \bar{\lambda}^4 &= \lambda^4.
+
+    \end{align}
+
+    and recalling that $\bar{\beta} = \bar{b}_2\bar{\lambda}^2 + \bar{b}_3\bar{\lambda}^3
+    + \bar{b}_4\bar{\lambda}^4 + \dots$ we find that
+
+    \begin{equation}
+
+    \bar{b}_2=b_2, \quad \bar{b}_3=b_3, \quad \text{and} \quad \bar{b}_4 = b_4-a_2b_3+a_3b_2-a_2^2b_2.
+
+    \end{equation}
+
+    Finally
+
+    \begin{equation}
+
+    \bar{\beta}''(\bar{\lambda}) = \frac{d}{d\bar{\lambda}}\left(\beta(\lambda)\frac{d\bar{\lambda}}{d\lambda}\right)
+    = \frac{d\lambda}{d\bar{\lambda}}\frac{d}{d\lambda}\left(\beta(\lambda)\frac{d\bar{\lambda}}{d\lambda}\right)
+    = \frac{d\lambda}{d\bar{\lambda}}\left(\beta''(\lambda)\frac{d\bar{\lambda}}{d\lambda}
+    + \beta(\lambda)\frac{d^2\bar{\lambda}}{d\lambda^2}\right) = \beta''(\lambda)
+    + \beta(\lambda) \frac{d\lambda}{d\bar{\lambda}}\frac{d^2\bar{\lambda}}{d\lambda^2}
+
+    \end{equation}
+
+    so that, at a fixed point
+
+    \begin{equation}
+
+    \bar{\beta}''(\bar{\lambda}_f) = \beta''(\lambda_f).
+
+    \end{equation}
+
+    \end{enumerate}'
+---
+problem:
+  type: problem
+  content: "Consider the field theory\n\\begin{equation}\n    \\mathcal{L} = -\\frac{1}{2}(\\\
+    partial\\phi)^2 - \\frac{1}{2}m_0^2\\phi^2 - \\frac{g_0}{6}\\phi^3\n\\end{equation}\n\
+    Calculate the $\\beta$-function associated with the coupling $g_0$. Use dimensional\
+    \ regularization and minimal subtraction. You will find that this is a theory\
+    \ where the coupling constant becomes weaker at higher energies \\textit{i.e.}\
+    \ it is an asymptotically free theory."
+solution:
+  type: solution
+  content: 'The Lagrangian is
+
+    \begin{equation}
+
+    \mathcal{L} = -\frac{1}{2}(\partial\phi_0)^2 - \frac{1}{2}m_0^2\phi_0^2 - \frac{g_0}{6}\phi_0^6
+    = -\frac{1}{2}(\partial\phi)^2 - \frac{1}{2}m^2\phi^2 - \frac{g\mu^\epsilon}{6}\phi^6
+    - \frac{A}{2}(\partial\phi)^2 - \frac{B}{2}m^2\phi^2 - \frac{g\mu^\epsilon C}{6}\phi^6
+
+    \end{equation}
+
+    with
+
+    \begin{equation}
+
+    g_0 = g\mu^\epsilon (1+A)^{-1/2}(1+C)
+
+    \end{equation}
+
+    Thus to calculate the beta function, we need only calculate A and C. This involves
+    calculating the momentum dependent part of the two point function, and the three
+    point function. Both of these relevant computations have been done in class and/or
+    in previous problem sets. In class, we found that the two point function was (with
+    $D = m^2 + x(1-x)p^2$)
+
+    \begin{align}
+
+    &= \frac{g^2\mu^{2\epsilon}}{2(4\pi)^2} \int_0^1 dx \frac{\Gamma(2-\frac{d}{2})}{D^{2-\frac{d}{2}}}
+    - Ap^2 - m^2 B \notag\\
+
+    &= \text{finite} - \epsilon \int_0^1 D dx - Ap^2 - Bm^2 \notag \\
+
+    &= \text{finite or p independent} - \frac{\alpha p^2}{6\epsilon} - Ap^2
+
+    \end{align}
+
+    thus $A = -\frac{\alpha}{6\epsilon}$ in a minimal subtraction scheme. Similarly,
+    in the previous homework we found that the three point function was
+
+    \begin{align}
+
+    &= g+gC + \text{finite} + g\frac{2\alpha}{\epsilon}\int dx dy dz\, \delta(x+y+z-1)
+    \notag \\
+
+    &= \text{finite} + g\left(C+\frac{\alpha}{\epsilon}\right)
+
+    \end{align}
+
+    thus in MS, $C=-\frac{\alpha}{\epsilon}$. To lowest non trivial order
+
+    \begin{equation}
+
+    g_0 = g\mu^\epsilon (1-\frac{\alpha}{6\epsilon})^{-\frac{1}{2}} (1-\frac{\alpha}{\epsilon})
+    = g\mu^\epsilon (1-\frac{3\alpha}{4\epsilon})
+
+    \end{equation}
+
+    Using the scale independence of bare quantities, we log differentiate each side,
+    which gives
+
+    \begin{equation}
+
+    0 = \beta_g\mu^\epsilon(1-\frac{9\alpha}{4\epsilon}) + g\epsilon\mu^\epsilon(1-\frac{3\alpha}{4\epsilon})
+
+    \end{equation}
+
+    Multiplying by $(1+\frac{9\alpha}{4\epsilon})$ and taking the $\epsilon \to 0$
+    limit gives
+
+    \begin{equation}
+
+    \beta_g = \frac{3}{4}\alpha g
+
+    \end{equation}
+
+    Using the chain rule and the definition of $\alpha$ gives
+
+    \begin{equation}
+
+    \beta_\alpha = -\frac{3}{2}\alpha^2 + O(\alpha^3)
+
+    \end{equation}
+
+    which implies that the theory is asymptotically free.'

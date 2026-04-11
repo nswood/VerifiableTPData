@@ -1,0 +1,14 @@
+# Test config for adapted problems from MIT OCW seed data
+# Uses the semi-synthetic generator to adapt seed problem/solution pairs
+
+dataset_name: mit_ocw_adapted_test
+system_prompt_path: prompts/QFT_seed_processing/semi-synth-qft.txt
+topic_name: QFT_adapted_test
+seed_data_path: seeds/MIT_OCW
+data_type: adapted_data
+num_problems: 4
+num_workers: 3
+model: gemini-2.5-flash
+verbose: false
+seed: 42
+parse_code_subsections: false

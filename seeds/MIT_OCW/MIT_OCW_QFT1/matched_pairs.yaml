@@ -1,0 +1,984 @@
+problem:
+  type: problem
+  content: "Consider the Dirac action with $m=0$.\n\\begin{enumerate}[label = \\alph*]\n\
+    \    \\item Show that the action is invariant under transformations\n    \\begin{equation}\n\
+    \        \\psi \\to e^{i\\alpha\\gamma^5}\\psi\\,. \\tag{12}\n    \\end{equation}\n\
+    \    \\item Construct the Noether current for the above symmetry.\n    \\item\
+    \ Find how the mass term $m\\bar{\\psi}\\psi$ transforms under (12). Is it invariant?\n\
+    \\end{enumerate}"
+solution:
+  type: solution
+  content: "Consider the Dirac action with $m = 0$.\n\\begin{enumerate}\n    \\item[(a)]\
+    \ Under an infinitesimal chiral rotation, $\\delta\\psi = i\\alpha\\gamma^5\\\
+    psi$. Noting that the Lagrangian is invariant, the Noether current is thus:\n\
+    \    \\[\n        j_5^\\mu = \\frac{\\partial\\mathcal{L}}{\\partial(\\partial_\\\
+    mu\\psi)}\\delta\\psi = \\bar{\\psi}\\gamma^\\mu\\gamma^5\\psi\n    \\]\n\n  \
+    \  \\item[(b)] The mass term transforms as:\n    \\[\n        m\\bar{\\psi}\\\
+    psi \\to m\\bar{\\psi}'\\psi' = m\\bar{\\psi}e^{i\\alpha\\gamma_5}e^{i\\alpha\\\
+    gamma_5}\\psi = m\\bar{\\psi} e^{2i\\alpha\\gamma^5}\\psi\n    \\]\n    Since\
+    \ $\\alpha$ is arbitrary, this is not left invariant under the chiral rotation.\n\
+    \\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider the theory of Majorana fermions discussed in Pset 9, written\
+    \ in terms of a two-component complex spinor $\\psi_L$\n\\begin{equation}\n  \
+    \  \\mathcal{L}_L = i\\psi_L^\\dagger \\bar{\\sigma}^\\mu \\partial_\\mu \\psi_L\
+    \ - \\frac{m}{2}(\\psi_L^T \\sigma^2 \\psi_L + \\psi_L^\\dagger \\sigma^2 \\psi_L^*)\\\
+    ,. \\tag{13}\n\\end{equation}\nwhere $\\psi_L^T$ denotes the transpose of $\\\
+    psi_L$, and $\\bar{\\sigma}^\\mu = (1, \\vec{\\sigma})$.\n\\begin{enumerate}[label\
+    \ = \\alph*]\n    \\item Write down the equal time canonical quantization relations.\n\
+    \    \\item Write down the classical equations of motion. In momentum space a\
+    \ general solution can be written as\n    \\begin{equation}\n        \\psi_L(x)\
+    \ = u(p)e^{ip\\cdot x} + v(p)e^{-ip\\cdot x}\\,. \\tag{14}\n    \\end{equation}\n\
+    \    Using the above notations, write down a complete basis of solutions in the\
+    \ rest frame (i.e. $\\vec{p}=0$).\n    \\item Verify the following expressions\
+    \ give a complete basis of solutions for general $p$ (below $\\bar{\\sigma} =\
+    \ (1, -\\vec{\\sigma})$)\n    \\begin{align}\n        u_s(p) &= \\sqrt{-p\\cdot\\\
+    bar{\\sigma}}\\zeta_s \\tag{15} \\\\\n        v_s(p) &= -\\sqrt{-p\\cdot\\sigma}\\\
+    sigma^2\\zeta_s^* \\tag{16}\n    \\end{align}\n    where $\\zeta_s, s = \\pm$\
+    \ are respectively eigenvectors of $\\sigma^3$ with eigenvalues $\\pm$.\n    \\\
+    item Write down the mode expansion for quantum operator $\\psi_L$.\n    \\item\
+    \ Define the vacuum and construct the single-particle states (properly normalized).\
+    \ Discuss the differences between the particles in this theory and those of the\
+    \ Dirac theory.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "Consider the theory of Majorana fermions discussed in Problem Set 9, written\
+    \ in terms of a 2-component complex spinor $\\psi_L$\n\\[\n    \\mathcal{L}_L\
+    \ = i\\psi_L^\\dagger \\sigma^\\mu \\partial_\\mu \\psi_L - \\frac{m}{2}(\\psi_L^T\\\
+    sigma^2\\psi_L + \\psi_L^\\dagger\\sigma^{2*}\\psi_L^*)\n\\]\nwhere $T$ denotes\
+    \ the transpose of $\\psi$, and $\\sigma^\\mu = (1, \\vec{\\sigma})$.\n\\begin{enumerate}\n\
+    \    \\item[(a)] Write down the equal time canonical quantization relations.\n\
+    \    \n    For the Majorana Lagrangian above, the conjugate momentum to $\\psi_L$\
+    \ is\n    \\[\n        \\pi_L = i\\psi_L^\\dagger\n    \\]\n    Therefore, the\
+    \ canonical anticommutation relations are\n    \\[\n        \\{\\psi_{La}(t, \\\
+    mathbf{x}), \\psi_{Lb}(t, \\mathbf{x}')\\} = \\{\\psi_{La}^\\dagger(t, \\mathbf{x}),\
+    \ \\psi_{Lb}^\\dagger(t, \\mathbf{x}')\\} = 0, \\quad \\{\\psi_{La}(t, \\mathbf{x}),\
+    \ \\psi_{Lb}^\\dagger(t, \\mathbf{x}')\\} = \\delta_{ab}\\delta^{(3)}(\\mathbf{x}\
+    \ - \\mathbf{x}')\n    \\]\n    \n    \\item[(b)] Write down the equations of\
+    \ motion. In momentum space a general solution can be written as\n    \\[\n  \
+    \      \\psi_L(x) = u(p)e^{ip\\cdot x} + v(p)e^{-ip\\cdot x}\n    \\]\n    Using\
+    \ this notation, write down a complete basis of solutions in the rest frame $p=0$.\n\
+    \    \n    The equations of motion are given by:\n    \\[\n        i\\sigma^\\\
+    mu\\partial_\\mu\\psi_L - m\\sigma^2\\psi_L^* = 0, \\quad -i\\partial_\\mu\\psi_L^T\\\
+    sigma^\\mu - m\\psi_L^\\dagger\\sigma^2 = 0\n    \\]\n    Using the ansatz $\\\
+    psi_L(x) = u(p)e^{ip\\cdot x} + v(p)e^{-ip\\cdot x}$, we obtain the momentum space\
+    \ equation\n    \\[\n        [-p_\\mu\\sigma^\\mu u_L(p) - m\\sigma^2 v_L^*(p)]e^{ip\\\
+    cdot x} + [p_\\mu\\sigma^\\mu v_L(p) - m\\sigma^2 u_L^*(p)]e^{-ip\\cdot x} = 0\n\
+    \    \\]\n    Both positive and negative frequency parts must vanish independently,\
+    \ which gives\n    \\[\n        p_\\mu\\sigma^\\mu u_L(p) + m\\sigma^2 v_L^*(p)\
+    \ = 0, \\quad p_\\mu\\sigma^\\mu v_L(p) - m\\sigma^2 u_L^*(p) = 0\n    \\]\n \
+    \   Note that these are not independent: the first equation implies the second,\
+    \ as\n    \\[\n        p_\\mu\\sigma^{\\mu*}v_L^* = -\\frac{1}{m}(p\\cdot\\sigma)\\\
+    sigma^2(p\\cdot\\sigma)^* u_L^* = -\\frac{1}{m}(p\\cdot\\sigma)(p\\cdot\\bar{\\\
+    sigma})\\sigma^{2*}u_L^* = -m\\sigma^{2*}u_L^*\n    \\]\n    where in the first\
+    \ equality we use the complex conjugate form of $p_\\mu\\sigma^\\mu u_L(p) + m\\\
+    sigma^2 v_L^*(p) = 0$, in the second we use from Problem Set 9 that $\\sigma^2\\\
+    sigma^*\\sigma^2 = -\\bar{\\sigma}$, and in the last equality we use that $(p\\\
+    cdot\\sigma)(p\\cdot\\bar{\\sigma}) = m^2$.\n    \n    Thus, without loss of generality,\
+    \ we look for solutions to $p_\\mu\\sigma^\\mu u_L(p) + m\\sigma^2 v_L^*(p) =\
+    \ 0$. In the rest frame, this becomes\n    \\[\n        u_L(0) = \\sigma_2 v_L(0)^*\
+    \ \\implies v_L(0) = -\\sigma_2 u_L(0)^*\n    \\]\n    This relates $u_L$ to $v_L$.\
+    \ We still have the freedom to specify the polarization $u_L(0)$. First, consider\
+    \ the normalized eigenvectors $\\xi_{\\{s\\in\\pm\\}}$ of $\\sigma^3$. That is,\
+    \ $\\sigma^3\\xi_\\pm = \\pm\\xi_\\pm$, and $\\xi_r^\\dagger\\xi_s = \\delta_{rs}$.\
+    \ We let this be our solution space of $u_L(0)$, and set:\n    \\[\n        u_{Ls}(0)\
+    \ = \\sqrt{m}\\xi_s, \\quad v_{Ls}(0) = -\\sqrt{m}\\sigma_2\\xi_s, \\quad \\xi_+\
+    \ = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix}, \\quad \\xi_- = \\begin{pmatrix}\
+    \ 0 \\\\ 1 \\end{pmatrix}\n    \\]\n    These are normalized so that $u_{Lr}^\\\
+    dagger(0) u_{Ls}(0) = m\\delta_{rs}$.\n    \n    \\item[(d)] Write down the mode\
+    \ expansion for the quantum operator $\\psi_L$.\n    \n    The mode expansion\
+    \ is given by\n    \\begin{align*}\n        \\psi_L(x) &= \\int \\frac{d^3k}{(2\\\
+    pi)^3}\\frac{1}{\\sqrt{2\\omega_k}} \\sum_s (a_k^{(s)} u_{Ls}(k)e^{-ik\\cdot x}\
+    \ + a_k^{\\dagger(s)} v_{Ls}(k)e^{ik\\cdot x}) \\\\\n        \\psi_L^\\dagger(x)\
+    \ &= \\int \\frac{d^3k}{(2\\pi)^3}\\frac{1}{\\sqrt{2\\omega_k}} \\sum_s (a_k^{\\\
+    dagger(s)} u_{Ls}^\\dagger(k)e^{ik\\cdot x} + a_k^{(s)} v_{Ls}^\\dagger(k)e^{-ik\\\
+    cdot x})\n    \\end{align*}\n    where the relation between $u_L(p)$ and $v_L(p)$\
+    \ is given in part (b).\n    \n    \\item[(e)] Define the vacuum and construct\
+    \ the single particle states, with proper normalization.\n    \n    The vacuum\
+    \ is defined by the state annihilated by all the $a_k^{(s)}$'s, i.e. $a_k^{(s)}|0\\\
+    rangle=0$. The single particle states are defined as usual (with Lorentz invariant\
+    \ inner product):\n    \\[\n        |k, s\\rangle = \\sqrt{2\\omega_k}a_k^{\\\
+    dagger(s)}|0\\rangle\n    \\]\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider the Yukawa theory discussed in lecture\n\\begin{equation}\n \
+    \   \\mathcal{L} = -\\frac{1}{2}(\\partial\\phi)^2 - \\frac{1}{2}m^2\\phi^2 -\
+    \ \\bar{\\psi}(i\\not\\!\\partial - m)\\psi - g\\phi\\bar{\\psi}\\psi\\,. \\tag{19}\n\
+    \\end{equation}\nDenote the propagator of a $\\phi$ particle by a dashed line\
+    \ and that of $\\psi$ by a solid line (with arrow). We will call $p$ the particle\
+    \ excitation of $\\psi$ and $\\bar{p}$ and the anti-particle excitation of $\\\
+    psi$.\n\\begin{enumerate}[label = \\alph*]\n    \\item Consider the process\n\
+    \    \\begin{equation}\n        p+\\bar{p} \\to p+\\bar{p} \\tag{20}\n    \\end{equation}\n\
+    \    Draw the lowest order Feynman diagrams and write down the corresponding scattering\
+    \ amplitude. Take the initial and final states have momenta and ploarizations\
+    \ $(p_1, s_1), (p_2, s_2)$ and $(p'_1, s'_1), (p'_2, s'_2)$ respectively.\n  \
+    \  \\item Consider the process\n    \\begin{equation}\n        p+\\bar{p} \\to\
+    \ \\phi+\\phi \\tag{21}\n    \\end{equation}\n    Draw the lowest order Feynman\
+    \ diagrams and write down the corresponding scattering amplitude. Take the initial\
+    \ and final states have momenta and ploarizations $(p_1, s_1), (p_2, s_2)$ and\
+    \ $p'_1, p'_2$ respectively.\n    \\item Consider the process\n    \\begin{equation}\n\
+    \        p+\\phi \\to p+\\phi \\tag{22}\n    \\end{equation}\n    Draw the lowest\
+    \ order Feynman diagrams and write down the corresponding scattering amplitude.\
+    \ Take the initial and final states have momenta and ploarizations $(p_1, s_1),\
+    \ p_2$ and $(p'_1, s'_1), p'_2$ respectively.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "Consider the Yukawa theory discussed in lecture,\n\\[\n    \\mathcal{L}\
+    \ = \\frac{1}{2}(\\partial\\phi)^2 - \\frac{1}{2}m^2\\phi^2 + \\bar{\\psi}(i\\\
+    not\\!\\partial - m)\\psi + g\\phi\\bar{\\psi}\\psi\n\\]\nDenote the propagator\
+    \ of a $\\phi$ particle by a dashed line, and that of $\\psi$ by a solid line\
+    \ (with arrow). We will call $p$ the particle excitation of $\\psi$, and $\\bar{p}$\
+    \ the antiparticle excitation of $\\bar{\\psi}$.\n\n\\begin{enumerate}\n    \\\
+    item[(a)] Consider the process\n    \\[\n        \\bar{p} + \\bar{p} \\to \\bar{p}\
+    \ + \\bar{p}\n    \\]\n    Write down the lowest order scattering amplitude. Take\
+    \ the initial and final states to have momenta and polarizations $(p_1, s_1),\
+    \ (p_2, s_2)$ and $(p'_1, s'_1), (p'_2, s'_2)$ respectively.\n    \n    We identify\
+    \ the Mandelstam variables $s = (p_1+p_2)^2$, $t=(p_1-p'_1)^2$, and $u=(p_1-p'_2)^2$.\
+    \ There is a t-channel and a u-channel diagram. Using the Feynman rules, the amplitude\
+    \ is:\n    \\begin{align*}\n        \\mathcal{M} &= ig^2 \\left[ \\frac{(\\bar{v}_{s_1'}(p_1')v_{s_1}(p_1))(\\\
+    bar{v}_{s_2'}(p_2')v_{s_2}(p_2))}{(p_1-p_1')^2 - m_\\phi^2 + i\\epsilon} - \\\
+    frac{(\\bar{v}_{s_2'}(p_2')v_{s_1}(p_1))(\\bar{v}_{s_1'}(p_1')v_{s_2}(p_2))}{(p_1-p_2')^2\
+    \ - m_\\phi^2 + i\\epsilon} \\right] \\\\\n        &= -ig^2 \\left[ \\frac{(\\\
+    bar{v}_{s_1'}(p_1')v_{s_1}(p_1))(\\bar{v}_{s_2'}(p_2')v_{s_2}(p_2))}{t - m_\\\
+    phi^2 + i\\epsilon} - \\frac{(\\bar{v}_{s_2'}(p_2')v_{s_1}(p_1))(\\bar{v}_{s_1'}(p_1')v_{s_2}(p_2))}{u\
+    \ - m_\\phi^2 + i\\epsilon} \\right]\n    \\end{align*}\n    \n    \\item[(b)]\
+    \ Consider the process\n    \\[\n        p + \\bar{p} \\to \\phi + \\phi\n   \
+    \ \\]\n    Write down the lowest order scattering amplitude. Take the initial\
+    \ and final states to have momenta and polarizations $(p_1,s_1), (p_2,s_2)$ and\
+    \ $p'_1, p'_2$.\n    \n    There is a t-channel and a u-channel diagram. Using\
+    \ the Feynman rules, the amplitude is:\n    \\[\n        \\mathcal{M} = g^2 \\\
+    left[ \\frac{\\bar{v}_{s_2}(p_2)(m_p + i(\\not\\!p_1 - \\not\\!p'_1))u_{s_1}(p_1)}{t\
+    \ - m_\\psi^2 + i\\epsilon} + \\frac{\\bar{v}_{s_2}(p_2)(m_p + i(\\not\\!p_1 -\
+    \ \\not\\!p'_2))u_{s_1}(p_1)}{u - m_\\psi^2 + i\\epsilon} \\right]\n    \\]\n\
+    \    We have made use of the expression for the fermion propagator,\n    \\[\n\
+    \        \\frac{i}{i\\not\\!k - m+i\\epsilon} = \\frac{m+\\not\\!k}{k^2+m^2-i\\\
+    epsilon}.\n    \\]\n\n    \\item[(c)] Consider the process\n    \\[\n        p\
+    \ + \\phi \\to p + \\phi\n    \\]\n    Write down the lowest order scattering\
+    \ amplitude. Take the initial and final states to have momenta and polarizations\
+    \ $(p_1,s_1), p_2$ and $(p'_1,s'_1), p'_2$.\n    \n    There is an s-channel and\
+    \ a u-channel diagram. Using the Feynman rules, the amplitude is:\n    \\[\n \
+    \       \\mathcal{M} = g^2\\left[ \\frac{\\bar{u}_{s'_1}(p'_1)(m_p + i(\\not\\\
+    !p_1+\\not\\!p_2))u_{s_1}(p_1)}{s - m_\\psi^2 + i\\epsilon} + \\frac{\\bar{u}_{s'_1}(p'_1)(m_p\
+    \ + i(\\not\\!p_1-\\not\\!p'_2))u_{s_1}(p_1)}{u - m_\\psi^2 + i\\epsilon} \\right]\n\
+    \    \\]\n    \n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Until now, we have disregarded the vacuum's zero-point energy as an unobservable\
+    \ (infinite) shift in the energy scale. However, as Casimir demonstrated in 1948,\
+    \ \\textit{differences} in vacuum zero-point energies are, however, observable.\
+    \ This phenomenon is known as the Casimir effect. A simplest example of the Casimir\
+    \ effect is a small attractive force between two close parallel conducting plates,\
+    \ due to quantum vacuum fluctuations of the electromagnetic field. The force is\
+    \ caused by change in vacuum energy of the electromagnetic field that results\
+    \ from the boundary conditions imposed by the plates.\n\nIn this problem we will\
+    \ explore the Casimir effect. For technical simplicity, we will consider a toy\
+    \ version of the effect, which captures all the essential physics. As we have\
+    \ learned, after quantization the electromagnetic field has the same number of\
+    \ degrees of freedom as two massless scalar fields. So we will consider a massless\
+    \ scalar field instead of the Maxwell theory. Also instead of three spatial dimensions\
+    \ we consider one spatial dimension.\n\nConsider a free, massless, real scalar\
+    \ field $\\phi$ in one spatial dimension, i.e.\n\\begin{equation}\nS = -\\frac{1}{2}\
+    \ \\int dxdt \\ \\partial_\\mu\\phi \\partial^\\mu\\phi \\,. \\tag{24}\n\\end{equation}\n\
+    The vacuum of the system has an infinite zero-point energy. Let us denote it by\
+    \ $E_0$. Now imagine we put two ``plates'' at $x = 0$ and $x = a$ such that $\\\
+    phi$ is required to vanish at the location of the plates,\\footnote{In real-life\
+    \ Casimir effects, the plates are simply conducting plates.} i.e.\n\\begin{equation}\n\
+    \\phi(x = 0, t) = \\phi(x = a, t) = 0 \\,. \\tag{25}\n\\end{equation}\nAdding\
+    \ plates which imposes additional boundary conditions on $\\phi$ disturbs the\
+    \ vacuum, and results in a different zero-point energy $E(a)$.\n\nEven though\
+    \ both $E_0$ and $E(a)$ are infinite, their difference turns out to be finite\
+    \ and physically meaningful. In fact the difference\n\\begin{equation}\nU(a) =\
+    \ E(a) - E_0 \\tag{26}\n\\end{equation}\ncan be considered as the potential energy\
+    \ between the two plates. Changing $a$ modifies the potential energy and results\
+    \ in a force between the plates which can be measured experimentally!\n\nIn this\
+    \ problem I will guide you to calculate $U(a)$. As you learned in calculus, taking\
+    \ the differences between infinities is a highly dangerous thing to do. One can\
+    \ in principle get any answer. So we will need to be very careful.\n\nBoth $E_0$\
+    \ and $E_a$ have two sources of infinities, one from the infinite volume, the\
+    \ other from there are infinite number of local degrees of freedom. It is convenient\
+    \ to separate these two infinities by putting the system in a box with finite\
+    \ size $L \\gg a$. We will take $L$ to infinity at the end of the calculation.\
+    \ More explicitly, we require $\\phi$ to satisfy a periodic boundary condition\n\
+    \\begin{equation}\n\\phi(x, t) = \\phi(x + L, t) \\tag{27}\n\\end{equation}\n\
+    i.e. putting the system on a circle of size $L$.\n\n\\begin{enumerate}[label =\
+    \ \\alph*]\n    \\item In the vacuum (i.e. before putting the plates), write down\
+    \ the mode expansion for $\\phi$ and calculate its zero-point energy $E_0$. Your\
+    \ answer should have the form\n    \\begin{equation}\n    E_0 = \\frac{1}{2} \\\
+    sum_n \\omega_n \\tag{28}\n    \\end{equation}\n    where $\\omega_n$ is the energy\
+    \ for each mode. You should specify both $\\omega_n$ and the range of summation.\n\
+    \n    \\item Adding the plates separates the system into two segments, one has\
+    \ size $a$, the other has size $L-a$. In both segments one has Dirichlet boundary\
+    \ conditions (25) at two ends. (Remember the system is on a circle.) So it is\
+    \ enough to work out the story for one of them. Find the mode expansion for $\\\
+    phi$ in the region $[0, a]$ and zero-point energy $\\varepsilon(a)$. Again your\
+    \ answer should have the form\n    \\begin{equation}\n    \\varepsilon(a) = \\\
+    frac{1}{2} \\sum_n \\tilde{\\omega}_n \\tag{29}\n    \\end{equation}\n    and\
+    \ you should specify both $\\tilde{\\omega}_n$ and the range of summation. The\
+    \ total zero-point energy of the system in the presence of the plates is thus\n\
+    \    \\begin{equation}\n    E(a) = \\varepsilon(a) + \\varepsilon(L-a) \\,. \\\
+    tag{30}\n    \\end{equation}\n\n    \\item Both sums (28) and (30) are divergent.\
+    \ There is not much sense in taking the difference between them. To take the difference\
+    \ we will first make them finite. We will do this by introducing a ``UV cutoff''\
+    \ $\\Lambda$, i.e. change the sums to\\footnotemark\n    \\begin{equation}\n \
+    \   E_0 = \\frac{1}{2} \\sum_n \\omega_n e^{-\\frac{\\omega_n}{\\Lambda}} \\tag{31}\n\
+    \    \\end{equation}\n    and\n    \\begin{equation}\n    \\varepsilon(a) = \\\
+    frac{1}{2} \\sum_n \\tilde{\\omega}_n e^{-\\frac{\\tilde{\\omega}_n}{\\Lambda}}\
+    \ \\,. \\tag{32}\n    \\end{equation}\n    \\footnotetext{Note that by introducing\
+    \ $\\Lambda$, we suppress the contributions from ``high'' energy modes with $\\\
+    omega_n, \\tilde{\\omega}_n \\gg \\Lambda$.}\n    Clearly taking the limit $\\\
+    Lambda \\to \\infty$ inside the sum we recover (28) and (29). Now evaluate (31)\
+    \ and (32) with a finite $\\Lambda$.\n\n    \\item Expand the answers you get\
+    \ in part (c) in the limit $\\Lambda \\to \\infty$. You will find they become\
+    \ divergent. Keep terms which are divergent and finite, but throw away all terms\
+    \ which go to zero in the limit (i.e. throw away all terms with a negative power\
+    \ of $\\Lambda$).\n\n    \\item From your answers in part (d), find\n    \\begin{equation}\n\
+    \    U(a) = E(a) - E_0 \\,. \\tag{33}\n    \\end{equation}\n    You should find\
+    \ $U(a)$ is finite in the limit $\\Lambda \\to \\infty$. Now take the limit $L\
+    \ \\to \\infty$ in $U(a)$, and find the force between the plates in the $L \\\
+    to \\infty$ limit.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "Calculate\n\\begin{equation*}\n[A_0(t, \\mathbf{x}), \\partial_\\mu A^\\\
+    mu(t, \\mathbf{x}')]\n\\end{equation*}\nand from your result explain why we cannot\
+    \ impose $\\partial_\\mu A^\\mu = 0$ as an operator equation.\nIn the mode expansion\
+    \ for $A_0$, only the $\\alpha=0$ components survive, since $\\epsilon^{(0)}$\
+    \ is the only polarization with a time-like component.\n\\begin{equation*}\n \
+    \   A_0 = \\int \\frac{\\mathrm{d}^3\\mathbf{k}}{\\sqrt{2\\omega_k}} (a^{(0)}_{\\\
+    mathbf{k}} e^{i\\mathbf{k}\\cdot\\mathbf{x}} + a^{(0)\\dagger}_{\\mathbf{k}} e^{-i\\\
+    mathbf{k}\\cdot\\mathbf{x}})\n\\end{equation*}\nNext, we compute $\\partial_\\\
+    mu A^\\mu$ in the mode expansion.\n\\begin{align*}\n    \\partial_\\mu A^\\mu\
+    \ &= i \\int \\frac{\\mathrm{d}^3\\mathbf{k}}{\\sqrt{2\\omega_k}} \\sum_{\\alpha=0}^3\
+    \ [(k\\cdot\\epsilon^{(\\alpha)}) a^{(\\alpha)}_{\\mathbf{k}} e^{ik\\cdot x} -\
+    \ (k\\cdot\\epsilon^{(\\alpha)*}) a^{(\\alpha)\\dagger}_{\\mathbf{k}} e^{-ik\\\
+    cdot x}] \\\\\n    &= i \\int \\mathrm{d}^3\\mathbf{k} \\sqrt{\\frac{\\omega_k}{2}}\
+    \ \\left[ (a^{(0)}_{\\mathbf{k}} + a^{(3)}_{\\mathbf{k}}) e^{ik\\cdot x} - (a^{(0)\\\
+    dagger}_{\\mathbf{k}} + a^{(3)\\dagger}_{\\mathbf{k}}) e^{-ik\\cdot x} \\right]\n\
+    \\end{align*}\nwhere we use $k\\cdot \\epsilon^{(0)} = \\omega_k$, $k\\cdot\\\
+    epsilon^{(1,2)}=0$, $k\\cdot\\epsilon^{(3)} = \\omega_k$ by using the explicit\
+    \ form of the polarizations. Therefore,\n\\begin{align*}\n    [A_0(t,\\mathbf{x}),\
+    \ \\partial_\\mu A^\\mu(t, \\mathbf{x}')] &= \\frac{i}{2} \\int \\frac{\\mathrm{d}^3\\\
+    mathbf{k} \\mathrm{d}^3\\mathbf{k}'}{\\sqrt{\\omega_k\\omega_{k'}}} \\sqrt{\\\
+    omega_{k'}} \\left[ (a^{(0)}_{\\mathbf{k}} e^{i\\mathbf{k}\\cdot\\mathbf{x}} +\
+    \ a^{(0)\\dagger}_{\\mathbf{k}} e^{-i\\mathbf{k}\\cdot\\mathbf{x}}), (a^{(0)}_{\\\
+    mathbf{k}'} + a^{(3)}_{\\mathbf{k}'}) e^{ik'\\cdot x'} - (a^{(0)\\dagger}_{\\\
+    mathbf{k}'} + a^{(3)\\dagger}_{\\mathbf{k}'}) e^{-ik'\\cdot x'} \\right] \\\\\n\
+    \    &= -\\frac{i}{2} \\int \\frac{\\mathrm{d}^3\\mathbf{k} \\mathrm{d}^3\\mathbf{k}'}{\\\
+    sqrt{\\omega_k\\omega_{k'}}} \\sqrt{\\omega_{k'}} \\left( [a^{(0)}_{\\mathbf{k}},\
+    \ a^{(0)\\dagger}_{\\mathbf{k}'}] e^{i(k\\cdot x - k'\\cdot x')} + [a^{(0)\\dagger}_{\\\
+    mathbf{k}}, a^{(0)}_{\\mathbf{k}'}] e^{i(-k\\cdot x + k'\\cdot x')} \\right) \\\
+    \\\n    &= -i \\int \\frac{\\mathrm{d}^3\\mathbf{k} \\mathrm{d}^3\\mathbf{k}'}{\\\
+    sqrt{\\omega_k\\omega_{k'}}} \\sqrt{\\omega_{k'}} (-(2\\pi)^3 \\delta^{(3)}(\\\
+    mathbf{k}-\\mathbf{k}')) e^{i(k\\cdot x - k'\\cdot x')} \\\\\n    &= i \\int \\\
+    mathrm{d}^3\\mathbf{k} e^{i\\mathbf{k}\\cdot(\\mathbf{x}-\\mathbf{x}')} = i(2\\\
+    pi)^3 \\delta^{(3)}(\\mathbf{x}-\\mathbf{x}')\n\\end{align*}\nIn the 3rd equality,\
+    \ we used that the two terms in line 2 are equal, upon change of variables $\\\
+    mathbf{k} \\leftrightarrow \\mathbf{k}'$.\n\nWe see that the commutator is non-vanishing.\
+    \ This prevents us from imposing $\\partial_\\mu A^\\mu = 0$ as an operator equation,\
+    \ which would imply the commutator vanishes identically."
+---
+problem:
+  type: problem
+  content: "Consider a theory with two scalar fields $\\phi$ and $\\chi$\n\\begin{equation}\n\
+    \    \\mathcal{L} = -\\frac{1}{2}(\\partial_\\mu\\phi)^2 - \\frac{1}{2}M^2\\phi^2\
+    \ - \\frac{1}{2}(\\partial_\\mu\\chi)^2 - \\frac{1}{2}m^2\\chi^2 + \\frac{1}{2}g\\\
+    phi\\chi^2 \\, .\n\\end{equation}\nAssume $M > 2m$ and the coupling constant $g$\
+    \ is small. Calculate the decay rate $\\Gamma$ of $\\phi$-particles to the lowest\
+    \ order in $g$."
+solution:
+  type: solution
+  content: "Consider a theory with 2 scalar fields $\\phi$ and $\\chi$,\n\\begin{equation*}\n\
+    \    \\mathcal{L} = \\frac{1}{2}(\\partial_\\mu\\phi)^2 - \\frac{1}{2}M^2\\phi^2\
+    \ - \\frac{1}{2}(\\partial_\\mu\\chi)^2 - \\frac{1}{2}m^2\\chi^2 + \\frac{1}{2}g\\\
+    phi\\chi^2\n\\end{equation*}\nAssume $M > 2m$ and the coupling $g$ is small. Calculate\
+    \ the decay rate $\\Gamma$ of $\\phi$-particles to the lowest order in $g$.\n\n\
+    We can read off the Feynman rules from the Lagrangian. They are $\\frac{-i}{p^2+M^2-i\\\
+    epsilon}$ for a $\\phi$ propagator, $\\frac{-i}{p^2+m^2-i\\epsilon}$ for a $\\\
+    chi$ propagator, and $ig$ for the 3-point vertex.\n\nAt leading order, the decay\
+    \ $\\phi \\to \\chi\\chi$ is given by a single diagram. Using the Feynman rules,\
+    \ the amplitude is simply $\\mathcal{M} = ig$.\n\nNow we substitute this into\
+    \ the formula for differential decay rate in the rest frame of $\\phi$:\n\\begin{align*}\n\
+    d\\Gamma &= \\frac{1}{2M} |\\mathcal{M}|^2 (2\\pi)^4 \\delta^4(k_1 + k_2 - k_\\\
+    phi) \\frac{d^3k_1}{2\\omega_{k_1}} \\frac{d^3k_2}{2\\omega_{k_2}} \\\\\n&= \\\
+    frac{g^2}{2M} \\frac{1}{4\\omega_k^2} \\frac{d^3k}{(2\\pi)^2} \\delta(2\\omega_k\
+    \ - k_\\phi^0) = \\frac{g^2}{2M} \\frac{\\sqrt{E^2-m^2}}{32\\pi^2 E} dE d\\Omega_2\
+    \ \\delta(E - M/2)\n\\end{align*}\nPerforming the integrals, and multiplying by\
+    \ 1/2 for identical final state particles, we have\n\\begin{equation*}\n\\Gamma\
+    \ = \\frac{g^2}{32\\pi M} \\sqrt{1 - \\frac{4m^2}{M^2}}\n\\end{equation*}"
+---
+problem:
+  type: problem
+  content: "In this problem we consider a toy model of the process in which an electron-positron\
+    \ collision produces a quark-antiquark final state through an intermediate photon:\
+    \ $e^+e^- \\to \\gamma \\to q\\bar{q}$. The role of the electron and that of the\
+    \ positron is played by a massless scalar field $\\psi$. The photon is represented\
+    \ by a massless scalar field $\\phi$. Finally, the quarks are represented by a\
+    \ massive scalar field $\\chi$. The relevant Lagrangian density is\n\\begin{equation}\n\
+    \    \\mathcal{L} = -\\frac{1}{2}(\\partial_\\mu\\psi)^2 - \\frac{1}{2}(\\partial_\\\
+    mu\\phi)^2 - \\frac{1}{2}(\\partial_\\mu\\chi)^2 - \\frac{1}{2}m^2\\chi^2 + \\\
+    frac{1}{2}g'\\phi\\psi^2 + \\frac{1}{2}g\\phi\\chi^2 \\, .\n\\end{equation}\n\
+    Assume that couplings $g$ and $g'$ are small and of comparable magnitude.\n\n\\\
+    begin{enumerate}[label = \\alph*]\n    \\item Consider the process:\n    \\begin{equation}\n\
+    \        \\psi\\psi \\to \\chi\\chi \\, .\n    \\end{equation}\n    Compute the\
+    \ total cross section to lowest order in couplings. Express your answer in terms\
+    \ of $s, t, u$ variables.\n\n    \\item Consider the process:\n    \\begin{equation}\n\
+    \        \\psi\\psi \\to \\psi\\psi \\, .\n    \\end{equation}\n    Compute the\
+    \ differential cross section to lowest order in couplings. Express your answer\
+    \ in terms of $s, t, u$ variables.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "The relevant Lagrangian density is\n\\begin{equation*}\n    \\mathcal{L}\
+    \ = -\\frac{1}{2}(\\partial_\\mu\\psi)^2 - \\frac{1}{2}(\\partial_\\mu\\phi)^2\
+    \ - \\frac{1}{2}(\\partial_\\mu\\chi)^2 - \\frac{1}{2}m^2\\chi^2 + \\frac{1}{2}g'\\\
+    phi\\psi^2 + \\frac{1}{2}g\\phi\\chi^2\n\\end{equation*}\n\\begin{enumerate}[label\
+    \ = \\alph*]\n    \\item \nCompute the total cross-section to lowest order in\
+    \ couplings. Express your answer in terms of $s, t, u$.\nThe Mandelstam variables\
+    \ for $2 \\to 2$ scattering are given by\n\\begin{equation*}\n    s = -(p_1 +\
+    \ p_2)^2, \\quad t = -(p_1 - p_3)^2, \\quad u = -(p_1 - p_4)^2, \\quad s+t+u =\
+    \ \\sum_{i=1}^4 m_i^2\n\\end{equation*}\nThe Feynman rules are $\\frac{-i}{p^2-i\\\
+    epsilon}$ for a $\\psi$ propagator, $\\frac{-i}{p^2-i\\epsilon}$ for a $\\phi$\
+    \ propagator, $\\frac{-i}{p^2+m^2-i\\epsilon}$ for a $\\chi$ propagator, $ig$\
+    \ for the $\\phi\\chi^2$ interaction, and $ig'$ for the $\\phi\\psi^2$ interaction.\n\
+    \nAt leading order, the process $\\psi\\psi \\to \\chi\\chi$ is given by a single\
+    \ s-channel diagram.\n\n\nUsing the Feynman rules, the amplitude is\n\\begin{equation*}\n\
+    \    \\mathcal{M} = (ig') \\frac{-i}{(p_1+p_2)^2-i\\epsilon} (ig) = igg'\\frac{1}{s}\n\
+    \\end{equation*}\nTo compute the cross-section, we first work out kinematics.\
+    \ We can take the momentum to be\n\\begin{align*}\n    k_1 &= (E, 0, 0, E), &\
+    \ k_2 &= (E, 0, 0, -E) \\\\\n    k_3 &= (E, 0, k'\\sin\\theta, k'\\cos\\theta),\
+    \ & k_4 &= (E, 0, -k'\\sin\\theta, -k'\\cos\\theta), & k'^2 := E^2 - m^2\n\\end{align*}\n\
+    In terms of the Mandelstam variables, this gives\n\\begin{equation*}\n    s =\
+    \ 4E^2, \\quad t = -E^2 - k'^2 + 2Ek'\\cos\\theta, \\quad u = -E^2 - k'^2 - 2Ek'\\\
+    cos\\theta\n\\end{equation*}\nThe differential scattering amplitude is\n\\begin{equation*}\n\
+    \    d\\sigma = \\frac{1}{64\\pi^2 s} |\\mathcal{M}|^2 d\\Omega = \\frac{g^2 g'^2}{64\\\
+    pi^2 s E^2} \\frac{k'}{s^2} d\\Omega_2\n\\end{equation*}\nMultiplying by 1/2 for\
+    \ identical final state particles and performing the angular integration, the\
+    \ total scattering amplitude is\n\\begin{equation*}\n    \\sigma = \\frac{1}{2}\
+    \ \\int d\\sigma = \\frac{(gg')^2}{32\\pi s^3} \\sqrt{1 - \\frac{4m^2}{s}}\n\\\
+    end{equation*}\n\n\\item \nCompute the differential cross-section to lowest order.\
+    \ Express your answer in terms of $s, t, u$.\nAt leading order, the process $\\\
+    psi\\psi \\to \\psi\\psi$ is given by $s,t,u$-channel diagrams.\n\nUsing the Feynman\
+    \ rules, the amplitude is\n\\begin{equation*}\n    \\mathcal{M} = (ig) \\left[\
+    \ \\frac{-i}{(p_1+p_2)^2-i\\epsilon} + \\frac{-i}{(p_1-p_3)^2-i\\epsilon} + \\\
+    frac{-i}{(p_1-p_4)^2-i\\epsilon} \\right] (ig) = -ig^2 \\left( \\frac{1}{s} +\
+    \ \\frac{1}{t} + \\frac{1}{u} \\right)\n\\end{equation*}\nProceeding in the same\
+    \ way as (a) with the same kinematics, the differential cross section is\n\\begin{equation*}\n\
+    \    d\\sigma = \\frac{g^4}{64\\pi^2 s} \\left( \\frac{1}{s} + \\frac{1}{t} +\
+    \ \\frac{1}{u} \\right)^2 d\\Omega_2 = \\frac{g^4}{64\\pi^2 s} \\left( 1 - \\\
+    frac{4}{\\sin^2\\theta} \\right)^2 d\\Omega_2\n\\end{equation*}\nNote: in principle,\
+    \ we would multiply by 1/2 for identical particles and perform the integral for\
+    \ the total scattering cross section, but the $\\theta$-integral is divergent\
+    \ at $\\theta=0$ and $\\theta=\\pi$. These are known as collinear singularities,\
+    \ associated with the final state particles moving along the same axis. It is\
+    \ related to subtleties in defining asymptotic states for massless particles,\
+    \ such as how to distinguish between multiple collinear massless particles with\
+    \ a single massless particle of the same total energy.\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider the scattering process\n\\begin{equation}\n    e^- + \\mu^- \\\
+    to e^- + \\mu^- \\, .\n\\end{equation}\nElectron and muon have mass $m_e$ and\
+    \ $m_\\mu$ respectively.\n\\begin{enumerate}[label = \\alph*]\n    \\item Calculate\
+    \ the scattering amplitude $\\mathcal{M}$.\n    \\item Calculate\n    \\begin{equation}\n\
+    \        \\frac{1}{4} \\sum_{\\text{spin}} |\\mathcal{M}|^2\n    \\end{equation}\n\
+    \    where $\\sum_{\\text{spin}}$ denotes average over the spins of the initial\
+    \ state and sum over the spins of the final state. Express your answer in terms\
+    \ of $s, t, u$ variables defined in (8) and (13).\n\\end{enumerate}\n\\textbf{The\
+    \ following two parts are bonus parts (20 points)}\n\\begin{enumerate}[label =\
+    \ \\alph*]\n    \\setcounter{enumi}{2}\n    \\item Calculate the differential\
+    \ cross section in the center of mass frame.\n    \\item Obtain the differential\
+    \ cross section in the muon rest frame. Show that in the limit $m_\\mu \\to \\\
+    infty$, one recovers the cross section of Rutherford scattering, equation (21).\n\
+    \\end{enumerate}"
+solution:
+  type: solution
+  content: "Consider the scattering process\n\\begin{equation*}\n    e^- + \\mu^-\
+    \ \\to e^- + \\mu^-\n\\end{equation*}\nThe electron and muon have masses $m_e$\
+    \ and $m_\\mu$, respectively.\n\\begin{enumerate}[label = \\alph*]\n    \\item\
+    \ At leading order, the process is given by a single t-channel diagram.\n    Using\
+    \ the Feynman rules, the amplitude is\n    \\begin{equation*}\n        \\mathcal{M}\
+    \ = -ie^2\\frac{1}{t+i\\epsilon} [\\bar{u}_{s'_1}(p'_1)\\gamma^\\mu u_{s_1}(p_1)][\\\
+    bar{u}_{s'_2}(p'_2)\\gamma_\\mu u_{s_2}(p_2)]\n    \\end{equation*}\n\\item \n\
+    Squaring the amplitude, summing over final spins, and averaging over initial spins,\
+    \ we have\n\\begin{align*}\n    \\frac{1}{4}\\sum_{s_1,s_2,s'_1,s'_2} |\\mathcal{M}|^2\
+    \ &= \\frac{e^4}{4t^2} \\sum_{s_1,s_2,s'_1,s'_2} [\\bar{u}_{s'_1}(p'_1)\\gamma^\\\
+    mu u_{s_1}(p_1)\\bar{u}_{s_1}(p_1)\\gamma^\\nu u_{s'_1}(p'_1)] [\\bar{u}_{s'_2}(p'_2)\\\
+    gamma_\\mu u_{s_2}(p_2)\\bar{u}_{s_2}(p_2)\\gamma_\\nu u_{s'_2}(p'_2)] \\\\\n\
+    \    &= \\frac{e^4}{4t^2} \\text{Tr}[\\gamma^\\mu\\Lambda_+(p'_1)\\gamma^\\nu\\\
+    Lambda_+(p_1)] \\text{Tr}[\\gamma_\\mu\\Lambda_+(p'_2)\\gamma_\\nu\\Lambda_+(p_2)]\
+    \ \\\\\n    &= \\frac{4e^4}{t^2} [(m_e^2+p_1\\cdot p'_1)g^{\\mu\\nu} - p'^\\mu_1\
+    \ p^\\nu_1 - p'^\\nu_1 p^\\mu_1][(m_\\mu^2+p_2\\cdot p'_2)g_{\\mu\\nu} - p'_{2\\\
+    mu}p_{2\\nu} - p'_{2\\nu}p_{2\\mu}] \\\\\n    &= \\frac{8e^4}{t^2} (p_1\\cdot\
+    \ p_2 p'_1\\cdot p'_2 + p_1\\cdot p'_2 p'_1\\cdot p_2 + m_\\mu^2 p_1\\cdot p'_1\
+    \ + m_e^2 p_2\\cdot p'_2 + 2m_e^2 m_\\mu^2) \\\\\n    &= \\frac{8e^4}{t^2} \\\
+    left( \\frac{s^2+u^2}{4} - (m_e^2+m_\\mu^2)(s+u) + \\frac{3}{2}(m_e^2+m_\\mu^2)^2\
+    \ \\right)\n\\end{align*}\nIn the second line we use the identity $\\sum_s u_s(p)\\\
+    bar{u}_s(p) = \\Lambda_+(p) = i(i\\not p + m)$. In the third line, we use the\
+    \ gamma trace identities\n\\begin{gather*}\n    \\text{Tr}(\\gamma^\\mu) = \\\
+    text{Tr}(\\gamma^\\mu\\gamma^\\nu\\gamma^\\rho) = 0, \\quad \\text{Tr}(\\gamma^\\\
+    mu\\gamma^\\nu) = 4\\eta^{\\mu\\nu}, \\\\ \\text{Tr}(\\gamma^\\mu\\gamma^\\nu\\\
+    gamma^\\rho\\gamma^\\sigma) = 4(\\eta^{\\mu\\nu}\\eta^{\\rho\\sigma} - \\eta^{\\\
+    mu\\rho}\\eta^{\\nu\\sigma} + \\eta^{\\mu\\sigma}\\eta^{\\nu\\rho})\n\\end{gather*}\n\
+    in order to simplify\n\\begin{equation*}\n    \\text{Tr}[\\gamma^\\mu(i\\not p+m)\\\
+    gamma^\\nu(i\\not q+m)] = \\eta^{\\mu\\nu}(4m^2+p\\cdot q) - 4p^\\mu q^\\nu -\
+    \ 4p^\\nu q^\\mu\n\\end{equation*}\nIn the last line, we use the Mandelstam identities\n\
+    \\begin{equation*}\n    s = -(p_1+p_2)^2 = m_e^2+m_\\mu^2-2p_1\\cdot p_2, \\quad\
+    \ u=-(p_1-p'_2)^2 = m_e^2+m_\\mu^2+2p_1\\cdot p'_2\n\\end{equation*}\n\n\\item\
+    \ \nWe first work out kinematics. In the center of mass frame, we can take the\
+    \ momenta to be\n\\begin{align*}\n    p_1 &= (E_1, 0, 0, p), & p_2 &= (E_2, 0,\
+    \ 0, -p) \\\\\n    p'_1 &= (E_1, 0, p\\sin\\theta, p\\cos\\theta), & p'_2 &= (E_2,\
+    \ 0, -p\\sin\\theta, -p\\cos\\theta), & p'^2 := E_1^2 - m_e^2\n\\end{align*}\n\
+    In terms of Mandelstam variables,\n\\begin{align*}\n    s &= -(p_1+p_2)^2 = E_{cm}^2\
+    \ = (E_1+E_2)^2 \\\\\n    t &= -(p_1-p'_1)^2 = 2p^2(\\cos\\theta-1) \\\\\n   \
+    \ u &= -(p_1-p'_2)^2 = (E_2-E_1)^2 - 2p^2(\\cos\\theta+1)\n\\end{align*}\nIn the\
+    \ center of mass frame, the spin-summed/averaged differential cross-section is\n\
+    \\begin{equation*}\n    \\left(\\frac{d\\sigma}{d\\Omega}\\right)_{cm} = \\frac{1}{64\\\
+    pi^2 s} \\frac{1}{4} \\sum |\\mathcal{M}|^2 = \\frac{e^4}{8\\pi^2 s t^2} \\left(\
+    \ \\frac{s^2+u^2}{4} - (m_e^2+m_\\mu^2)(s+u) + \\frac{3}{2}(m_e^2+m_\\mu^2)^2\
+    \ \\right)\n\\end{equation*}\n\n\\item \nIn the muon rest frame, the kinematics\
+    \ becomes\n\\begin{align*}\n    p_1 &= (E_1, 0, 0, p), & p_2 &= (m_\\mu, 0, 0,\
+    \ 0) \\\\\n    p'_1 &= (E'_1, 0, p'\\sin\\theta, p'\\cos\\theta), & p'_2 &= (E_1-E'_1+m_\\\
+    mu, 0, -p'\\sin\\theta, p-p'\\cos\\theta)\n\\end{align*}\nThe Lorentz-invariant\
+    \ differential cross section is given by\n\\begin{equation*}\n    d\\sigma = \\\
+    frac{1}{4E_A E_B |v_A-v_B|} \\frac{1}{4}\\sum_{\\text{spin}}|\\mathcal{M}|^2 d\\\
+    Pi_{\\text{LIPS}}\n\\end{equation*}\nThe spin-summed/averaged amplitude is given\
+    \ in (b). In the muon rest frame,\n\\begin{equation*}\n    E_1 E_2 |v_1-v_2| =\
+    \ |E_1 p_2^z - E_2 p_1^z| = m_\\mu p\n\\end{equation*}\nThe final state phase\
+    \ space factor is\n\\begin{equation*}\n    d\\Pi_{\\text{LIPS}} = (2\\pi)^4 \\\
+    delta^4(p_1+p_2-p'_1-p'_2) \\frac{d^3p'_1}{2E'_1} \\frac{d^3p'_2}{2E'_2} = \\\
+    frac{1}{(2\\pi)^2} \\frac{1}{4E'_1 E'_2} \\delta(E_1+m_\\mu-E'_1-E'_2) p'^2 dp'\
+    \ d\\Omega_2\n\\end{equation*}\nfor $E'^2_1=m_e^2+p'^2$, and $E'^2_2 = m_\\mu^2+|\\\
+    mathbf{p}_1-\\mathbf{p}'_1|^2 = m_\\mu^2+p'^2+p^2-2pp'\\cos\\theta$.\nNow we take\
+    \ the limit as $m_\\mu \\to \\infty$. We have $E'_2 \\approx m_\\mu$, therefore\
+    \ the delta function imposes $E_1 \\approx E'_1$, thus $p \\approx p'$. The final\
+    \ state phase factor simplifies to\n\\begin{equation*}\n    d\\Pi_{\\text{LIPS}}\
+    \ \\approx \\frac{1}{16\\pi^2} \\frac{p}{m_\\mu} d\\Omega_2\n\\end{equation*}\n\
+    The leading $m_\\mu$ dependence from the amplitude is\n\\begin{align*}\n    \\\
+    frac{1}{4}\\sum_{\\text{spin}}|\\mathcal{M}|^2 &= \\frac{8e^4}{t^2}(p_1\\cdot\
+    \ p_2 p'_1\\cdot p'_2 + p_1\\cdot p'_2 p'_1\\cdot p_2 + m_\\mu^2 p_1\\cdot p'_1\
+    \ + m_e^2 p_2\\cdot p'_2 + 2m_e^2 m_\\mu^2) \\\\\n    &\\approx \\frac{e^4 m_\\\
+    mu^2}{2p^4\\sin^4(\\theta/2)} (2E_1^2 - m_e^2 - E_1^2 + p^2\\cos\\theta+2m_e^2)\
+    \ \\\\\n    &= \\frac{e^4 m_\\mu^2}{2p^4\\sin^4(\\theta/2)} (2E_1^2 - 2p^2\\sin^2(\\\
+    theta/2)) = \\frac{e^4 m_\\mu^2}{\\beta p^2 \\sin^4(\\theta/2)} (1-\\beta^2\\\
+    sin^2(\\theta/2)), \\quad \\beta=p/E_1\n\\end{align*}\nPutting everything together,\
+    \ the differential cross section in the muon rest frame for $m_\\mu^2 \\to \\\
+    infty$ is\n\\begin{equation*}\n    \\frac{d\\sigma}{d\\Omega} \\approx \\frac{\\\
+    alpha^2}{4p^2\\beta^2\\sin^4(\\theta/2)} (1-\\beta^2\\sin^2(\\theta/2))\n\\end{equation*}\n\
+    \\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider the Hamiltonian for a unit mass harmonic oscillator with frequency\
+    \ $\\omega$\n\\begin{equation}\n    H = \\frac{1}{2}(\\hat{p}^2 + \\omega^2\\\
+    hat{x}^2) \\,. \\tag{20}\n\\end{equation}\nIn the Heisenberg picture $\\hat{x}(t)$\
+    \ and $\\hat{p}(t)$ are dynamical variables which evolve with time. They obey\
+    \ the equal-time commutation relation\n\\begin{equation}\n    [\\hat{x}(t), \\\
+    hat{p}(t)] = i \\,. \\tag{21}\n\\end{equation}\nHere and below we set $\\hbar\
+    \ = 1$.\n\\begin{enumerate}\n    \\item[(a)] Obtain the Heisenberg evolution equations\
+    \ for $\\hat{x}(t)$ and $\\hat{p}(t)$.\n    \\item[(b)] Suppose the initial conditions\
+    \ at $t=0$ are given by\n    \\begin{equation}\n        \\hat{x}(0) = \\hat{x},\
+    \ \\quad \\hat{p}(0) = \\hat{p} \\tag{22}\n    \\end{equation}\n    find $\\hat{x}(t)$\
+    \ and $\\hat{p}(t)$.\n    \\item[(c)] It is convenient to introduce operators\
+    \ $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$ defined by\n    \\begin{equation}\n\
+    \        \\hat{x}(t) = \\frac{1}{\\sqrt{2\\omega}}(\\hat{a}(t) + \\hat{a}^\\dagger(t)),\
+    \ \\quad \\hat{p}(t) = -i\\sqrt{\\frac{\\omega}{2}}(\\hat{a}(t) - \\hat{a}^\\\
+    dagger(t)) \\,. \\tag{23}\n    \\end{equation}\n    Show that $\\hat{a}(t)$ and\
+    \ $\\hat{a}^\\dagger(t)$ satisfy equal-time commutation relation\n    \\begin{equation}\n\
+    \        [\\hat{a}(t), \\hat{a}^\\dagger(t)] = 1 \\,. \\tag{24}\n    \\end{equation}\n\
+    \    \\item[(d)] Express the Hamiltonian in terms of $\\hat{a}(t)$ and $\\hat{a}^\\\
+    dagger(t)$.\n    \\item[(e)] Obtain the Heisenberg equations for $\\hat{a}(t)$\
+    \ and $\\hat{a}^\\dagger(t)$.\n    \\item[(f)] Suppose the initial conditions\
+    \ at $t=0$ are given by\n    \\begin{equation}\n        \\hat{a}(0) = \\hat{a},\
+    \ \\quad \\hat{a}^\\dagger(0) = \\hat{a}^\\dagger \\tag{25}\n    \\end{equation}\n\
+    \    find $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$.\n    \\item[(g)] Express $\\\
+    hat{x}(t)$, $\\hat{p}(t)$ and the Hamiltonian $H$ in terms of $\\hat{a}$ and $\\\
+    hat{a}^\\dagger$.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(a)] Obtain the Heisenberg evolution equations\
+    \ for $\\hat{x}(t)$ and $\\hat{p}(t)$. \\\\\n    We use Heisenberg's equations\
+    \ of motion for $\\hat{x}(t)$ and $\\hat{p}(t)$:\n    \\[\n    \\frac{d\\hat{x}(t)}{dt}\
+    \ = i[H, \\hat{x}(t)] \\qquad \\frac{d\\hat{p}(t)}{dt} = i[H, \\hat{p}(t)]\n \
+    \   \\]\n    The right hand sides can be computed using $H = \\frac{1}{2}(\\hat{p}^2+\\\
+    omega^2\\hat{x}^2)$, the commutator $[\\hat{x},\\hat{p}] = i$, and the Heisenberg\
+    \ time evolution $\\mathcal{O}(t) = e^{iHt}\\mathcal{O}e^{-iHt}$. For instance:\n\
+    \    \\[\n    [H, \\hat{x}(t)] = [H, e^{iHt}\\hat{x}e^{-iHt}] = e^{iHt}[H, \\\
+    hat{x}]e^{-iHt} = -ie^{iHt}\\hat{p}e^{-iHt} = -i\\hat{p}(t)\n    \\]\n    Hence,\
+    \ we have:\n    \\[\n    \\frac{d\\hat{x}(t)}{dt} = \\hat{p}(t) \\qquad \\frac{d\\\
+    hat{p}(t)}{dt} = -\\omega^2\\hat{x}(t)\n    \\]\n\n    \\item[(b)] Suppose the\
+    \ initial conditions at $t=0$ are given by\n    \\[\n    \\hat{x}(0) = \\hat{x}\
+    \ \\qquad \\hat{p}(0) = \\hat{p}\n    \\]\n    Find $\\hat{x}(t)$ and $\\hat{p}(t)$.\
+    \ \\\\\n    We can decouple the system by converting to second order equations:\n\
+    \    \\[\n    \\ddot{\\hat{x}}(t) = -\\omega^2\\hat{x}(t) \\qquad \\ddot{\\hat{p}}(t)\
+    \ = -\\omega^2\\hat{p}(t)\n    \\]\n    Solving with the initial conditions $\\\
+    dot{\\hat{x}}(0) = \\hat{p}$ and $\\dot{\\hat{p}}(0) = -\\omega^2 \\hat{x}$, we\
+    \ find\n    \\[\n    \\hat{x}(t) = \\hat{x}\\cos\\omega t + \\frac{1}{\\omega}\\\
+    hat{p}\\sin\\omega t \\qquad \\hat{p}(t) = \\hat{p}\\cos\\omega t - \\omega\\\
+    hat{x}\\sin\\omega t\n    \\]\n\n    \\item[(c)] It is convenient to introduce\
+    \ operators $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$ defined by:\n    \\[\n  \
+    \  \\hat{x}(t) = \\sqrt{\\frac{1}{2\\omega}}(\\hat{a}(t)+\\hat{a}^\\dagger(t)),\
+    \ \\qquad \\hat{p}(t) = -i\\sqrt{\\frac{\\omega}{2}}(\\hat{a}(t)-\\hat{a}^\\dagger(t))\n\
+    \    \\]\n    Show that $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$ satisfy the equal-time\
+    \ commutation relation\n    \\[\n    [\\hat{a}(t), \\hat{a}^\\dagger(t)] = 1\n\
+    \    \\]\n    We solve for $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$ in terms of\
+    \ $\\hat{x}(t)$ and $\\hat{p}(t)$:\n    \\[\n    \\hat{a}(t) = \\sqrt{\\frac{\\\
+    omega}{2}}\\hat{x}(t)+i\\sqrt{\\frac{1}{2\\omega}}\\hat{p}(t), \\qquad \\hat{a}^\\\
+    dagger(t) = \\sqrt{\\frac{\\omega}{2}}\\hat{x}(t)-i\\sqrt{\\frac{1}{2\\omega}}\\\
+    hat{p}(t)\n    \\]\n    Using the commutation relations between position and momentum\
+    \ operators, we have\n    \\[\n    [\\hat{a}(t), \\hat{a}^\\dagger(t)] = -\\frac{i}{2}[\\\
+    hat{x}(t), \\hat{p}(t)]+\\frac{i}{2}[\\hat{p}(t), \\hat{x}(t)] = 1\n    \\]\n\n\
+    \    \\item[(d)] Express the Hamiltonian in terms of $\\hat{a}(t)$ and $\\hat{a}^\\\
+    dagger(t)$.\n    \\begin{align*}\n    H = H(t) &= e^{iHt}He^{-iHt} = \\frac{1}{2}(\\\
+    hat{p}(t)^2 + \\omega^2\\hat{x}(t)^2) \\\\\n    &= \\frac{\\omega}{4}(-(\\hat{a}(t)-\\\
+    hat{a}^\\dagger(t))^2 + (\\hat{a}(t)+\\hat{a}^\\dagger(t))^2) = \\frac{\\omega}{2}(\\\
+    hat{a}^\\dagger(t)\\hat{a}(t)+\\hat{a}(t)\\hat{a}^\\dagger(t)) \\\\\n    &= \\\
+    omega\\left(\\hat{a}^\\dagger(t)\\hat{a}(t)+\\frac{1}{2}\\right) = \\omega\\left(N(t)+\\\
+    frac{1}{2}\\right)\n    \\end{align*}\n    where in the last equality we define\
+    \ the number operator, $N(t)=\\hat{a}^\\dagger(t)\\hat{a}(t)$.\n\n    \\item[(e)]\
+    \ Obtain the Heisenberg equations for $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$.\
+    \ \\\\\n    Using the results in parts (c) and (d), we have\n    \\begin{align*}\n\
+    \    \\frac{d\\hat{a}(t)}{dt} &= i[H, \\hat{a}(t)] = i\\omega[\\hat{a}^\\dagger(t)\\\
+    hat{a}(t), \\hat{a}(t)] = -i\\omega\\hat{a}(t) \\\\\n    \\frac{d\\hat{a}^\\dagger(t)}{dt}\
+    \ &= i[H, \\hat{a}^\\dagger(t)] = i\\omega[\\hat{a}^\\dagger(t)\\hat{a}(t), \\\
+    hat{a}^\\dagger(t)] = i\\omega\\hat{a}^\\dagger(t)\n    \\end{align*}\n\n    \\\
+    item[(f)] Suppose the initial conditions at $t=0$ are given by\n    \\[\n    \\\
+    hat{a}(0)=\\hat{a}, \\qquad \\hat{a}^\\dagger(0)=\\hat{a}^\\dagger\n    \\]\n\
+    \    Find $\\hat{a}(t)$ and $\\hat{a}^\\dagger(t)$. \\\\\n    The equations in\
+    \ (e) are decoupled, and first-order linear. We immediately have\n    \\[\n  \
+    \  \\hat{a}(t) = \\hat{a}e^{-i\\omega t}, \\qquad \\hat{a}^\\dagger(t) = \\hat{a}^\\\
+    dagger e^{i\\omega t}\n    \\]\n\n    \\item[(g)] Express $\\hat{x}(t)$, $\\hat{p}(t)$,\
+    \ and the Hamiltonian $H$ in terms of $\\hat{a}$ and $\\hat{a}^\\dagger$. \\\\\
+    \n    We substitute the expressions obtained in (f) into parts (c) and (d).\n\
+    \    \\begin{align*}\n    \\hat{x}(t) &= \\sqrt{\\frac{1}{2\\omega}}(\\hat{a}e^{-i\\\
+    omega t} + \\hat{a}^\\dagger e^{i\\omega t}) \\\\\n    \\hat{p}(t) &= -i\\sqrt{\\\
+    frac{\\omega}{2}}(\\hat{a}e^{-i\\omega t} - \\hat{a}^\\dagger e^{i\\omega t})\
+    \ \\\\\n    H(t) = H &= \\omega\\left(\\hat{a}^\\dagger\\hat{a} + \\frac{1}{2}\\\
+    right)\n    \\end{align*}\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "Consider the field theory of a complex value scalar field $\\phi(x)$ with\
+    \ action\n\\begin{equation}\n    S = \\int d^4x \\left[-\\partial_\\mu \\phi^*\
+    \ \\partial^\\mu \\phi - V(|\\phi|^2)\\right], \\qquad |\\phi|^2 = \\phi\\phi^*\
+    \ \\,. \\tag{33}\n\\end{equation}\nOne could either consider the real and imaginary\
+    \ parts of $\\phi$, or $\\phi$ and $\\phi^*$ as independent dynamical variables.\
+    \ The latter is more convenient in most situations.\n\\begin{enumerate}\n    \\\
+    item[(a)] Check the action (33) is Lorentz invariant (see (15)) and find the equations\
+    \ of motion.\n    \\item[(b)] Find the canonical conjugate momenta for $\\phi$\
+    \ and $\\phi^*$, and the Hamiltonian $H$ for (33).\n    \\item[(c)] The action\
+    \ (33) is invariant under transformation\n    \\begin{equation}\n        \\phi\
+    \ \\to e^{i\\alpha}\\phi, \\qquad \\phi^* \\to e^{-i\\alpha}\\phi^* \\tag{34}\n\
+    \    \\end{equation}\n    for arbitrary constant $\\alpha$. When $\\alpha$ is\
+    \ small, i.e. for an infinitesimal transformation, (34) become\n    \\begin{equation}\n\
+    \        \\delta\\phi = i\\alpha\\phi, \\qquad \\delta\\phi^* = -i\\alpha\\phi^*\
+    \ \\tag{35}\n    \\end{equation}\n    Use Noether theorem to find the corresponding\
+    \ conserved current $j^\\mu$ and conserved charge $Q$.\n    \\item[(d)] Use equations\
+    \ of motion of part (a) to verify directly that $j^\\mu$ is indeed conserved.\n\
+    \\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(a)] To find the equations of motion, we\
+    \ use the Euler-Lagrange equations, treating $\\phi$ and $\\phi^*$ as independent:\n\
+    \    \\[\n    \\frac{\\partial\\mathcal{L}}{\\partial\\phi} - \\partial_\\mu\\\
+    frac{\\partial\\mathcal{L}}{\\partial(\\partial_\\mu\\phi)} = 0 \\qquad\n    \\\
+    frac{\\partial\\mathcal{L}}{\\partial\\phi^*} - \\partial_\\mu\\frac{\\partial\\\
+    mathcal{L}}{\\partial(\\partial_\\mu\\phi^*)} = 0\n    \\]\n    The left-hand\
+    \ side can be confusing to evaluate due to the contracted indices, so we do one\
+    \ calculation very explicitly:\n    \\[\n    \\partial_\\mu\\frac{\\partial\\\
+    mathcal{L}}{\\partial(\\partial_\\mu\\phi)} = \\partial_\\mu\\left[\\frac{\\partial}{\\\
+    partial(\\partial_\\mu\\phi)}(-\\partial_\\nu\\phi^*\\partial^\\nu\\phi)\\right]\
+    \ = \\partial_\\mu[-\\partial_\\nu\\phi^*\\delta^{\\nu\\mu}] = -\\partial^2\\\
+    phi^*\n    \\]\n    Hence, the equations of motion are\n    \\[\n    \\partial^2\\\
+    phi^* - V'(|\\phi|^2)\\phi^*=0, \\qquad \\partial^2\\phi-V'(|\\phi|^2)\\phi=0\n\
+    \    \\]\n    Note that these are conjugate equations, as expected.\n\n    \\\
+    item[(b)] Find the canonical conjugate momenta for $\\phi$ and $\\phi^*$, and\
+    \ the Hamiltonian $H$. \\\\\n    We write the Lagrangian density as\n    \\[\n\
+    \    \\mathcal{L} = \\partial_t\\phi^*\\partial_t\\phi - \\nabla\\phi^*\\cdot\\\
+    nabla\\phi - V(|\\phi|^2)\n    \\]\n    The conjugate momenta are thus\n    \\\
+    [\n    \\pi := \\frac{\\partial\\mathcal{L}}{\\partial(\\partial_t\\phi)} = \\\
+    partial_t\\phi^*, \\qquad\n    \\pi^* := \\frac{\\partial\\mathcal{L}}{\\partial(\\\
+    partial_t\\phi^*)} = \\partial_t\\phi\n    \\]\n    The Hamiltonian is given by\n\
+    \    \\begin{align*}\n    H = \\int d^3x(\\pi\\partial_t\\phi + \\pi^*\\partial_t\\\
+    phi - \\mathcal{L}) = \\int d^3x(\\pi^*\\pi + \\nabla\\phi^*\\cdot\\nabla\\phi\
+    \ + V(|\\phi|^2))\n    \\end{align*}\n\n    \\item[(c)] The action is invariant\
+    \ under the transformation\n    \\[\n    \\phi \\to e^{i\\alpha}\\phi, \\qquad\
+    \ \\phi^* \\to e^{-i\\alpha}\\phi^*\n    \\]\n    for arbitrary constant $\\alpha$.\
+    \ When $\\alpha$ is small, i.e. for an infinitesimal transformation, this becomes\n\
+    \    \\[\n    \\delta\\phi = i\\alpha\\phi, \\qquad \\delta\\phi^*=-i\\alpha\\\
+    phi^*\n    \\]\n    Use Noether's theorem to find the corresponding conserved\
+    \ current $j^\\mu$ and conserved charge $Q$. \\\\\n    By Noether's theorem, the\
+    \ conserved current is given by\n    \\[\n    j^\\mu = \\sum_a\\frac{\\partial\\\
+    mathcal{L}}{\\partial(\\partial_\\mu\\phi_a)}\\delta\\phi_a - F^\\mu, \\qquad\
+    \ \\delta\\mathcal{L}=\\partial_\\mu F^\\mu\n    \\]\n    In this case, $\\delta\\\
+    phi=i\\alpha\\phi$, $\\delta\\phi^*=-i\\alpha\\phi^*$, and $\\delta\\mathcal{L}=0$.\
+    \ We find\n    \\[\n    j^\\mu = -\\partial^\\mu\\phi^*(i\\alpha\\phi) - \\partial^\\\
+    mu\\phi(-i\\alpha\\phi^*) = i\\alpha(\\phi^*\\partial^\\mu\\phi - \\phi\\partial^\\\
+    mu\\phi^*)\n    \\]\n    One may remove the proportionality constant if desired,\
+    \ to get\n    \\[\n    j^\\mu = \\phi^*\\partial^\\mu\\phi - \\phi\\partial^\\\
+    mu\\phi^*\n    \\]\n    The corresponding charge is then\n    \\[\n    Q = \\\
+    int d^3x j^0 = \\int d^3x(\\phi^*\\partial_t\\phi-\\phi\\partial_t\\phi^*)\n \
+    \   \\]\n    \n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "In this problem we work out the energy-momentum tensor of the complex\
+    \ scalar theory (33).\n\\begin{enumerate}\n    \\item[(a)] Under a spacetime translation\n\
+    \    \\begin{equation}\n        x'^\\mu = x^\\mu + a^\\mu \\tag{36}\n    \\end{equation}\n\
+    \    a scalar field transforms as\n    \\begin{equation}\n        \\phi'(x') =\
+    \ \\phi(x) \\,. \\tag{37}\n    \\end{equation}\n    Show that the action (33)\
+    \ is invariant under transformation $\\phi(x) \\to \\phi'(x)$.\n    \\item[(b)]\
+    \ Write down the transformation of the scalar fields $\\phi$ and $\\phi^*$ for\
+    \ an infinitesimal translation, and use Noether theorem to find the corresponding\
+    \ conserved currents $T^{\\mu\\nu}$.\n    \\item[(c)] The conserved charge for\
+    \ a time translation\n    \\begin{equation}\n        H = \\int d^3x\\, T^{00}\
+    \ \\tag{38}\n    \\end{equation}\n    should be identified with the total energy\
+    \ of the system, while that for a spatial translation\n    \\begin{equation}\n\
+    \        P^i = \\int d^3x\\, T^{0i} \\tag{39}\n    \\end{equation}\n    should\
+    \ be identified with the total momentum. Thus $T^{\\mu\\nu}$ is referred to as\
+    \ the energy-momentum tensor. Write down the explicit expressions for $H$ and\
+    \ $P^i$. Compare $H$ obtained here with the Hamiltonian of problem 3(b).\n   \
+    \ \\item[(d)] Use equations of motion of problem 3(a) to verify directly that\
+    \ $T^{\\mu\\nu}$ is indeed conserved.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(b)] Write down the transformation of the\
+    \ scalar fields $\\phi$ and $\\phi^*$ for an infinitesimal translation, and use\
+    \ Noether's theorem to find the corresponding conserved currents $T^{\\mu\\nu}$.\
+    \ \\\\\n    An infinitesimal translation acts on the fields as:\n    \\begin{align*}\n\
+    \    \\delta\\phi &= \\phi'(x) - \\phi(x) = \\phi(x-a) - \\phi(x) = -a^\\nu\\\
+    partial_\\nu\\phi(x) \\\\\n    \\delta\\phi^* &= \\phi'^*(x) - \\phi^*(x) = \\\
+    phi^*(x-a) - \\phi^*(x) = -a^\\nu\\partial_\\nu\\phi^*(x)\n    \\end{align*}\n\
+    \    We also need the change in the Lagrangian density under translations:\n \
+    \   \\begin{align*}\n    \\delta\\mathcal{L} &= \\mathcal{L}' - \\mathcal{L} =\
+    \ -\\partial_\\nu(\\phi^*(x)-a^\\mu\\partial_\\mu\\phi^*(x))\\partial^\\nu(\\\
+    phi(x)-a^\\mu\\partial_\\mu\\phi(x)) \\\\\n    &\\quad - V( (\\phi^*(x)-a^\\mu\\\
+    partial_\\mu\\phi^*(x))(\\phi(x)-a^\\mu\\partial_\\mu\\phi(x)) ) - \\mathcal{L}\
+    \ \\\\\n    &= a^\\mu(\\partial_\\nu\\partial_\\mu\\phi^*(x))\\partial^\\nu\\\
+    phi(x) + \\partial_\\nu\\phi^*(x)\\partial^\\nu\\partial_\\mu\\phi(x)) + a^\\\
+    mu V'(\\phi^*\\phi)(\\partial_\\mu\\phi^*\\phi+\\phi^*\\partial_\\mu\\phi) + O(a^\\\
+    mu a^\\nu) \\\\\n    &= -a^\\mu\\partial_\\mu\\mathcal{L} = a_\\mu\\partial_\\\
+    nu(-g^{\\mu\\nu}\\mathcal{L}) := (a_\\mu\\partial_\\nu)F^{\\mu\\nu}\n    \\end{align*}\n\
+    \    The translations are parameterized by a 4-vector $a^\\nu$, and we have a\
+    \ Noether current (itself a 4-vector) for each. Hence, we can encode the conserved\
+    \ currents from translations into a rank-2 tensor, $T^{\\mu\\nu}$. In the following,\
+    \ we let the first index pick out the direction of the translation $a^\\nu$.\n\
+    \    \n    The Noether current is\n    \\begin{align*}\n    T^{\\mu\\nu} &:= (j^\\\
+    nu)^\\mu = \\frac{\\partial\\mathcal{L}}{\\partial(\\partial_\\mu\\phi)}(\\delta\\\
+    phi)^\\nu + \\frac{\\partial\\mathcal{L}}{\\partial(\\partial_\\mu\\phi^*)}(\\\
+    delta\\phi^*)^\\nu - F^{\\mu\\nu} \\\\\n    &= -\\partial^\\mu\\phi^*(-\\partial^\\\
+    nu\\phi) - \\partial^\\mu\\phi(-\\partial^\\nu\\phi^*) + g^{\\mu\\nu}\\mathcal{L}\
+    \ \\\\\n    &= \\partial^\\mu\\phi^*\\partial^\\nu\\phi + \\partial^\\nu\\phi^*\\\
+    partial^\\mu\\phi - \\eta^{\\mu\\nu}(\\partial_\\rho\\phi^*\\partial^\\rho\\phi\
+    \ + V(|\\phi|^2))\n    \\end{align*}\n\n    \\item[(c)] The conserved charge for\
+    \ a time translation\n    \\[\n    H = \\int d^3x T^{00}\n    \\]\n    should\
+    \ be identified with the total energy of the system, while that for a spatial\
+    \ translation\n    \\[\n    P^i = \\int d^3x T^{0i}\n    \\]\n    is identified\
+    \ with the total momentum. Thus $T^{\\mu\\nu}$ is referred to as the energy-momentum\
+    \ tensor. Write down the explicit expressions for $H$ and $P^i$. \\\\\n    We\
+    \ compute:\n    \\begin{align*}\n    H &= \\int d^3x T^{00} = \\int d^3x (2\\\
+    partial_t\\phi^*\\partial_t\\phi + (-\\partial_t\\phi^*\\partial_t\\phi + \\nabla\\\
+    phi^*\\cdot\\nabla\\phi + V(|\\phi|^2))) \\\\\n    &= \\int d^3x (\\partial_t\\\
+    phi^*\\partial_t\\phi + \\nabla\\phi^*\\cdot\\nabla\\phi + V(|\\phi|^2)) \\\\\n\
+    \    P^i &= \\int d^3x T^{0i} = \\int d^3x (\\partial^0\\phi^*\\partial^i\\phi\
+    \ + \\partial^i\\phi^*\\partial^0\\phi) = -\\int d^3x (\\partial_t\\phi^*\\partial_i\\\
+    phi + \\partial_i\\phi^*\\partial_t\\phi)\n    \\end{align*}\n\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "The Schrodinger equation for a free non-relativistic particle is\n\\begin{equation}\n\
+    i\\partial_t \\psi(\\vec{x}, t) = -\\frac{1}{2m} \\nabla^2 \\psi(\\vec{x}, t)\
+    \ \\,.\n\\end{equation}\nThe generalization of the above equation to a free relativistic\
+    \ particle is the so-called Klein-Gordon equation\n\\begin{equation}\n\\partial_t^2\
+    \ \\psi(\\vec{x}, t) - \\nabla^2 \\psi(\\vec{x}, t) + m^2 \\psi(\\vec{x}, t) =\
+    \ 0 \\,.\n\\end{equation}\nWe emphasize that in both (15) and (16), $\\psi(\\\
+    vec{x}, t)$ is interpreted as a wave function for dynamical variable $\\vec{x}(t)$\
+    \ rather than a dynamical field.\n\n\\begin{enumerate}\n    \\item[(a)] As a reminder,\
+    \ derive from (15) the continuity equation for the probability\n    \\begin{equation}\n\
+    \        \\partial_t \\rho + \\nabla \\cdot \\vec{J} = 0,\n    \\end{equation}\n\
+    \    where\n    \\begin{equation}\n        \\rho = |\\psi|^2, \\quad \\vec{J}\
+    \ = -\\frac{i}{2m} (\\psi^* \\nabla \\psi - \\psi \\nabla \\psi^*) \\,.\n    \\\
+    end{equation}\n\n    \\item[(b)] Suppose $\\psi(\\vec{x}, t)$ has the plane wave\
+    \ form, i.e.\n    \\begin{equation}\n        \\psi(\\vec{x}, t) \\propto e^{i\
+    \ \\vec{k} \\cdot \\vec{x}}\n    \\end{equation}\n    for some real vector $\\\
+    vec{k}$, find the solutions to (16).\n\n    \\item[(c)] Show that the Klein-Gordon\
+    \ equation also leads to a continuity equation (17) with now $\\rho$ and $\\vec{J}$\
+    \ given by\n    \\begin{equation}\n        \\rho = \\frac{i}{2m} (\\psi^* \\partial_t\
+    \ \\psi - \\psi \\partial_t \\psi^*), \\quad \\vec{J} = -\\frac{i}{2m} (\\psi^*\
+    \ \\nabla \\psi - \\psi \\nabla \\psi^*) \\,.\n    \\end{equation}\n    \n   \
+    \ \\item[(d)] Argue that $\\rho$ in (20) cannot be interpreted as probability\
+    \ density.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "The Schrödinger equation for a free non-relativistic particle is:\n\\\
+    begin{equation*}\n    i\\partial_t\\psi(\\vec{x},t) = -\\frac{1}{2m}\\nabla^2\\\
+    psi(\\vec{x},t)\n\\end{equation*}\nThe generalization of the above equation to\
+    \ a free relativistic particle is the so-called Klein-Gordon equation\n\\begin{equation*}\n\
+    \    \\partial_t^2\\psi(\\vec{x},t) - \\nabla^2\\psi(\\vec{x},t) + m^2\\psi(\\\
+    vec{x},t) = 0\n\\end{equation*}\nWe emphasize that in both these equations, $\\\
+    psi(\\vec{x},t)$ is interpreted as a wave function for the dynamical variable\
+    \ $\\vec{x}(t)$, rather than a dynamical field.\n\n(a) Suppose $\\psi(\\vec{x},\
+    \ t)$ has the plane wave form, i.e.\n\\begin{equation*}\n    \\psi(\\vec{x},t)\
+    \ \\propto e^{i\\vec{k}\\cdot\\vec{x}}\n\\end{equation*}\nfor some real vector\
+    \ $\\vec{k}$. Find the solutions to the Klein-Gordon equation above.\nWe substitute\
+    \ the ansatz $\\psi(\\vec{x},t) = e^{i\\vec{k}\\cdot\\vec{x}}\\phi(t)$ into the\
+    \ Klein-Gordon equation to get an equation for $\\phi(t)$:\n\\begin{equation*}\n\
+    \    \\partial_t^2\\phi + (k^2+m^2)\\phi = 0\n\\end{equation*}\nThis has plane-wave\
+    \ solutions of positive and negative frequencies,\n\\begin{equation*}\n    \\\
+    phi(t) = Ae^{-i\\omega_k t} + Be^{i\\omega_k t}, \\qquad \\omega_k = \\sqrt{k^2+m^2}\n\
+    \\end{equation*}\nHence, the Klein-Gordon equation has solutions\n\\begin{equation*}\n\
+    \    \\psi(\\vec{x},t) = Ae^{i(-\\omega_k t + \\vec{k}\\cdot\\vec{x})} + Be^{i(\\\
+    omega_k t + \\vec{k}\\cdot\\vec{x})}\n\\end{equation*}\n\n(b) For the negative\
+    \ frequency plane wave solution ($A=0$, with real amplitude $B$) from part (a),\
+    \ the density is given by\n\\begin{equation*}\n    \\rho = \\frac{i}{2m}(\\psi^*\\\
+    partial_t\\psi - \\psi\\partial_t\\psi^*) = \\frac{1}{m}\\text{Im}(\\psi\\partial_t\\\
+    psi^*)\n\\end{equation*}\nFor this solution, we compute\n\\begin{equation*}\n\
+    \    \\rho = \\text{Im}\\left(Be^{i\\omega_k t+i\\vec{k}\\cdot\\vec{x}}(-i\\omega_k)Be^{-i\\\
+    omega_k t-i\\vec{k}\\cdot\\vec{x}}\\right) = -B^2\\omega_k\n\\end{equation*}\n\
+    Note that the factor of $1/m$ has been absorbed by convention, effectively setting\
+    \ $m=1$ in the definition of the density $\\rho$."
+---
+problem:
+  type: problem
+  content: "\\begin{enumerate}\n    \\item[(a)] Show that it is enough to impose (24)\
+    \ at $t=0$. In other words, once we impose them at $t=0$, then the relations at\
+    \ general $t$ are automatically satisfied.\n    \n    \\textit{Note: This statement\
+    \ in fact applies not only to $V(\\phi) = \\frac{1}{2}m^2\\phi^2$, but any potential\
+    \ $V(\\phi)$.}\n    \n    \\item[(b)] Express $a_k$ and $a_k^\\dagger$ in terms\
+    \ of $\\tilde{\\phi}(\\vec{k})$ and $\\tilde{\\pi}(\\vec{k})$, where $\\tilde{\\\
+    phi}(\\vec{k})$ and $\\tilde{\\pi}(\\vec{k})$ are Fourier transforms of $\\phi(\\\
+    vec{x}, t=0)$ and $\\pi(\\vec{x}, t=0)$, i.e.\n    \\begin{equation}\n    \\tilde{\\\
+    phi}(\\vec{k}) = \\int d^3x\\, e^{-i\\vec{k}\\cdot\\vec{x}} \\phi(\\vec{x}, t=0)\n\
+    \    \\end{equation}\n    and similarly for $\\tilde{\\pi}$.\n    \n    \\item[(c)]\
+    \ Using the expressions you derived in part (b) to deduce the commutations relations\n\
+    \    \\begin{equation}\n    [a_k, a_{k'}], \\quad [a_k^\\dagger, a_{k'}^\\dagger],\
+    \ \\quad [a_k, a_{k'}^\\dagger]\n    \\end{equation}\n    from the commutation\
+    \ relations (24) at $t=0$.\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "For the real scalar field theory discussed in lecture,\n\\begin{equation*}\n\
+    \    \\mathcal{L} = \\frac{1}{2}\\partial_\\mu\\phi\\partial^\\mu\\phi - \\frac{1}{2}m^2\\\
+    phi^2\n\\end{{equation*}\nwe showed that the time-evolution of the quantum operator\
+    \ $\\phi(\\vec{x},t)$ is given by\n\\begin{equation*}\n    \\phi(\\vec{x},t) =\
+    \ \\int \\frac{d^3k}{(2\\pi)^3}\\frac{1}{\\sqrt{2\\omega_k}}(a_{\\vec{k}}u_{\\\
+    vec{k}}(\\vec{x},t) + a_{\\vec{k}}^\\dagger u_{\\vec{k}}^*(\\vec{x},t))\n\\end{equation*}\n\
+    where\n\\begin{equation*}\n    \\omega_k = \\sqrt{\\vec{k}^2+m^2}, \\qquad u_{\\\
+    vec{k}} = e^{-i\\omega_k t+i\\vec{k}\\cdot\\vec{x}}\n\\end{equation*}\nWe use\
+    \ $\\pi(\\vec{x},t)$ to denote the momentum density conjugate to $\\phi$. The\
+    \ canonical commutation relations among $\\phi$ and $\\pi$ are\n\\begin{equation*}\n\
+    \    [\\phi(\\vec{x},t), \\phi(\\vec{x}',t)] = [\\pi(\\vec{x},t), \\pi(\\vec{x}',t)]\
+    \ = 0, \\qquad [\\phi(\\vec{x},t), \\pi(\\vec{x}',t)] = i\\delta^{(3)}(\\vec{x}-\\\
+    vec{x}')\n\\end{equation*}\n(a) Express $a_{\\vec{k}}$ and $a_{\\vec{k}}^\\dagger$\
+    \ in terms of $\\tilde{\\phi}(\\vec{k})$ and $\\tilde{\\pi}(\\vec{k})$, where\
+    \ $\\tilde{\\phi}(\\vec{k})$ and $\\tilde{\\pi}(\\vec{k})$ are Fourier transforms\
+    \ of $\\phi(\\vec{x}, t=0)$ and $\\pi(\\vec{x}, t=0)$, e.g.\n\\begin{equation*}\n\
+    \    \\tilde{\\phi}(\\vec{k}) = \\int d^3x e^{-i\\vec{k}\\cdot\\vec{x}}\\phi(\\\
+    vec{x}, t=0)\n\\end{equation*}\nWe start with the mode expansions for $\\phi(\\\
+    vec{x},t)$ and $\\pi(\\vec{x},t)$\n\\begin{align*}\n    \\phi(\\vec{x},t) &= \\\
+    int\\frac{d^3k}{(2\\pi)^3}\\frac{1}{\\sqrt{2\\omega_k}}(a_{\\vec{k}}e^{-i\\omega_k\
+    \ t+i\\vec{k}\\cdot\\vec{x}} + a_{\\vec{k}}^\\dagger e^{i\\omega_k t-i\\vec{k}\\\
+    cdot\\vec{x}}) \\\\\n    \\pi(\\vec{x},t) &= -i\\int\\frac{d^3k}{(2\\pi)^3}\\\
+    sqrt{\\frac{\\omega_k}{2}}(a_{\\vec{k}}e^{-i\\omega_k t+i\\vec{k}\\cdot\\vec{x}}\
+    \ - a_{\\vec{k}}^\\dagger e^{i\\omega_k t-i\\vec{k}\\cdot\\vec{x}})\n\\end{align*}\n\
+    This is almost of the form of a Fourier transform, and by changing variables of\
+    \ one of the terms from $\\vec{k} \\to -\\vec{k}$ we have\n\\begin{align*}\n \
+    \   \\tilde{\\phi}(\\vec{k},t) &= \\frac{1}{\\sqrt{2\\omega_k}}(a_{\\vec{k}}e^{-i\\\
+    omega_k t} + a_{-\\vec{k}}^\\dagger e^{i\\omega_k t}) \\\\\n    \\tilde{\\pi}(\\\
+    vec{k},t) &= -i\\sqrt{\\frac{\\omega_k}{2}}(a_{\\vec{k}}e^{-i\\omega_k t} - a_{-\\\
+    vec{k}}^\\dagger e^{i\\omega_k t})\n\\end{align*}\nNow, observe that the equations\
+    \ are decoupled in $\\vec{k}$. We can take $t=0$ and solve this as a regular system\
+    \ of equations for $a_{\\vec{k}}$ and $a_{\\vec{k}}^\\dagger$.\n\\begin{align}\n\
+    \    a_{\\vec{k}} &= \\sqrt{\\frac{\\omega_k}{2}}\\tilde{\\phi}(\\vec{k}) + i\\\
+    frac{1}{\\sqrt{2\\omega_k}}\\tilde{\\pi}(\\vec{k}) \\nonumber \\\\\n    a_{\\\
+    vec{k}}^\\dagger &= \\sqrt{\\frac{\\omega_k}{2}}\\tilde{\\phi}(-\\vec{k}) - i\\\
+    frac{1}{\\sqrt{2\\omega_k}}\\tilde{\\pi}(-\\vec{k}) \\label{eq:a_k_dagger}\n\\\
+    end{align}\n\n(b) Using the expressions derived in part (a), deduce the commutation\
+    \ relations\n\\begin{equation*}\n    [a_{\\vec{k}}, a_{\\vec{k}'}], \\qquad [a_{\\\
+    vec{k}}^\\dagger, a_{\\vec{k}'}^\\dagger], \\qquad [a_{\\vec{k}}, a_{\\vec{k}'}^\\\
+    dagger]\n\\end{equation*}\nfrom the commutation relations above at $t=0$.\nIt\
+    \ is useful to take the Fourier transform $\\mathcal{F}$ (from position to momentum\
+    \ space) of the $t=0$ canonical commutation relations:\n\\begin{align*}\n    [\\\
+    tilde{\\phi}(\\vec{k}), \\tilde{\\phi}(\\vec{k}')] = [\\tilde{\\pi}(\\vec{k}),\
+    \ \\tilde{\\pi}(\\vec{k}')] &= \\mathcal{F}_{x\\to k} \\circ \\mathcal{F}_{x'\\\
+    to k'}(0) = 0 \\\\\n    [\\tilde{\\phi}(\\vec{k}), \\tilde{\\pi}(\\vec{k}')] &=\
+    \ \\mathcal{F}_{x\\to k} \\circ \\mathcal{F}_{x'\\to k'}(i\\delta^{(3)}(\\vec{x}-\\\
+    vec{x}')) = i\\int d^3x d^3x' e^{-i\\vec{k}\\cdot\\vec{x}}e^{-i\\vec{k}'\\cdot\\\
+    vec{x}'}\\delta^{(3)}(\\vec{x}-\\vec{x}') \\\\\n    &= i\\int d^3x e^{-i(\\vec{k}+\\\
+    vec{k}')\\cdot\\vec{x}} = i(2\\pi)^3\\delta^{(3)}(\\vec{k}+\\vec{k}')\n\\end{align*}\n\
+    Now we compute commutators of creation and annihilation operators using the results\
+    \ in (a)\n\\begin{align}\n    [a_{\\vec{k}}, a_{\\vec{k}'}] &= +\\frac{i}{2}([\\\
+    tilde{\\phi}(\\vec{k}), \\tilde{\\pi}(\\vec{k}')] + [\\tilde{\\pi}(\\vec{k}),\
+    \ \\tilde{\\phi}(\\vec{k}')]) = \\frac{i}{2}(i(2\\pi)^3\\delta^{(3)}(\\vec{k}+\\\
+    vec{k}') - i(2\\pi)^3\\delta^{(3)}(\\vec{k}'+\\vec{k})) = 0 \\nonumber \\\\\n\
+    \    [a_{\\vec{k}}^\\dagger, a_{\\vec{k}'}^\\dagger] &= -\\frac{i}{2}([\\tilde{\\\
+    phi}(-\\vec{k}), \\tilde{\\pi}(-\\vec{k}')] + [\\tilde{\\pi}(-\\vec{k}), \\tilde{\\\
+    phi}(-\\vec{k}')]) = -\\frac{i}{2}(i(2\\pi)^3\\delta^{(3)}(-\\vec{k}-\\vec{k}')\
+    \ - i(2\\pi)^3\\delta^{(3)}(-\\vec{k}'-\\vec{k})) = 0 \\nonumber \\\\\n    [a_{\\\
+    vec{k}}, a_{\\vec{k}'}^\\dagger] &= +\\frac{1}{2}(-[\\tilde{\\phi}(\\vec{k}),\
+    \ i\\tilde{\\pi}(-\\vec{k}')] + [i\\tilde{\\pi}(\\vec{k}), \\tilde{\\phi}(-\\\
+    vec{k}')]) = \\frac{1}{2}(-(2\\pi)^3(-\\delta^{(3)}(\\vec{k}-\\vec{k}')) - (2\\\
+    pi)^3\\delta^{(3)}(\\vec{k}'-\\vec{k})) \\nonumber \\\\\n    &= (2\\pi)^3\\delta^{(3)}(\\\
+    vec{k}-\\vec{k}') \\label{eq:commutation}\n\\end{align}"
+---
+problem:
+  type: problem
+  content: "Introduce\n\\begin{equation}\nZ[J] = \\int D\\phi \\, e^{i \\int d^4 x\
+    \ \\, \\mathcal{L}}, \\quad Z_0 = Z[J = 0] = \\int D\\phi \\, e^{i \\int d^4 x\
+    \ \\, \\mathcal{L}_0} \\tag{7}\n\\end{equation}\nwhere $\\mathcal{L}$ is given\
+    \ by \n\\begin{equation}\n\\mathcal{L} = -\\frac{1}{2}\\partial_\\mu\\phi\\partial^\\\
+    mu\\phi - \\frac{1}{2}m^2\\phi^2 + J(x)\\phi = \\mathcal{L}_0 + J(x)\\phi \\,.\
+    \ \\tag{8}\n\\end{equation}\nUsing similar tricks as we introduced in lecture\
+    \ to derive (1), you can show that\n\\begin{equation}\n\\langle 0, +\\infty |\
+    \ 0, -\\infty \\rangle = \\frac{Z[J]}{Z_0} \\tag{9}\n\\end{equation}\nwith an\
+    \ appropriate $i\\epsilon$ prescription. I will not ask you to derive the above\
+    \ equation, but you should think about yourself how it can be derived.\nUsing\
+    \ (9) to find the probability of no particle production\n\\begin{equation}\nP_0\
+    \ = |\\langle 0, +\\infty | 0, -\\infty \\rangle|^2 \\,. \\tag{10}\n\\end{equation}\n\
+    by directly evaluating the path integrals (7)."
+solution:
+  type: solution
+  content: 'We compute:
+
+    \begin{align*}
+
+    Z[J] &= \int D\phi e^{i \int d^4x (\mathcal{L}_0 + J\phi)} \\
+
+    &= \int D\phi \exp\left[-\frac{i}{2} \int d^4p \left(\phi^\dagger(p)(p^2+m^2-i\epsilon)\phi(p)
+    - J^\dagger(p)\phi(p) - J(p)\phi^\dagger(p)\right)\right] \\
+
+    &= Z_0 \exp\left[\frac{i}{2}\int d^4p \frac{|J(p)|^2}{p^2+m^2-i\epsilon}\right]
+
+    \end{align*}
+
+    In the last line, we complete the square and perform a linear shift of $\phi,
+    \phi^\dagger$. Therefore,
+
+    \begin{align*}
+
+    P_0 = \left|\frac{Z[J]}{Z[0]}\right|^2 &= \exp\left[i \int d^4p |J(p)|^2 \operatorname{Im}\frac{1}{p^2+m^2-i\epsilon}\right]
+    \\
+
+    &= \exp\left[-\pi \int d^4p |J(p)|^2 \delta(p^2+m^2)\right] \\
+
+    &= \exp\left[-\pi \int d^4p |J(p)|^2 \frac{1}{2\omega_{\mathbf{p}}}(\delta(p^0-\omega_{\mathbf{p}})
+    + \delta(p^0+\omega_{\mathbf{p}}))\right] \\
+
+    &= \exp\left[-\int \frac{d^3\mathbf{p}}{2\pi} \frac{\pi}{2\omega_{\mathbf{p}}}
+    (|J(\omega_{\mathbf{p}},\mathbf{p})|^2 + |J(-\omega_{\mathbf{p}},\mathbf{p})|^2)\right]
+    \\
+
+    &= \exp\left[-\int \frac{d^3\mathbf{p}}{2\omega_{\mathbf{p}}} |J(\mathbf{p})|^2\right]
+    = e^{-\lambda}
+
+    \end{align*}
+
+    In the line 1, we use that $a-a^* = 2i\operatorname{Im}(a)$. In line 2, we use
+    the identity
+
+    \[ \lim_{\epsilon\to 0^+} \frac{1}{x-i\epsilon} = \text{PV}\left(\frac{1}{x}\right)
+    + i\pi\delta(x) \]
+
+    where PV is the Cauchy principal value. Line 3 uses the identity from Problem
+    Set 1 that
+
+    \[ \delta(p^2+m^2) = \frac{1}{2\omega_{\mathbf{p}}}(\delta(p^0-\omega_{\mathbf{p}})
+    + \delta(p^0+\omega_{\mathbf{p}})) \]
+
+    In line 4 we perform the $p^0$ integral. Finally, in line 5 we use the invariance
+    of the $\int d^3\mathbf{p}$ under $\mathbf{p} \to -\mathbf{p}$, along with $J(-p)
+    = J^*(p)$ to show that the second term is equal to the first.'
+---
+problem:
+  type: problem
+  content: "For $\\lambda\\phi^4$ theory (11), consider the quantity\n\\begin{equation}\n\
+    Z_0 = \\langle 0 | T e^{-i\\int_{-\\infty}^\\infty H_I dt} | 0 \\rangle \\tag{14}\n\
+    \\end{equation}\nwhere the expectation value is evaluated in the free theory.\
+    \ We also assume that the free theory vacuum $|0\\rangle$ is properly normalized,\
+    \ i.e.\\ $\\langle 0|0 \\rangle = 1$.\n\\begin{enumerate}\n    \\item[(a)] Consider\n\
+    \    \\begin{equation}\n    W_0 = \\log Z_0 \\,. \\tag{15}\n    \\end{equation}\n\
+    \    Show that $W_0$ can be written in a form\n    \\begin{equation}\n    W_0\
+    \ = C - i\\varepsilon VT \\tag{16}\n    \\end{equation}\n    where $C$ is some\
+    \ constant independent of the spacetime volume, $\\varepsilon$ is the energy density\
+    \ difference between the full and free theories, and $VT$ is the total spacetime\
+    \ volume. Note $T = t-t'$ where $t \\to \\infty$ and $t' \\to -\\infty$ are respectively\
+    \ upper and lower limits of the path integrals.\n    \n    \\item[(b)] The Feynman\
+    \ diagrams in perturbative expansion of $Z_0$ have no external lines, which are\
+    \ often called vacuum diagrams or vacuum bubbles. We thus say that $Z_0$ is obtained\
+    \ by summing over vacuum diagrams. Show that $W_0$ is the sum of \\emph{connected}\
+    \ vacuum diagrams.\n    \n    Note that the statement in fact applies to all theories.\n\
+    \    \n    \\emph{Hint}: consult discussion of Peskin and Schroeder on p.96-98.\
+    \ The discussion of Peskin and Schroeder is not great, but hopefully you can get\
+    \ the key idea and write down your own proof.\n    \n    \\item[(c)] Write down\
+    \ the expression for $\\varepsilon$ to order $\\mathcal{O}(\\lambda^2)$. You can\
+    \ write it either in coordinate or momentum space. It is enough to write it formally\
+    \ as integrations of Feynman propagators. You do not need to evaluate the integrals.\n\
+    \    \n    \\emph{Note: the expression is divergent!}\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "\\begin{enumerate}\n    \\item[(c)] We first write down all the connected\
+    \ vacuum diagrams to order $O(\\lambda^2)$, using $\\int d^4x = VT$.\n\n\\begin{center}\n\
+    \\begin{tabular}{|c|c|c|p{9cm}|}\n\\hline\nOrder & Diagram & S & Expressions \\\
+    \\\n\\hline\n$\\lambda^1$ & $V_1^{(1)}$ & $2^3$ & $-i\\lambda VT G_F(0)^2$ \\\\\
+    \n& & & $-i\\lambda \\left(\\int d^4q \\frac{-i}{q^2+m^2-i\\epsilon}\\right)^2$\
+    \ \\\\\n\\hline\n$\\lambda^2$ & $V_2^{(2)}$ & $2^4$ & $(-i\\lambda)^2 VT G_F(0)^2\
+    \ \\int d^4z G_F(z)^2$ \\\\\n& & & $(-i\\lambda)^2 \\left(\\int d^4q \\frac{-i}{q^2+m^2-i\\\
+    epsilon}\\right)^2 \\int d^4q \\left(\\frac{-i}{q^2+m^2-i\\epsilon}\\right)^2$\
+    \ \\\\\n\\hline\n$\\lambda^2$ & $V_3^{(2)}$ & $2 \\times 4!$ & $(-i\\lambda)^2\
+    \ VT \\int d^4z G_F(z)^4$ \\\\\n& & & $(-i\\lambda)^2 \\int d^4q_1 d^4q_2 d^4q_3\
+    \ \\frac{-i}{q_1^2+m^2-i\\epsilon} \\frac-i{q_2^2+m^2-i\\epsilon} \\frac-i{q_3^2+m^2-i\\\
+    epsilon} \\frac-i{(q_1+q_2+q_3)^2+m^2-i\\epsilon}$ \\\\\n\\hline\n\\end{tabular}\n\
+    \\end{center}\nThe symmetry factor of $V_1^{(1)}$ has $2^2$ from propagators starting\
+    \ and ending on the same vertex, and another factor of 2 permuting the loops.\
+    \ The symmetry factor of $V_2^{(2)}$ has $2^2$ from propagators starting and ending\
+    \ on the same vertex, a factor of 2 permuting the identical vertices, and another\
+    \ factor of 2 due to the 2 identical propagators connecting the internal vertices.\
+    \ The symmetry factor of $V_3^{(2)}$ has a factor of 2 permuting the identical\
+    \ vertices, $4!$ from the 4 identical propagators connecting the internal vertices.\n\
+    \nHence, we have\n\\begin{align*}\n\\epsilon &= \\frac{i}{VT} (V_1^{(1)} + V_2^{(2)}\
+    \ + V_3^{(2)}) + O(\\lambda^3) \\\\\n&= \\frac{\\lambda}{8}(G_F(0))^2 - \\frac{i\\\
+    lambda^2}{16}(G_F(0))^2 \\int d^4x (G_F(x))^2 - \\frac{i\\lambda^2}{48} \\int\
+    \ d^4x (G_F(x))^4 + O(\\lambda^3)\n\\end{align*}\n\\end{enumerate}"
+---
+problem:
+  type: problem
+  content: "In the Majorana representation, $\\gamma^\\mu$ are real and thus $\\psi$\
+    \ can be chosen to be real. Such a spinor is call a Majorana spinor. This has\
+    \ important physical consequences. Upon quantization, being real, a Majorana particle\
+    \ should not have an anti-particle (or equivalently it is its own anti-particle).\n\
+    \nWe discussed in lecture that the concept of a Majorana spinor can be generalized\
+    \ to any representation of $\\gamma$, if we could find a matrix $B$ satisfying\n\
+    \\begin{equation}\nB\\gamma^\\mu B^{-1} = \\gamma^{\\mu *}, \\tag{27}\n\\end{equation}\n\
+    and the Majorana condition is\n\\begin{equation}\n\\psi^* = B\\psi. \\tag{28}\n\
+    \\end{equation}\n\\begin{enumerate}\n    \\item[(a)] In lecture we showed that\
+    \ in the chiral representation (18) we can choose $B = \\gamma^2$. Solve the Majorana\
+    \ condition (28) in the chiral representation. Show that in this representation\
+    \ a Majorana spinor $\\psi$ can be expressed in terms of $\\psi_L$ alone.\n  \
+    \  \\item[(b)] Plug in the expression (in terms of $\\psi_L$) for Majorana $\\\
+    psi$ you obtained in part (a) into the Dirac action. Show that it reduces to the\
+    \ action you found in part 3(f)! (That is why the mass term you found in part\
+    \ 3(e) is called the Majorana mass term.)\n\\end{enumerate}"
+solution:
+  type: solution
+  content: "In the Majorana representation, $\\gamma^\\mu$ are real, and thus $\\\
+    psi$ can be chosen to be real. Such a spinor is called a Majorana spinor. This\
+    \ has important physical consequences. Upon quantization, being real, a Majorana\
+    \ particle should not have an antiparticle (or equivalently, it is its own antiparticle).\n\
+    We discussed in lecture that the concept of a Majorana spinor can be generalized\
+    \ to any representation of $\\gamma$. If we can find a matrix $B$ satisfying\n\
+    \\begin{equation*}\n    B\\gamma^\\mu B^{-1} = (\\gamma^\\mu)^*\n\\end{equation*}\n\
+    the Majorana condition is\n\\begin{equation*}\n    \\psi^* = B\\psi\n\\end{equation*}\n\
+    \n\\begin{enumerate}[label = \\alph*]\n    \\item In lecture we showed that in\
+    \ the chiral representation we can choose $B = \\gamma^2$. Solve the Majorana\
+    \ condition in the chiral representation. Show that in this representation a Majorana\
+    \ spinor $\\psi$ can be expressed in terms of $\\psi_L$ alone.\n    For $B = -i\\\
+    gamma^2$, the Majorana condition in the chiral representation is\n    \\begin{equation*}\n\
+    \        B\\psi = \\begin{pmatrix} 0 & -i\\sigma^2 \\\\ i\\sigma^2 & 0 \\end{pmatrix}\
+    \ \\begin{pmatrix} \\psi_L \\\\ \\psi_R \\end{pmatrix} = \\begin{pmatrix} -i\\\
+    sigma^2\\psi_R \\\\ i\\sigma^2\\psi_L \\end{pmatrix} = \\begin{pmatrix} \\psi_L^*\
+    \ \\\\ \\psi_R^* \\end{pmatrix} = \\psi^*\n    \\end{equation*}\n    This gives\
+    \ us $\\psi_L^* = -i\\sigma^2\\psi_R$, and $\\psi_R^* = i\\sigma^2\\psi_L$. Therefore\
+    \ $\\psi_R = -i(\\sigma^2)^*\\psi_L^{*T} = i\\sigma^2\\psi_L^{*T}$, and we can\
+    \ write $\\psi$ in terms of purely $\\psi_L$:\n    \\begin{equation*}\n      \
+    \  \\psi = \\begin{pmatrix} \\psi_L \\\\ i\\sigma^2\\psi_L^{*T} \\end{pmatrix}\n\
+    \    \\end{equation*}\n\\end{enumerate}"

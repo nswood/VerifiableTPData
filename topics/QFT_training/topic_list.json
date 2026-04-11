@@ -1,0 +1,143 @@
+{
+    "Advanced Undergraduate": {
+      "Foundations and Scalar Fields": [
+        { "id": "UG-01", "topic": "Classical field theory and Lagrangian formalism", "description": "Build field theories from symmetry principles using actions and Euler–Lagrange equations. Connect kinetic and interaction terms to conservation laws and dimensions.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-02", "topic": "Euler–Lagrange equations for fields", "description": "Derive equations of motion for scalar or vector fields, including derivative couplings. Track overall signs and coefficients carefully and interpret terms physically.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-03", "topic": "Symmetries and Noether’s theorem", "description": "Relate continuous symmetries to conserved currents and charges. Distinguish internal vs spacetime symmetries in simple models and extract explicit currents.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-04", "topic": "Energy–momentum tensor (canonical vs improved)", "description": "Construct stress tensors and test conservation. Examine traceless limits and symmetry under Lorentz transformations.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-05", "topic": "Lorentz invariance and field representations", "description": "Classify fields by spin and transformation properties. Verify covariance of actions and bilinears using indices or gamma-matrix conventions at a conceptual level.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-06", "topic": "Quantization of the Klein–Gordon field", "description": "Promote classical fields to operators, impose commutators, and define creation/annihilation operators. Connect normalizations to delta functions and box quantization.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-07", "topic": "Plane-wave solutions and dispersion", "description": "Analyze Fourier modes, on-shell relations, and normalization for free relativistic fields. Relate to physical energies and group velocity.", "category": "Foundations and Scalar Fields" },
+        { "id": "UG-08", "topic": "Microcausality and equal-time commutators", "description": "Compute spacelike (anti)commutators and identify conditions for microcausality. Clarify locality assumptions.", "category": "Foundations and Scalar Fields" }
+      ],
+      "Path Integrals and Quantization": [
+        { "id": "UG-09", "topic": "Path integrals: Z[J] and W[J]", "description": "Formulate generating functionals for free theories and relate functional derivatives to correlation functions. Track signs and normalization.", "category": "Path Integrals and Quantization" },
+        { "id": "UG-10", "topic": "Gaussian functional integrals", "description": "Evaluate quadratic path integrals and determinants. Connect to propagators through completing the square and inverses of operators.", "category": "Path Integrals and Quantization" },
+        { "id": "UG-11", "topic": "Connected vs 1PI generating functionals", "description": "Relate Z, W, and Γ. Distinguish connected, amputated, and 1PI objects and their roles in perturbation theory.", "category": "Path Integrals and Quantization" },
+        { "id": "UG-12", "topic": "Interaction picture and Dyson series", "description": "Organize time evolution with interactions and set up the Dyson expansion. Use interaction-picture operators and time ordering consistently.", "category": "Path Integrals and Quantization" },
+        { "id": "UG-13", "topic": "Propagators and Green’s functions", "description": "Construct time-ordered, retarded, and advanced propagators in x- and p-space. Emphasize boundary conditions and mass dependence.", "category": "Path Integrals and Quantization" },
+        { "id": "UG-14", "topic": "Wick’s theorem and contractions", "description": "Reduce time-ordered products to contractions and normal-ordered terms. Connect operator algebra to diagrammatics.", "category": "Path Integrals and Quantization" }
+      ],
+      "Symmetries and Scattering": [
+        { "id": "UG-15", "topic": "Tree-level perturbation theory", "description": "Generate Feynman rules and compute elementary tree amplitudes. Track symmetry factors and identical-particle combinatorics.", "category": "Symmetries and Scattering" },
+        { "id": "UG-16", "topic": "φ⁴ theory at tree level", "description": "Study 2→2 scalar scattering, channels, and basic kinematics. Compare identical vs distinguishable cases and symmetry factors.", "category": "Symmetries and Scattering" },
+        { "id": "UG-17", "topic": "Cross sections and Lorentz-invariant phase space", "description": "Relate matrix elements to observables using flux and LI phase space. Explore threshold behavior and high-energy limits.", "category": "Symmetries and Scattering" },
+        { "id": "UG-18", "topic": "LSZ reduction (conceptual)", "description": "Connect amputated Green’s functions to S-matrix elements and clarify wavefunction renormalization. Focus on which factors appear and why.", "category": "Symmetries and Scattering" },
+        { "id": "UG-19", "topic": "Real vs complex scalar fields", "description": "Contrast U(1) symmetry, charge, and particle content. Derive the Noether current for complex fields.", "category": "Symmetries and Scattering" },
+        { "id": "UG-20", "topic": "Discrete symmetries (P, C, T) for scalars", "description": "Classify simple operators under parity, charge conjugation, and time reversal. Provide selection rules in basic processes.", "category": "Symmetries and Scattering" },
+        { "id": "UG-21", "topic": "Partial-wave expansion (intro)", "description": "Decompose simple scattering amplitudes into partial waves. Identify s- and p-wave dominance near threshold.", "category": "Symmetries and Scattering" },
+        { "id": "UG-22", "topic": "Optical theorem at tree-level accuracy", "description": "Relate forward amplitude to total cross section in simple models. Check unitarity constraints qualitatively.", "category": "Symmetries and Scattering" },
+        { "id": "UG-23", "topic": "Källén function and kinematics", "description": "Use the Källén λ function to handle two-body kinematics. Analyze allowed regions and special limits.", "category": "Symmetries and Scattering" },
+        { "id": "UG-24", "topic": "Dimensional analysis and natural units", "description": "Track mass dimensions of fields and couplings. Use natural units to check consistency of results.", "category": "Symmetries and Scattering" },
+        { "id": "UG-25", "topic": "Stability and boundedness of potentials", "description": "Identify conditions for vacuum stability in polynomial scalar potentials. Classify phases and small oscillations.", "category": "Symmetries and Scattering" }
+      ]
+    },
+    "Graduate": {
+      "Fermions and Spinor Structure": [
+        { "id": "GR-01", "topic": "Dirac equation and spinor solutions", "description": "Solve plane-wave spinors and completeness relations; compute bilinears and currents. Interpret helicity and chirality in simple processes.", "category": "Fermions and Spinor Structure" },
+        { "id": "GR-02", "topic": "Quantized Dirac field", "description": "Build fermionic Fock space from anti-commutation relations. Connect field operators to particle number and charges.", "category": "Fermions and Spinor Structure" },
+        { "id": "GR-03", "topic": "Gamma matrices, traces, and bilinears", "description": "Use Clifford algebra identities and trace technology. Classify bilinears by Lorentz and discrete symmetries.", "category": "Fermions and Spinor Structure" },
+        { "id": "GR-04", "topic": "Chirality, helicity, and projection operators", "description": "Work with chiral projectors, massless limits, and spin sums. Apply to scattering and symmetry analyses.", "category": "Fermions and Spinor Structure" },
+        { "id": "GR-05", "topic": "Discrete symmetries for fermions", "description": "Classify fermionic operators under P, C, and T. Provide selection rules and simple examples.", "category": "Fermions and Spinor Structure" }
+      ],
+      "Gauge Fields and Symmetry": [
+        { "id": "GR-06", "topic": "QED and Abelian gauge invariance", "description": "Derive local U(1) invariance, Feynman rules, and Ward identities. Examine gauge choices and physical observables.", "category": "Gauge Fields and Symmetry" },
+        { "id": "GR-07", "topic": "Yang–Mills theories and color structure", "description": "Formulate non-Abelian field strengths and covariant derivatives. Understand self-interactions and color factors.", "category": "Gauge Fields and Symmetry" },
+        { "id": "GR-08", "topic": "Gauge fixing and Faddeev–Popov ghosts", "description": "Quantize non-Abelian theories in covariant gauges. Derive ghost terms, vertices, and their role in loops.", "category": "Gauge Fields and Symmetry" },
+        { "id": "GR-09", "topic": "Ward–Takahashi identities", "description": "Relate symmetries to Green’s function identities. Constrain renormalization and amplitude structures.", "category": "Gauge Fields and Symmetry" },
+        { "id": "GR-10", "topic": "Background vs Rξ gauges (conceptual)", "description": "Compare gauge-fixing strategies and their impact on intermediate quantities. Emphasize gauge-parameter independence of observables.", "category": "Gauge Fields and Symmetry" }
+      ],
+      "Renormalization and Quantum Corrections": [
+        { "id": "GR-11", "topic": "Vacuum polarization", "description": "Analyze photon self-energy at one loop and momentum dependence of propagators. Interpret charge screening in QED.", "category": "Renormalization and Quantum Corrections" },
+        { "id": "GR-12", "topic": "Dimensional regularization", "description": "Regulate loop integrals in d=4−2ε. Track poles, scales, and scheme conventions (MS/ℳS̄).", "category": "Renormalization and Quantum Corrections" },
+        { "id": "GR-13", "topic": "Counterterms and renormalized parameters", "description": "Define renormalization conditions, Z-factors, and parameter redefinitions. Compare on-shell vs minimal schemes.", "category": "Renormalization and Quantum Corrections" },
+        { "id": "GR-14", "topic": "Running couplings and β functions (QED)", "description": "Derive coupling evolution with scale and interpret effective charge. Connect to physical cross sections.", "category": "Renormalization and Quantum Corrections" },
+        { "id": "GR-15", "topic": "Renormalization of φ⁴ theory (one loop)", "description": "Compute 2- and 4-point divergences and extract Z-factors. Discuss coupling running and triviality qualitatively.", "category": "Renormalization and Quantum Corrections" }
+      ],
+      "Spontaneous Symmetry Breaking and Higgs": [
+        { "id": "GR-16", "topic": "Goldstone theorem", "description": "Connect continuous symmetry breaking to massless modes via current algebra. Provide simple examples.", "category": "Spontaneous Symmetry Breaking and Higgs" },
+        { "id": "GR-17", "topic": "Higgs mechanism (Abelian)", "description": "Show gauge boson mass generation via SSB and gauge fixing. Track eaten modes and physical spectra.", "category": "Spontaneous Symmetry Breaking and Higgs" },
+        { "id": "GR-18", "topic": "Higgs mechanism (non-Abelian, conceptual)", "description": "Extend to SU(2)-like settings with multiple gauge bosons. Emphasize counting of degrees of freedom and masses.", "category": "Spontaneous Symmetry Breaking and Higgs" },
+        { "id": "GR-19", "topic": "Unitarity and the optical theorem", "description": "Link forward scattering to total cross sections. Verify S-matrix consistency at tree or one-loop level in simple channels.", "category": "Spontaneous Symmetry Breaking and Higgs" },
+        { "id": "GR-20", "topic": "Infrared divergences in QED (inclusive observables)", "description": "Understand soft/collinear singularities and their cancellation in inclusive rates. Use soft factors and KLN intuition.", "category": "Spontaneous Symmetry Breaking and Higgs" }
+      ],
+      "Applied Topics and Tools": [
+        { "id": "GR-21", "topic": "Spectral representation (Källén–Lehmann, intro)", "description": "Express two-point functions via spectral densities and discuss positivity/normalization constraints.", "category": "Applied Topics and Tools" },
+        { "id": "GR-22", "topic": "Dispersion relations (intro)", "description": "Relate real/imaginary parts of amplitudes through analyticity and subtractions. Apply to simple correlators.", "category": "Applied Topics and Tools" },
+        { "id": "GR-23", "topic": "Partial waves and unitarity bounds", "description": "Use partial-wave unitarity to constrain couplings or cross sections in toy models.", "category": "Applied Topics and Tools" },
+        { "id": "GR-24", "topic": "Crossing symmetry basics", "description": "Relate s-, t-, and u-channel processes through analytic continuation for simple amplitudes.", "category": "Applied Topics and Tools" },
+        { "id": "GR-25", "topic": "Lehmann–Symanzik–Zimmermann details (applied)", "description": "Connect field renormalization factors to residues and asymptotic states for calculable examples.", "category": "Applied Topics and Tools" }
+      ]
+    },
+    "Advanced Graduate": {
+      "Renormalization Group and Scaling": [
+        { "id": "AG-01", "topic": "RG flow and fixed points", "description": "Formulate RG equations and classify fixed points. Linearize flows and extract simple critical exponents.", "category": "Renormalization Group and Scaling" },
+        { "id": "AG-02", "topic": "β functions in φ⁴ and QED", "description": "Compute one-loop β-functions with attention to factors and schemes. Interpret UV/IR behavior and triviality vs asymptotic freedom.", "category": "Renormalization Group and Scaling" },
+        { "id": "AG-03", "topic": "Anomalous dimensions", "description": "Determine field/operator rescaling with scale and relate to correlation function scaling.", "category": "Renormalization Group and Scaling" },
+        { "id": "AG-04", "topic": "Dimensional transmutation and Λ scales", "description": "Explain how dimensionless couplings generate a physical scale through renormalization; connect to running couplings.", "category": "Renormalization Group and Scaling" },
+        { "id": "AG-05", "topic": "Callan–Symanzik equation (intro)", "description": "Relate RG flow to scale dependence of correlators and Green’s functions. Solve simple CS equations.", "category": "Renormalization Group and Scaling" }
+      ],
+      "Non-Abelian Gauge Theories": [
+        { "id": "AG-06", "topic": "Non-Abelian renormalization and QCD β function", "description": "Evaluate color factors and derive asymptotic freedom for SU(N). Discuss nf-dependence and scheme issues.", "category": "Non-Abelian Gauge Theories" },
+        { "id": "AG-07", "topic": "Background field method (one-loop effective action)", "description": "Preserve gauge invariance in effective actions and streamline RG calculations. Emphasize background vs quantum fields.", "category": "Non-Abelian Gauge Theories" },
+        { "id": "AG-08", "topic": "Wilson loops and area law (qualitative)", "description": "Use Wilson loops to diagnose confinement. Contrast area vs perimeter behaviors and simple models.", "category": "Non-Abelian Gauge Theories" },
+        { "id": "AG-09", "topic": "BRST symmetry (intro)", "description": "Introduce BRST transformations and cohomology ideas. Connect to gauge fixing and ghost structure.", "category": "Non-Abelian Gauge Theories" }
+      ],
+      "Finite Temperature and Vacuum Effects": [
+        { "id": "AG-10", "topic": "Matsubara formalism", "description": "Use imaginary time and periodicity to compute thermal correlators. Perform simple Matsubara sums.", "category": "Finite Temperature and Vacuum Effects" },
+        { "id": "AG-11", "topic": "Thermal effective potential (intro)", "description": "Study symmetry restoration/breaking at finite temperature using simple scalar models and high-T expansions.", "category": "Finite Temperature and Vacuum Effects" },
+        { "id": "AG-12", "topic": "Casimir effect (calculable setups)", "description": "Evaluate vacuum energy shifts due to boundaries in simple geometries. Interpret forces and scaling.", "category": "Finite Temperature and Vacuum Effects" }
+      ],
+      "Anomalies and Supersymmetry": [
+        { "id": "AG-13", "topic": "Chiral anomalies (triangle diagrams)", "description": "Compute axial anomalies and understand current non-conservation. State cancellation conditions.", "category": "Anomalies and Supersymmetry" },
+        { "id": "AG-14", "topic": "Gauge anomalies (consistency)", "description": "Identify gauge anomaly structures and cancellation criteria in simple fermion spectra.", "category": "Anomalies and Supersymmetry" },
+        { "id": "AG-15", "topic": "Instantons and tunneling (scalar)", "description": "Construct bounce solutions and estimate vacuum decay rates semiclassically. Track determinants conceptually.", "category": "Anomalies and Supersymmetry" },
+        { "id": "AG-16", "topic": "Supersymmetry algebra and multiplets (N=1)", "description": "Build supercharges and superfields; derive component actions. Verify invariance and multiplet structure.", "category": "Anomalies and Supersymmetry" },
+        { "id": "AG-17", "topic": "Wess–Zumino model (intro)", "description": "Construct the simplest interacting SUSY model and analyze component interactions and invariants.", "category": "Anomalies and Supersymmetry" }
+      ]
+    },
+    "Post Graduate": {
+      "Amplitude and On-Shell Methods": [
+        { "id": "PG-01", "topic": "Spinor helicity for massless particles", "description": "Represent external states with spinor variables and express amplitudes using angle/square brackets. Enforce little-group scaling and on-shell constraints.", "category": "Amplitude and On-Shell Methods" },
+        { "id": "PG-02", "topic": "Color decomposition", "description": "Separate color from kinematics in non-Abelian amplitudes using trace or color-flow bases. Compare partial amplitudes across bases.", "category": "Amplitude and On-Shell Methods" },
+        { "id": "PG-03", "topic": "BCFW recursion", "description": "Reconstruct tree amplitudes from complex momentum shifts and factorization. Address boundary terms and valid shifts.", "category": "Amplitude and On-Shell Methods" },
+        { "id": "PG-05", "topic": "Optical theorem and Cutkosky rules", "description": "Connect imaginary parts of amplitudes to sums over on-shell intermediate states. Apply to forward scattering and check consistency.", "category": "Amplitude and On-Shell Methods" }
+      ],
+      "Loop and Regularization Techniques": [
+        { "id": "PG-11", "topic": "Passarino–Veltman reduction", "description": "Reduce tensor integrals to scalar masters and organize loop computations systematically. Track dimensional factors consistently.", "category": "Loop and Regularization Techniques" },
+        { "id": "PG-12", "topic": "Dimensional regularization for amplitudes", "description": "Evaluate d-dimensional integrals and keep ε-poles and finite remainders straight. Clarify scheme dependence in results.", "category": "Loop and Regularization Techniques" },
+        { "id": "PG-13", "topic": "Integration-by-parts (IBP) identities (intro)", "description": "Use IBP relations to reduce loop integrals to masters. Understand Laporta-style reduction conceptually.", "category": "Loop and Regularization Techniques" },
+        { "id": "PG-14", "topic": "Feynman parameters and simple master integrals", "description": "Parametrize loop integrals and evaluate standard bubbles/triangles/boxes in simple kinematics.", "category": "Loop and Regularization Techniques" }
+      ],
+      "Effective Field Theories": [
+        { "id": "PG-15", "topic": "Operator product expansion (beyond LO)", "description": "Organize short-distance expansions and Wilson coefficients for correlators and currents. Treat running and mixing where needed.", "category": "Effective Field Theories" },
+        { "id": "PG-16", "topic": "Wilsonian matching and integrating out", "description": "Derive low-energy effective actions by eliminating heavy fields. Compute threshold corrections and power counting.", "category": "Effective Field Theories" },
+        { "id": "PG-17", "topic": "Chiral perturbation theory (χPT)", "description": "Build the chiral Lagrangian under symmetry constraints and compute low-energy pion processes. Track LECs and orders.", "category": "Effective Field Theories" },
+        { "id": "PG-18", "topic": "Soft-collinear effective theory (SCET)", "description": "Factorize hard/collinear/soft modes and resum large logarithms. Outline matching and running at a conceptual level.", "category": "Effective Field Theories" },
+        { "id": "PG-19", "topic": "Heavy-quark effective theory (HQET)", "description": "Use heavy-quark symmetry and 1/m expansions for heavy–light hadrons and currents. Identify spin/flavor symmetry predictions.", "category": "Effective Field Theories" },
+        { "id": "PG-20", "topic": "Nonrelativistic QCD (NRQCD)", "description": "Describe quarkonium with nonrelativistic expansions and leading bound-state effects. Contrast with potential models at a high level.", "category": "Effective Field Theories" },
+        { "id": "PG-22", "topic": "RG evolution of EFT operators", "description": "Evolve Wilson coefficients and handle operator mixing under RG flow. Keep scheme and basis conventions explicit.", "category": "Effective Field Theories" }
+      ],
+      "Nonperturbative and Topological Physics": [
+        { "id": "PG-24", "topic": "Instantons and tunneling (field theory)", "description": "Evaluate semiclassical saddle contributions and decay rates. Emphasize qualitative dependence on couplings and scales.", "category": "Nonperturbative and Topological Physics" },
+        { "id": "PG-25", "topic": "Solitons and topological defects", "description": "Construct kinks, vortices, or monopoles and analyze topological charges and stability. Contrast classical and quantum aspects.", "category": "Nonperturbative and Topological Physics" },
+        { "id": "PG-26", "topic": "Index theorems and anomaly inflow", "description": "Relate zero modes to topological invariants and anomalies. Use anomaly matching and inflow as guiding principles.", "category": "Nonperturbative and Topological Physics" },
+        { "id": "PG-27", "topic": "Large-N expansions and planar limits", "description": "Organize dynamics in 1/N for SU(N) and identify planar dominance. Discuss qualitative implications for spectra or correlators.", "category": "Nonperturbative and Topological Physics" },
+        { "id": "PG-28", "topic": "Confinement and Wilson loops", "description": "Use Wilson loops to extract static potentials and diagnose confining behavior. Highlight area vs perimeter laws.", "category": "Nonperturbative and Topological Physics" },
+        { "id": "PG-29", "topic": "Schwinger–Dyson equations and resummation", "description": "Develop self-consistent equations for correlators and perform controlled resummations. Interpret truncations physically.", "category": "Nonperturbative and Topological Physics" }
+      ],
+      "Curved Spacetime and Semiclassical QFT": [
+        { "id": "PG-30", "topic": "Path integrals in curved backgrounds", "description": "Define covariant measures and propagators and study curvature effects. Keep to calculable toy geometries or approximations.", "category": "Curved Spacetime and Semiclassical QFT" },
+        { "id": "PG-31", "topic": "Saddle-point methods and WKB", "description": "Estimate path integrals and transition amplitudes via stationary phase and WKB. Track phases and prefactors carefully.", "category": "Curved Spacetime and Semiclassical QFT" },
+        { "id": "PG-32", "topic": "Heat-kernel and Schwinger proper time (intro)", "description": "Use proper-time/heat-kernel techniques to evaluate determinants and effective actions in simple backgrounds.", "category": "Curved Spacetime and Semiclassical QFT" }
+      ],
+      "Conformal, Supersymmetric, and Dual Structures": [
+        { "id": "PG-36", "topic": "CFT primaries, descendants, and Ward identities", "description": "Classify operators by conformal data and compute basic correlators/OPEs. Emphasize Ward identities and dimensional analysis.", "category": "Conformal, Supersymmetric, and Dual Structures" },
+        { "id": "PG-38", "topic": "N=1,2 superfields and SUSY Ward identities", "description": "Build superfield actions and derive component interactions. Enforce SUSY Ward identities and multiplet relations.", "category": "Conformal, Supersymmetric, and Dual Structures" },
+        { "id": "PG-39", "topic": "AdS/CFT dictionary (field-theory side)", "description": "Match bulk fields to boundary operators and use holographic prescriptions for simple correlators. Keep to introductory, calculable settings.", "category": "Conformal, Supersymmetric, and Dual Structures" },
+        { "id": "PG-45", "topic": "Chern–Simons gauge theory (basics, 3D)", "description": "Discuss topological gauge actions and simple observables (e.g., Wilson lines). Keep to conceptual, computable cases.", "category": "Conformal, Supersymmetric, and Dual Structures" }
+      ]
+    }
+  }
+  
+

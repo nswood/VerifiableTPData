@@ -1,0 +1,22 @@
+# Test config for easy difficulty problems
+# Uses trimmed topic list for quick testing
+
+dataset_name: qft_easy_test
+topic_list_path: topics/QFT_test/topic_list.json
+system_prompt_path: prompts/QFT_training/easy_task_low_level_calc_prompt.txt
+topic_name: QFT_test
+topic: QFT
+verbose: false
+num_problems: 5
+level_split:
+  Advanced Undergraduate: 0.25
+  Graduate: 0.25
+  Advanced Graduate: 0.25
+  Post Graduate: 0.25
+model: gemini-2.5-flash
+seed: 42
+num_workers: 4
+task_config:
+  tasks_min: 1
+  tasks_max: 1
+  tasks_dependent: false
