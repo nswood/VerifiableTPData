@@ -9,27 +9,7 @@ Every problem includes Python test cases. Problems pass through quality checking
 
 ## Pipeline Overview
 
-```
-                              ┌──────────────┐
-                              │  topic list  │  (synthetic)
-                              │  or seeds    │  (adapted)
-                              └──────┬───────┘
-                                     │
-                              1. Generate
-                                     │
-                              2. Quality Check
-                                     │
-                              3. Filter QC ──▶ qc_failed/
-                                     │
-                              4. Indep Solver
-                                     │
-                              5. Filter Solver ──▶ solver_failed/
-                                     │
-                              ┌──────▼───────┐
-                              │  verified    │
-                              │  problems    │
-                              └──────────────┘
-```
+![Data Pipeline](figures/data_pipeline_muted_colors.png)
 
 ## Setup
 
