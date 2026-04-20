@@ -678,6 +678,9 @@ def main(
     base_dir_path = Path(base_dir)
     json_dir = base_dir_path
 
+    global QUALITY_LOG_FILE
+    QUALITY_LOG_FILE = base_dir_path / "quality_report.json"
+
     api_key = get_api_key(model_name=model)
     json_files = _gather_json_files(json_dir)
     if test_run:
