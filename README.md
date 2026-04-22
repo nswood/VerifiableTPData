@@ -1,7 +1,7 @@
 # VerifiableTPData
+This repo provides the data pipeline for generating verifiable theoretical physics problems used in the paper [Fine-Tuning Small Reasoning Models for Quantum Field Theory](https://arxiv.org/abs/2604.18936) by N. Woodward et al.. 
 
-A pipeline for generating verifiable theoretical physics problems with auto-graded test cases. Supports two generation modes:
-
+The pipeline supports two generation modes:
 - **Synthetic**: generate problems from a topic list using an LLM
 - **Adapted**: reformat existing seed problem-solution pairs into a verifiable format
 
@@ -226,4 +226,17 @@ seeds/
 scripts/
   run_pipeline.py                 # End-to-end orchestration
 genai.py                          # Gemini/OpenAI API wrapper
+```
+
+## Citation
+```bibtex
+@misc{woodward2026finetuningsmallreasoningmodels,
+      title={Fine-Tuning Small Reasoning Models for Quantum Field Theory}, 
+      author={Nathaniel S. Woodward and Zhiqi Gao and Yurii Kvasiuk and Kendrick M. Smith and Frederic Sala and Moritz Münchmeyer},
+      year={2026},
+      eprint={2604.18936},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2604.18936}, 
+}
 ```
