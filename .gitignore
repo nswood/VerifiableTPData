@@ -86,3 +86,6 @@ dmypy.json
 
 # api keys
 api_keys/
+
+# LaTeX report output
+output/

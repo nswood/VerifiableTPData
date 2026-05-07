@@ -194,6 +194,134 @@ Each problem JSON contains:
 - `model_solutions` — solver attempts with `verifier_result`
 - `indep_solver_results` — pass@k summary
 
+## Evaluating Models on the Dataset
+
+Once a directory of verified problems exists, you can run additional models
+against it, grade their solutions via code verification, and produce a
+PDF summary — separate from the data-generation pipeline.
+
+### Generate solutions and grade them
+
+```bash
+python scripts/generate_and_grade.py \
+  --problems_dir synthetic_data/QFT_test/qft_easy_test \
+  --num_attempts 5 \
+  --model_name gemini-2.5-flash
+```
+
+Default behavior: generate `num_attempts` solutions per problem, grade each
+attempt by executing its Python code against the problem's test cases,
+append results to `model_solutions[].attempts[].verifier_result` in each
+JSON, and emit a LaTeX/PDF summary to `output/`. Re-running appends new
+attempts unless `--overwrite_attempts` is passed.
+
+Single problem:
+
+```bash
+python scripts/generate_and_grade.py \
+  --problem_path synthetic_data/QFT_test/qft_easy_test/p1.json \
+  --num_attempts 1 \
+  --model_name gpt-5
+```
+
+Grade-only (skip generation, useful for re-grading after a code/test-case
+change):
+
+```bash
+python scripts/generate_and_grade.py --grading \
+  --problems_dir synthetic_data/QFT_test/qft_easy_test \
+  --regrade_all
+```
+
+| Flag | Default | Description |
+|------|---------|-------------|
+| `--problems_dir` | — | Directory of problem JSONs (required unless `--problem_path`) |
+| `--problem_path` | — | Single problem JSON instead of a directory |
+| `--model_name` | `gemini-2.5-flash` | Model used to generate solutions |
+| `--num_attempts` | 1 | Attempts per problem |
+| `--prompt_type` | `CoT` | `CoT` or `standard` (see `configs/inference_config.json`) |
+| `--temperature` | model default | Generation temperature |
+| `--grading` | off | Skip generation; only grade existing attempts |
+| `--regrade_all` | off | Re-grade attempts that already have a `verifier_result` |
+| `--overwrite_attempts` | off | Replace existing attempts instead of appending |
+| `--multi_gpu`, `--gpu_memory_utilization` | 1, 0.95 | Local-model (vLLM) options |
+| `--requests_per_minute`, `--max_concurrent_requests` | 1000, 500 | API rate-limit knobs |
+| `--latex_report` / `--no-latex_report` | on | Emit a PDF summary after grading a directory |
+| `--quiet` | off | Suppress grading debug output |
+
+### Model routing (API vs. local vLLM)
+
+`--model_name` is dispatched by prefix in `src/problem_processor_base.py`.
+Anything that does not match a known API prefix is treated as a local
+model and loaded via vLLM.
+
+| Prefix on `--model_name` | Routed to |
+|--------------------------|-----------|
+| `gemini*` | Google Gemini API |
+| `claude*` | Anthropic API |
+| `grok*` | xAI API |
+| `gpt*`, `chatgpt*`, `o1*`, `o3*`, `o4*` | OpenAI API |
+| `deepseek*` (except `deepseek-ai/DeepSeek-R1-Distill*`), `moonshotai*` | Together AI |
+| Anything else (e.g. a filesystem path or HuggingFace ID) | **local vLLM** |
+
+To run a local model, pass its path or HuggingFace identifier directly —
+vLLM is loaded on demand:
+
+```bash
+# Local checkpoint on disk:
+CUDA_VISIBLE_DEVICES=0,1 python scripts/generate_and_grade.py \
+  --problems_dir synthetic_data/QFT_test/qft_easy_test \
+  --num_attempts 5 \
+  --model_name {insert path to local model dir or HF} \
+  --multi_gpu 2 --temperature 1.0 --gpu_memory_utilization 0.75
+
+# HuggingFace model:
+CUDA_VISIBLE_DEVICES=0,1,2,3 python scripts/generate_and_grade.py \
+  --problems_dir synthetic_data/QFT_test/qft_easy_test \
+  --num_attempts 5 \
+  --model_name Qwen/Qwen2.5-7B-Instruct \
+  --multi_gpu 4
+```
+
+Tune `--multi_gpu` and `--gpu_memory_utilization` per node. For results
+written into `model_solutions[].model`, pass `--model_alias` to override
+the on-disk path with a clean label (e.g. `easy_sft_DS-7B_v1`).
+
+### Standalone LaTeX/PDF summary
+
+`scripts/generate_latex.py` builds the same report without re-running
+generation or grading — handy for regenerating PDFs from existing JSONs
+or filtering by model/topic:
+
+```bash
+# Analysis-only PDF for a directory:
+python scripts/generate_latex.py \
+  --problems_dir synthetic_data/QFT_test/qft_easy_test \
+  --analysis_only --pdf
+
+# Per-problem report restricted to one solver, including its CoT:
+python scripts/generate_latex.py \
+  --problem_path synthetic_data/QFT_test/qft_easy_test/p1.json \
+  --selected_solvers gemini-2.5-flash \
+  --attempts_included_per_model 1 \
+  --pdf --output_name p1_gemini_flash
+```
+
+Output (`.tex` and, with `--pdf`, the compiled PDF) lands in `output/`.
+PDF compilation requires `pdflatex` on `PATH`.
+
+| Flag | Description |
+|------|-------------|
+| `--problems_dir` / `--problem_path` | Source dataset (directory or single file) |
+| `--analysis_only` | Skip per-attempt rendering; just the summary tables |
+| `--pdf` | Compile to PDF and clean up `.aux` / `.log` / `.out` |
+| `--selected_solvers` | Only include these models in the report |
+| `--attempts_included_per_model` (alias `--num_attempts`) | Cap attempts per model |
+| `--best_of_n` | Best-of-N metric in the summary table (default 5) |
+| `--include_topics` / `--exclude_topics` | Filter by `Topic Entry ID` |
+| `--show_cot` | Render `<think>...</think>` content from reasoning models |
+| `--correct_only` | Skip attempts where `verified != 1` |
+
 ## Repository Layout
 
 ```
@@ -206,6 +334,7 @@ src/                              # Pipeline modules
   generate_test_cases.py          # Auto test case generation
   solution_generator.py           # LLM solution generator (used by indep_solver)
   solution_grader.py              # Code execution + output comparison
+  latex_generator.py              # LaTeX/PDF summary report builder
   problem_processor_base.py       # Base class for solver/grader
   llm_client.py, parser.py        # Generator helpers
   io_utils.py, seed_loader.py     # Utilities
@@ -225,6 +354,9 @@ seeds/
   MIT_OCW/                        # Test seeds for the adapted pipeline
 scripts/
   run_pipeline.py                 # End-to-end orchestration
+  generate_and_grade.py           # Run a model, grade attempts, emit a PDF summary
+  generate_latex.py               # Standalone LaTeX/PDF summary
+output/                           # Generated .tex / .pdf reports (gitignored)
 genai.py                          # Gemini/OpenAI API wrapper
 ```
 
